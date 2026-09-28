@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Ensure window.fetch has both a getter and setter to prevent "Cannot set property fetch of #<Window> which has only a getter"
+      (function() {
+        try {
+          var _origFetch = window.fetch;
+          var _activeFetch = _origFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _activeFetch;
+            },
+            set: function(newFetch) {
+              _activeFetch = newFetch;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // Fallback if defineProperty fails
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Jurista Law — Transparent Legal Counsel</title>
+    <meta name="description" content="A refined, illustrated multi-page law firm website with transparent counsel, bespoke line-art illustrations, practice areas, attorney profiles, case studies, insights, and consultation booking." />
+    <meta property="og:title" content="Jurista Law — Transparent Legal Counsel" />
+    <meta property="og:description" content="A refined, illustrated multi-page law firm website with transparent counsel, bespoke line-art illustrations, practice areas, attorney profiles, case studies, insights, and consultation booking." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#F1F4EC] text-[#173330] font-sans antialiased selection:bg-[#C6902E]/30 selection:text-[#173330]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

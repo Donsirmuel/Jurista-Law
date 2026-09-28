@@ -1,0 +1,6 @@
+{
+  "name": "Jurista Law — Transparent Legal Counsel",
+  "description": "A refined, illustrated multi-page law firm website with transparent counsel, bespoke line-art illustrations, practice areas, attorney profiles, case studies, insights, and consultation booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

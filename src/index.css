@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-bg: #F1F4EC;
+  --color-ink: #173330;
+  --color-mustard: #C6902E;
+  --color-brick: #9C4A32;
+  --color-muted: #2E4C47;
+  --color-panel: #E6E4D2;
+}
+
+:root {
+  --bg: #F1F4EC;
+  --ink: #173330;
+  --mustard: #C6902E;
+  --brick: #9C4A32;
+  --muted: #2E4C47;
+  --panel: #E6E4D2;
+  --border-light: rgba(23, 51, 48, 0.12);
+  --gold-glow: rgba(198, 144, 46, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F1F4EC;
+  color: #173330;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', serif;
+}
+
+/* Floating Badges Animation */
+@keyframes floatCycle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(3deg);
+  }
+}
+
+.animate-float {
+  animation: floatCycle 6.8s ease-in-out infinite;
+}
+
+/* Continuous Marquee Ticker */
+@keyframes continuousMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-continuous {
+  display: flex !important;
+  width: max-content !important;
+  animation: continuousMarquee 26s linear infinite !important;
+  will-change: transform;
+}
+
+.animate-marquee-continuous:hover {
+  animation-play-state: paused !important;
+}
+
+/* Organic Floating Bounce Keyframes */
+@keyframes slowBounceA {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) rotate(4deg);
+  }
+}
+
+@keyframes slowBounceB {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -15px, 0) rotate(-4deg);
+  }
+}
+
+@keyframes slowBounceC {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -22px, 0) rotate(5deg);
+  }
+}
+
+.animate-bounce-slow-a {
+  animation: slowBounceA 6.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-bounce-slow-b {
+  animation: slowBounceB 7.1s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-bounce-slow-c {
+  animation: slowBounceC 5.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Ink-draw SVG animation */
+.ink-draw-path {
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.is-drawn .ink-draw-path,
+.drawn .ink-draw-path,
+.group:hover .ink-draw-path {
+  stroke-dashoffset: 0 !important;
+}
+
+/* Scroll reveal element motion */
+.scroll-reveal {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+/* Staggered word fade in */
+@keyframes wordIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-word {
+  animation: wordIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .ink-draw-path {
+    stroke-dashoffset: 0 !important;
+  }
+  .animate-marquee {
+    animation: none !important;
+    transform: none !important;
+  }
+}
