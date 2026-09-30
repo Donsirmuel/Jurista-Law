@@ -45,6 +45,31 @@ h1, h2, h3, h4 {
   font-family: 'Fraunces', serif;
 }
 
+/* Organic Floating Hero Icon Badges Animation Spec */
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(5deg);
+  }
+}
+
+.ficon {
+  animation-name: floatY;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 6s; /* default, overridden per chip instance */
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ficon {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 /* Floating Badges Animation */
 @keyframes floatCycle {
   0%, 100% {

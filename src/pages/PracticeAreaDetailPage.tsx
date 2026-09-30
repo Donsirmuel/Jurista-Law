@@ -5,6 +5,7 @@ import { Breadcrumb } from '../components/Breadcrumb';
 import {
   CorporateIcon,
   ImmigrationIcon,
+  ScalesOfJusticeIcon,
   RealEstateIcon,
   CriminalIcon,
   MedicalIcon,
@@ -43,7 +44,7 @@ export const PracticeAreaDetailPage: React.FC<PracticeAreaDetailPageProps> = ({
       case 'criminal-law':
         return <CriminalIcon size={size} className="text-[#173330]" />;
       case 'medical-law':
-        return <MedicalIcon size={size} className="text-[#173330]" />;
+        return <ScalesOfJusticeIcon size={size} className="text-[#173330]" />;
       case 'family-law':
         return <FamilyIcon size={size} className="text-[#173330]" />;
     }

@@ -6,6 +6,7 @@ import { MarqueeStrip } from '../components/MarqueeStrip';
 import {
   CorporateIcon,
   ImmigrationIcon,
+  ScalesOfJusticeIcon,
   RealEstateIcon,
   CriminalIcon,
   MedicalIcon,
@@ -36,7 +37,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
       case 'criminal-law':
         return <CriminalIcon size={58} className="text-[#173330]" />;
       case 'medical-law':
-        return <MedicalIcon size={58} className="text-[#173330]" />;
+        return <ScalesOfJusticeIcon size={58} className="text-[#173330]" />;
       case 'family-law':
         return <FamilyIcon size={58} className="text-[#173330]" />;
     }
@@ -153,7 +154,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="py-20 lg:py-24 bg-[#F1F4EC]"
+        className="scroll-reveal py-20 lg:py-24 bg-[#F1F4EC]"
       >
         <div className="max-w-[1140px] mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -205,7 +206,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
       </motion.section>
 
       {/* 4. PRACTICE AREAS GRID (Scroll-Animated with Meaningful Icons) */}
-      <section className="py-20 lg:py-24 bg-[#FAFCF6] border-y border-[#173330]/10">
+      <section className="scroll-reveal py-20 lg:py-24 bg-[#FAFCF6] border-y border-[#173330]/10">
         <div className="max-w-[1140px] mx-auto px-6 sm:px-8">
           <motion.div
             initial={{ opacity: 0, y: 28 }}
@@ -259,7 +260,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
       </section>
 
       {/* 5. PROCESS SECTION ("How a case moves" with Staggered Scroll-In) */}
-      <section className="py-20 lg:py-24 bg-[#E6E4D2]/60">
+      <section className="scroll-reveal py-20 lg:py-24 bg-[#E6E4D2]/60">
         <div className="max-w-[1140px] mx-auto px-6 sm:px-8">
           <motion.div
             initial={{ opacity: 0, y: 28 }}
@@ -320,7 +321,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="py-20 lg:py-24 bg-[#F1F4EC]"
+        className="scroll-reveal py-20 lg:py-24 bg-[#F1F4EC]"
       >
         <div className="max-w-[1040px] mx-auto px-6 sm:px-8">
           <div className="bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-8 sm:p-12 lg:p-14 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center hover:shadow-md transition-shadow">
@@ -356,7 +357,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
       </motion.section>
 
       {/* 7. TESTIMONIALS (Scroll-Animated) */}
-      <section className="py-20 lg:py-24 bg-[#E6E4D2]/60 border-y border-[#173330]/10">
+      <section className="scroll-reveal py-20 lg:py-24 bg-[#E6E4D2]/60 border-y border-[#173330]/10">
         <div className="max-w-[1140px] mx-auto px-6 sm:px-8">
           <motion.div
             initial={{ opacity: 0, y: 28 }}
@@ -417,7 +418,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
       </section>
 
       {/* 8. ATTORNEYS PREVIEW GRID (Scroll-Animated) */}
-      <section className="py-20 lg:py-24 bg-[#F1F4EC]">
+      <section className="scroll-reveal py-20 lg:py-24 bg-[#F1F4EC]">
         <div className="max-w-[1140px] mx-auto px-6 sm:px-8">
           <motion.div
             initial={{ opacity: 0, y: 28 }}
@@ -479,7 +480,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="py-20 lg:py-24 bg-[#E6E4D2]/60 border-t border-[#173330]/10"
+        className="scroll-reveal py-20 lg:py-24 bg-[#E6E4D2]/60 border-t border-[#173330]/10"
       >
         <div className="max-w-[820px] mx-auto px-6 sm:px-8">
           <div className="text-center mb-12">

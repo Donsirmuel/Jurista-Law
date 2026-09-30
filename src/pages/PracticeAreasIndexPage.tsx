@@ -6,6 +6,7 @@ import { FloatingChips } from '../components/FloatingChips';
 import {
   CorporateIcon,
   ImmigrationIcon,
+  ScalesOfJusticeIcon,
   RealEstateIcon,
   CriminalIcon,
   MedicalIcon,
@@ -35,7 +36,7 @@ export const PracticeAreasIndexPage: React.FC<PracticeAreasIndexPageProps> = ({
       case 'criminal-law':
         return <CriminalIcon size={64} className="text-[#173330]" />;
       case 'medical-law':
-        return <MedicalIcon size={64} className="text-[#173330]" />;
+        return <ScalesOfJusticeIcon size={64} className="text-[#173330]" />;
       case 'family-law':
         return <FamilyIcon size={64} className="text-[#173330]" />;
     }

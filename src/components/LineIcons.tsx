@@ -1,10 +1,9 @@
 import React from 'react';
-import { motion } from 'motion/react';
 
 interface IconProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
   strokeWidth?: number | string;
-  animated?: boolean;
+  className?: string;
 }
 
 // Brand Logo Mark (Architectural Pillar & Courthouse Motif)
@@ -30,266 +29,480 @@ export const BrandLogoIcon: React.FC<IconProps> = ({ size = 28, className = '', 
   </svg>
 );
 
-// 1. Corporate Law Icon
-// Meaning: Multi-story corporate headquarters skyscrapers with architectural glass facade, upward growth chevron, and enterprise foundation
-export const CorporateIcon: React.FC<IconProps> = ({ size = 56, strokeWidth = 2.5, animated = false, className = '', ...props }) => (
+// 1. Bespoke Corporate Law Icon — The Handshake & Contract Agreement
+// Visual Concept: Formal executive handshake sealing an agreement, framed with contract document & fountain pen
+export const CorporateIcon: React.FC<IconProps> = ({
+  size = 56,
+  strokeWidth = 2.4,
+  className = '',
+  ...props
+}) => (
   <svg
     width={size}
     height={size}
-    viewBox="0 0 60 60"
+    viewBox="0 0 64 64"
     fill="none"
     className={className}
     {...props}
   >
-    {/* Main corporate tower */}
-    <path
-      d="M14 50 V18 L32 10 V50"
+    {/* Contract document outline in background */}
+    <rect
+      x="12"
+      y="8"
+      width="40"
+      height="48"
+      rx="4"
       stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      strokeWidth="1.8"
+      strokeDasharray="4 3"
+      opacity="0.3"
     />
-    {/* Secondary adjacent modern tower */}
-    <path
-      d="M32 22 L46 16 V50"
-      stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    {/* Foundation base line */}
-    <path
-      d="M10 50 H50"
-      stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-    />
-    {/* Corporate office windows (clean geometric line-art) */}
-    <line x1="20" y1="22" x2="26" y2="22" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-    <line x1="20" y1="29" x2="26" y2="29" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-    <line x1="20" y1="36" x2="26" y2="36" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-    <line x1="20" y1="43" x2="26" y2="43" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <line x1="20" y1="16" x2="36" y2="16" stroke="currentColor" strokeWidth="1.8" opacity="0.35" strokeLinecap="round" />
+    <line x1="20" y1="22" x2="44" y2="22" stroke="currentColor" strokeWidth="1.8" opacity="0.35" strokeLinecap="round" />
 
-    <line x1="38" y1="28" x2="41" y2="28" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-    <line x1="38" y1="35" x2="41" y2="35" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-    <line x1="38" y1="42" x2="41" y2="42" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-
-    {/* Upward growth chevron / handshake marker */}
+    {/* Handshake: Left Partner Arm & Cuff */}
     <path
-      d="M26 12 L32 8 L38 12"
-      stroke="#C6902E"
-      strokeWidth="2.4"
+      d="M6 38 L16 30 L22 34 L12 44 Z"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+    <line x1="9" y1="35" x2="15" y2="41" stroke="#C6902E" strokeWidth="2" strokeLinecap="round" />
+
+    {/* Handshake: Right Partner Arm & Cuff */}
+    <path
+      d="M58 38 L48 30 L42 34 L52 44 Z"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+    <line x1="55" y1="35" x2="49" y2="41" stroke="#C6902E" strokeWidth="2" strokeLinecap="round" />
+
+    {/* Handshake: Clasped Hands & Fingers */}
+    <path
+      d="M22 34 L28 28 C30 26 34 26 36 28 L42 34"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
+    {/* Interlocked fingers */}
+    <path
+      d="M25 36 L31 42 C33 44 37 44 39 42 L42 39"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M28 39 L33 44"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+    />
+    <path
+      d="M32 42 L36 46"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+    />
+
+    {/* Partnership / Deal Star Sparkle */}
+    <path
+      d="M32 20 L33.5 24 L37.5 25.5 L33.5 27 L32 31 L30.5 27 L26.5 25.5 L30.5 24 Z"
+      fill="#C6902E"
+    />
+
+    {/* Signature wax seal stamp at bottom right */}
+    <circle cx="44" cy="46" r="6" stroke="#9C4A32" strokeWidth="2" />
+    <path d="M41 46 L43 48 L47 44" stroke="#9C4A32" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
-// 2. Immigration Law Icon
-// Meaning: Official passport booklet with world globe meridians, visa entry stamp, and flight trajectory arc across borders
-export const ImmigrationIcon: React.FC<IconProps> = ({ size = 56, strokeWidth = 2.5, animated = false, className = '', ...props }) => (
+// 2. Bespoke Immigration Law Icon — The World Globe & Transnational Flight
+// Visual Concept: World globe with meridians, orbital migration route across borders, and visa seal
+export const ImmigrationIcon: React.FC<IconProps> = ({
+  size = 56,
+  strokeWidth = 2.4,
+  className = '',
+  ...props
+}) => (
   <svg
     width={size}
     height={size}
-    viewBox="0 0 60 60"
+    viewBox="0 0 64 64"
     fill="none"
     className={className}
     {...props}
   >
-    {/* Passport booklet cover */}
-    <rect
-      x="12"
-      y="12"
-      width="28"
-      height="38"
-      rx="3"
+    {/* Main Globe Sphere */}
+    <circle
+      cx="30"
+      cy="32"
+      r="20"
       stroke="currentColor"
       strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    {/* Passport spine shadow */}
-    <line x1="17" y1="12" x2="17" y2="50" stroke="currentColor" strokeWidth="1.8" />
 
-    {/* Globe emblem on passport cover */}
-    <circle cx="26" cy="28" r="7" stroke="currentColor" strokeWidth="2" />
-    <ellipse cx="26" cy="28" rx="3.5" ry="7" stroke="currentColor" strokeWidth="1.6" />
-    <line x1="19" y1="28" x2="33" y2="28" stroke="currentColor" strokeWidth="1.6" />
-
-    {/* Biometric chip emblem at bottom */}
-    <rect x="23" y="40" width="6" height="4" rx="1" stroke="currentColor" strokeWidth="1.6" />
-
-    {/* Official Visa Entry Stamp (Diagonal on the right side) */}
-    <circle
-      cx="42"
-      cy="24"
-      r="10"
-      stroke="#9C4A32"
-      strokeWidth="2.4"
-      strokeDasharray="3 3"
-    />
-    <path
-      d="M37 24 L41 28 L48 20"
-      stroke="#9C4A32"
-      strokeWidth="2.4"
+    {/* Equator */}
+    <line
+      x1="10"
+      y1="32"
+      x2="50"
+      y2="32"
+      stroke="currentColor"
+      strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round"
     />
 
-    {/* Flight migration route arc */}
+    {/* Latitude parallels */}
     <path
-      d="M36 44 C42 43 47 38 49 32"
+      d="M13 22 C18 25 42 25 47 22"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+    />
+    <path
+      d="M13 42 C18 39 42 39 47 42"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+    />
+
+    {/* Longitude central meridian */}
+    <line
+      x1="30"
+      y1="12"
+      x2="30"
+      y2="52"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+
+    {/* Elliptical side meridians */}
+    <ellipse
+      cx="30"
+      cy="32"
+      rx="11"
+      ry="20"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+    />
+
+    {/* Transnational Flight / Journey Orbital Arc */}
+    <path
+      d="M16 48 C24 56 46 54 54 40 C60 28 54 14 42 10"
       stroke="#C6902E"
       strokeWidth="2.2"
       strokeLinecap="round"
-      strokeDasharray="2 3"
+      strokeDasharray="4 3"
+    />
+
+    {/* Aircraft / Migration Arrowhead */}
+    <g transform="translate(42, 10) rotate(-45)">
+      <path
+        d="M0 0 L8 3 L12 0 L8 -3 Z"
+        fill="#C6902E"
+        stroke="#173330"
+        strokeWidth="1.2"
+      />
+      <path d="M4 -5 L7 -1 M4 5 L7 1" stroke="#C6902E" strokeWidth="1.5" strokeLinecap="round" />
+    </g>
+
+    {/* Approved Entry Visa Stamp Emblem */}
+    <circle
+      cx="46"
+      cy="44"
+      r="9"
+      stroke="#9C4A32"
+      strokeWidth="2.2"
+      strokeDasharray="2 2"
     />
     <path
-      d="M48 30 L51 33 L46 34 Z"
-      fill="#C6902E"
+      d="M42 44 L45 47 L51 41"
+      stroke="#9C4A32"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
 
-// 3. Real Estate Law Icon
-// Meaning: Classic architectural house with gabled roof, front door, property foundation, and a prominent solid brass key
-export const RealEstateIcon: React.FC<IconProps> = ({ size = 56, strokeWidth = 2.5, animated = false, className = '', ...props }) => (
+// 3. Bespoke Litigation & Justice Icon — The Classical Scales of Justice
+// Visual Concept: Fluted pillar, balanced horizontal brass beam, suspension chains, and weighing pans
+export const ScalesOfJusticeIcon: React.FC<IconProps> = ({
+  size = 56,
+  strokeWidth = 2.4,
+  className = '',
+  ...props
+}) => (
   <svg
     width={size}
     height={size}
-    viewBox="0 0 60 60"
+    viewBox="0 0 64 64"
     fill="none"
     className={className}
     {...props}
   >
-    {/* House structure */}
+    {/* Base Pedestal (Courthouse Foundation) */}
     <path
-      d="M10 26 L27 12 L44 26 V48 H10 Z"
+      d="M20 54 H44"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+    />
+    <path
+      d="M24 50 H40"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+    />
+    <path
+      d="M28 46 H36"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+    />
+
+    {/* Central Pillar Column */}
+    <line
+      x1="32"
+      y1="14"
+      x2="32"
+      y2="46"
+      stroke="currentColor"
+      strokeWidth="2.8"
+      strokeLinecap="round"
+    />
+
+    {/* Fulcrum Top Finial & Pivot Ring */}
+    <circle cx="32" cy="12" r="3.5" stroke="#C6902E" strokeWidth="2.2" fill="#FAFCF6" />
+    <circle cx="32" cy="18" r="2" fill="currentColor" />
+
+    {/* Main Balance Beam (Equilibrium) */}
+    <path
+      d="M12 18 C20 16 44 16 52 18"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+    />
+    {/* Beam end rings */}
+    <circle cx="12" cy="18" r="2" stroke="currentColor" strokeWidth="1.8" />
+    <circle cx="52" cy="18" r="2" stroke="currentColor" strokeWidth="1.8" />
+
+    {/* Left Scale: Hanging Chains */}
+    <line x1="12" y1="20" x2="6" y2="34" stroke="currentColor" strokeWidth="1.6" />
+    <line x1="12" y1="20" x2="18" y2="34" stroke="currentColor" strokeWidth="1.6" />
+    {/* Left Scale Pan */}
+    <path
+      d="M4 34 Q12 42 20 34 Z"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+    <line x1="4" y1="34" x2="20" y2="34" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" />
+
+    {/* Right Scale: Hanging Chains */}
+    <line x1="52" y1="20" x2="46" y2="34" stroke="currentColor" strokeWidth="1.6" />
+    <line x1="52" y1="20" x2="58" y2="34" stroke="currentColor" strokeWidth="1.6" />
+    {/* Right Scale Pan */}
+    <path
+      d="M44 34 Q52 42 60 34 Z"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+    <line x1="44" y1="34" x2="60" y2="34" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" />
+
+    {/* Subtle indicator needle pointing straight up */}
+    <line x1="32" y1="18" x2="32" y2="24" stroke="#9C4A32" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
+
+// Alias for Litigation / Medical
+export const ScalesIcon = ScalesOfJusticeIcon;
+export const LitigationIcon = ScalesOfJusticeIcon;
+
+// 4. Bespoke Real Estate Law Icon — Architectural Manor, Deed & Solid Brass Key
+export const RealEstateIcon: React.FC<IconProps> = ({
+  size = 56,
+  strokeWidth = 2.4,
+  className = '',
+  ...props
+}) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 64 64"
+    fill="none"
+    className={className}
+    {...props}
+  >
+    {/* House Structure */}
+    <path
+      d="M10 28 L28 14 L46 28 V52 H10 Z"
       stroke="currentColor"
       strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     {/* Chimney */}
-    <path d="M36 18 V14 H41 V22" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
-
-    {/* Front entrance door */}
     <path
-      d="M22 48 V34 H32 V48"
+      d="M38 20 V14 H43 V24"
       stroke="currentColor"
       strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <circle cx="30" cy="41" r="1.2" fill="currentColor" />
 
-    {/* Attic window */}
-    <circle cx="27" cy="22" r="3.5" stroke="currentColor" strokeWidth="2" />
+    {/* Attic Fanlight Window */}
+    <path
+      d="M23 24 A5 5 0 0 1 33 24 Z"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinejoin="round"
+    />
+    <line x1="28" y1="19" x2="28" y2="24" stroke="currentColor" strokeWidth="1.6" />
 
-    {/* Prominent Real Estate Key (Handed over in front) */}
-    <g transform="translate(38, 30)">
-      <circle cx="8" cy="8" r="6" stroke="#C6902E" strokeWidth="2.4" />
-      <circle cx="8" cy="8" r="2.5" stroke="#C6902E" strokeWidth="1.8" />
-      <path d="M8 14 V26" stroke="#C6902E" strokeWidth="2.4" strokeLinecap="round" />
-      <path d="M8 20 H13" stroke="#C6902E" strokeWidth="2.2" strokeLinecap="round" />
-      <path d="M8 24 H12" stroke="#C6902E" strokeWidth="2.2" strokeLinecap="round" />
+    {/* Front Entrance Door */}
+    <path
+      d="M22 52 V36 H34 V52"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <circle cx="31" cy="44" r="1.5" fill="#C6902E" />
+
+    {/* Ground Boundary Line */}
+    <line x1="6" y1="52" x2="56" y2="52" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" />
+
+    {/* Prominent Brass Property Key in Foreground */}
+    <g transform="translate(38, 28)">
+      <circle cx="10" cy="8" r="7" stroke="#C6902E" strokeWidth="2.4" />
+      <circle cx="10" cy="8" r="3" stroke="#C6902E" strokeWidth="1.8" />
+      <path d="M10 15 V30" stroke="#C6902E" strokeWidth="2.6" strokeLinecap="round" />
+      {/* Key wards / teeth */}
+      <path d="M10 22 H15" stroke="#C6902E" strokeWidth="2.4" strokeLinecap="round" />
+      <path d="M10 27 H16" stroke="#C6902E" strokeWidth="2.4" strokeLinecap="round" />
     </g>
 
-    {/* Ground property boundary line */}
-    <line x1="6" y1="48" x2="54" y2="48" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" />
+    {/* Parcel boundary badge */}
+    <circle cx="50" cy="16" r="2" fill="#9C4A32" />
+    <path d="M47 16 H53 M50 13 V19" stroke="#9C4A32" strokeWidth="1.5" strokeLinecap="round" />
   </svg>
 );
 
-// 4. Criminal Law Icon
-// Meaning: Judge's wooden gavel on strike block with impact acoustic lines, paired with protective shield
-export const CriminalIcon: React.FC<IconProps> = ({ size = 56, strokeWidth = 2.5, animated = false, className = '', ...props }) => (
+// 5. Bespoke Criminal Law Icon — The Judge's Gavel & Defense Shield
+export const CriminalIcon: React.FC<IconProps> = ({
+  size = 56,
+  strokeWidth = 2.4,
+  className = '',
+  ...props
+}) => (
   <svg
     width={size}
     height={size}
-    viewBox="0 0 60 60"
+    viewBox="0 0 64 64"
     fill="none"
     className={className}
     {...props}
   >
-    {/* Gavel Head (Angled striking mallet) */}
+    {/* Constitutional Defense Shield Outline in Background */}
+    <path
+      d="M38 10 C46 10 52 14 52 14 V28 C52 40 44 48 38 52 C35 50 30 46 27 42"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeDasharray="3 3"
+      opacity="0.35"
+    />
+
+    {/* Strike block pedestal */}
+    <ellipse cx="22" cy="50" rx="14" ry="4" stroke="currentColor" strokeWidth={strokeWidth} />
+    <path
+      d="M8 50 V54 C8 56.5 14.5 58 22 58 C29.5 58 36 56.5 36 54 V50"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+    />
+
+    {/* Striking Gavel Mallet Head */}
     <path
       d="M18 16 L28 26 L23 31 L13 21 Z"
       stroke="currentColor"
       strokeWidth={strokeWidth}
-      strokeLinecap="round"
       strokeLinejoin="round"
+      strokeLinecap="round"
     />
-    {/* Gavel Head End Caps */}
-    <line x1="16" y1="14" x2="20" y2="18" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" />
-    <line x1="21" y1="29" x2="25" y2="33" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" />
+    <line x1="16" y1="14" x2="20" y2="18" stroke="#C6902E" strokeWidth={strokeWidth} strokeLinecap="round" />
+    <line x1="21" y1="29" x2="25" y2="33" stroke="#C6902E" strokeWidth={strokeWidth} strokeLinecap="round" />
 
     {/* Gavel Handle */}
     <path
-      d="M26 21 L46 41"
+      d="M26 21 L48 43"
       stroke="currentColor"
       strokeWidth={strokeWidth}
       strokeLinecap="round"
     />
-    <line x1="43" y1="38" x2="48" y2="43" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+    {/* Grip ribbing */}
+    <line x1="43" y1="38" x2="48" y2="43" stroke="currentColor" strokeWidth="3.6" strokeLinecap="round" />
 
-    {/* Sound strike block (pedestal) */}
-    <ellipse cx="20" cy="46" rx="14" ry="4" stroke="currentColor" strokeWidth={strokeWidth} />
-    <path d="M6 46 V50 C6 52.2 12.3 54 20 54 C27.7 54 34 52.2 34 50 V46" stroke="currentColor" strokeWidth={strokeWidth} />
-
-    {/* Strike impact dynamic lines */}
-    <line x1="12" y1="36" x2="9" y2="33" stroke="#9C4A32" strokeWidth="2.4" strokeLinecap="round" />
-    <line x1="20" y1="34" x2="20" y2="30" stroke="#9C4A32" strokeWidth="2.4" strokeLinecap="round" />
-    <line x1="28" y1="36" x2="31" y2="33" stroke="#9C4A32" strokeWidth="2.4" strokeLinecap="round" />
-
-    {/* Defense Shield Outline in background */}
-    <path
-      d="M40 14 C46 14 50 17 50 17 V28 C50 35 44 42 40 45 C38 43.5 35 40.5 33 37"
-      stroke="#173330"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeDasharray="2 3"
-    />
+    {/* Impact Acoustic Resonance Lines */}
+    <line x1="12" y1="39" x2="8" y2="35" stroke="#9C4A32" strokeWidth="2.4" strokeLinecap="round" />
+    <line x1="22" y1="37" x2="22" y2="31" stroke="#9C4A32" strokeWidth="2.4" strokeLinecap="round" />
+    <line x1="32" y1="39" x2="36" y2="35" stroke="#9C4A32" strokeWidth="2.4" strokeLinecap="round" />
   </svg>
 );
 
-// 5. Medical Law Icon
-// Meaning: Clinical Rod of Asclepius (healing serpent coiled on staff) combined with Medical Cross and ECG heartbeat pulse
-export const MedicalIcon: React.FC<IconProps> = ({ size = 56, strokeWidth = 2.5, animated = false, className = '', ...props }) => (
+// 6. Bespoke Medical Law Icon — Clinical Caduceus, Medical Cross & Vital ECG Pulse
+export const MedicalIcon: React.FC<IconProps> = ({
+  size = 56,
+  strokeWidth = 2.4,
+  className = '',
+  ...props
+}) => (
   <svg
     width={size}
     height={size}
-    viewBox="0 0 60 60"
+    viewBox="0 0 64 64"
     fill="none"
     className={className}
     {...props}
   >
-    {/* Medical Cross background badge */}
+    {/* Subtle Medical Cross Emblem in Background */}
     <path
-      d="M24 10 H36 V20 H46 V32 H36 V42 H24 V32 H14 V20 H24 Z"
+      d="M26 12 H38 V22 H48 V34 H38 V44 H26 V34 H16 V22 H26 Z"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="1.8"
       strokeLinejoin="round"
       opacity="0.25"
     />
 
-    {/* Central Caduceus / Asclepius Staff */}
-    <line x1="30" y1="8" x2="30" y2="52" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" />
-    <circle cx="30" cy="8" r="3" fill="#C6902E" stroke="currentColor" strokeWidth="1.5" />
+    {/* Central Caduceus / Rod of Asclepius */}
+    <line x1="32" y1="8" x2="32" y2="54" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" />
+    <circle cx="32" cy="8" r="3" fill="#C6902E" stroke="currentColor" strokeWidth="1.5" />
 
-    {/* Coiling Serpent (Symbol of clinical diagnosis & standard of care) */}
+    {/* Healing Coiled Serpent */}
     <path
-      d="M23 16 C37 18 37 26 23 28 C23 30 37 32 37 38 C37 44 23 44 23 48 C23 50 27 50 30 50"
+      d="M24 16 C38 18 38 26 24 28 C24 30 38 32 38 38 C38 44 24 44 24 48 C24 50 28 50 32 50"
       stroke="currentColor"
       strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    {/* Serpent head */}
-    <path d="M23 16 C22 14 24 12 26 12 C28 12 29 13 29 15" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <circle cx="24" cy="16" r="1.5" fill="#9C4A32" />
 
-    {/* Clinical vital ECG heartbeat wave crossing through */}
+    {/* Clinical Vital ECG Heartbeat Wave */}
     <path
-      d="M8 32 H18 L22 24 L26 40 L30 30 L34 34 L38 32 H52"
+      d="M8 32 H18 L22 23 L27 41 L32 29 L36 35 L40 32 H56"
       stroke="#9C4A32"
       strokeWidth="2.4"
       strokeLinecap="round"
@@ -298,79 +511,70 @@ export const MedicalIcon: React.FC<IconProps> = ({ size = 56, strokeWidth = 2.5,
   </svg>
 );
 
-// 6. Family Law Icon
-// Meaning: Two parents with an embrace arch sheltering a young child in the center, expressing custody, protection, and care
-export const FamilyIcon: React.FC<IconProps> = ({ size = 56, strokeWidth = 2.5, animated = false, className = '', ...props }) => (
+// 7. Bespoke Family Law Icon — Protective Arch, Parents & Children
+export const FamilyIcon: React.FC<IconProps> = ({
+  size = 56,
+  strokeWidth = 2.4,
+  className = '',
+  ...props
+}) => (
   <svg
     width={size}
     height={size}
-    viewBox="0 0 60 60"
+    viewBox="0 0 64 64"
     fill="none"
     className={className}
     {...props}
   >
-    {/* Parent 1 (Left) */}
-    <circle cx="18" cy="18" r="6" stroke="currentColor" strokeWidth={strokeWidth} />
+    {/* Ground baseline */}
+    <line x1="8" y1="52" x2="56" y2="52" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+
+    {/* Protective Haven Arch Overhead */}
     <path
-      d="M8 48 C8 38 14 32 22 32 C24 32 26 33 27 34"
+      d="M12 28 Q32 8 52 28"
+      stroke="#9C4A32"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeDasharray="3 3"
+    />
+
+    {/* Parent 1 (Left) */}
+    <circle cx="20" cy="20" r="6" stroke="currentColor" strokeWidth={strokeWidth} />
+    <path
+      d="M10 50 C10 38 16 32 24 32 C26 32 28 33 29 34"
       stroke="currentColor"
       strokeWidth={strokeWidth}
       strokeLinecap="round"
     />
 
     {/* Parent 2 (Right) */}
-    <circle cx="42" cy="18" r="6" stroke="currentColor" strokeWidth={strokeWidth} />
+    <circle cx="44" cy="20" r="6" stroke="currentColor" strokeWidth={strokeWidth} />
     <path
-      d="M52 48 C52 38 46 32 38 32 C36 32 34 33 33 34"
+      d="M54 50 C54 38 48 32 40 32 C38 32 36 33 35 34"
       stroke="currentColor"
       strokeWidth={strokeWidth}
       strokeLinecap="round"
     />
 
     {/* Child in the Center */}
-    <circle cx="30" cy="27" r="4.5" stroke="#C6902E" strokeWidth={strokeWidth} />
+    <circle cx="32" cy="28" r="4.5" stroke="#C6902E" strokeWidth={strokeWidth} fill="#FAFCF6" />
     <path
-      d="M22 50 C22 43 25 39 30 39 C35 39 38 43 38 50"
+      d="M24 52 C24 44 27 40 32 40 C37 40 40 44 40 52"
       stroke="#C6902E"
       strokeWidth={strokeWidth}
       strokeLinecap="round"
     />
 
-    {/* Holding hands / sheltering embrace arch overhead */}
+    {/* Custody & Protection Harmony Heart in Center */}
     <path
-      d="M12 28 Q30 10 48 28"
-      stroke="#9C4A32"
-      strokeWidth="2.2"
-      strokeLinecap="round"
-      strokeDasharray="3 3"
-    />
-
-    {/* Ground baseline */}
-    <line x1="6" y1="50" x2="54" y2="50" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-  </svg>
-);
-
-// Canonical Scales of Justice
-export const ScalesIcon: React.FC<IconProps> = ({ size = 48, strokeWidth = 2.6, className = '', ...props }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 60 60"
-    fill="none"
-    className={className}
-    {...props}
-  >
-    <path
-      d="M30 12 V48 M20 20 H40 M20 20 L13 32 A7 6 0 0 0 27 32 Z M40 20 L33 32 A7 6 0 0 0 47 32 Z M24 48 H36"
-      stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      d="M32 15 C30 13 27 13 27 16 C27 19 32 22 32 22 C32 22 37 19 37 16 C37 13 34 13 32 15 Z"
+      fill="#9C4A32"
+      opacity="0.85"
     />
   </svg>
 );
 
-// Brick Checkmark for values & capability lists
+// Checkmark for values & lists
 export const BrickCheckIcon: React.FC<{ size?: number; className?: string }> = ({ size = 20, className = '' }) => (
   <svg
     width={size}
@@ -428,13 +632,6 @@ export const LocationPinIcon: React.FC<{ size?: number; className?: string }> = 
   </svg>
 );
 
-export const CalendarLineIcon: React.FC<{ size?: number; className?: string }> = ({ size = 18, className = '' }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
-    <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
-    <path d="M16 2V6M8 2V6M3 10H21" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
-  </svg>
-);
-
 export const ClockLineIcon: React.FC<{ size?: number; className?: string }> = ({ size = 18, className = '' }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
     <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2.4" />
@@ -442,7 +639,7 @@ export const ClockLineIcon: React.FC<{ size?: number; className?: string }> = ({
   </svg>
 );
 
-// Large Line-Art Office Scene Illustration for About Page
+// Large Line-Art Office Scene Illustration for About / Our Firm Page
 export const OfficeSceneIllustration: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
     viewBox="0 0 460 300"
@@ -554,6 +751,48 @@ export const BuildingMapIllustration: React.FC<{ className?: string }> = ({ clas
         strokeWidth="2.2"
       />
       <circle cx="0" cy="-18" r="4" fill="#F1F4EC" />
+    </g>
+  </svg>
+);
+
+// Neoclassical Courthouse Skyline Line-Art Border (For Footer & Architecture Motifs)
+export const CourthouseSkylineSilhouette: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <svg
+    viewBox="0 0 800 64"
+    fill="none"
+    className={`w-full h-auto ${className}`}
+    preserveAspectRatio="none"
+  >
+    {/* Base ground line */}
+    <line x1="0" y1="62" x2="800" y2="62" stroke="currentColor" strokeWidth="1.5" opacity="0.3" />
+
+    {/* Neoclassical courthouse facade with triangular pediment & columns */}
+    <g opacity="0.28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+      {/* Central pediment */}
+      <path d="M340 40 L400 16 L460 40 Z" />
+      <path d="M335 44 H465" />
+      {/* Columns */}
+      <line x1="352" y1="44" x2="352" y2="62" />
+      <line x1="372" y1="44" x2="372" y2="62" />
+      <line x1="392" y1="44" x2="392" y2="62" />
+      <line x1="408" y1="44" x2="408" y2="62" />
+      <line x1="428" y1="44" x2="428" y2="62" />
+      <line x1="448" y1="44" x2="448" y2="62" />
+
+      {/* Flanking urban structures */}
+      <rect x="220" y="32" width="60" height="30" />
+      <line x1="240" y1="36" x2="240" y2="58" strokeDasharray="3 3" />
+      <line x1="260" y1="36" x2="260" y2="58" strokeDasharray="3 3" />
+
+      <rect x="520" y="28" width="65" height="34" />
+      <line x1="540" y1="32" x2="540" y2="58" strokeDasharray="3 3" />
+      <line x1="565" y1="32" x2="565" y2="58" strokeDasharray="3 3" />
+
+      {/* Distant skyline outlines */}
+      <path d="M120 62 V48 H160 V62" />
+      <path d="M640 62 V42 H680 V62" />
+      <path d="M50 62 V52 H85 V62" />
+      <path d="M720 62 V50 H760 V62" />
     </g>
   </svg>
 );

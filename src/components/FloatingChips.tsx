@@ -10,257 +10,249 @@ export const FloatingChips: React.FC<FloatingChipsProps> = ({
   variant = 'full',
   onNavigate,
 }) => {
+  // Common glossy box-shadow from spec:
+  const glossyShadow =
+    '0 8px 18px rgba(23,51,48,0.16), inset 0 2px 5px rgba(255,255,255,0.65), inset 0 -6px 10px rgba(0,0,0,0.08)';
+
+  // Three alternating color palettes using the required radial-gradient formula:
+  // radial-gradient(circle at 32% 26%, <light> 0%, <mid> 30%, <accent> 65%, <dark> 100%)
+  const goldGradient =
+    'radial-gradient(circle at 32% 26%, #FEF8E8 0%, #ECC575 30%, #C6902E 65%, #8C5F14 100%)';
+  const tealGradient =
+    'radial-gradient(circle at 32% 26%, #EAF5F2 0%, #80B5AB 30%, #2E5951 65%, #142E2A 100%)';
+  const brickGradient =
+    'radial-gradient(circle at 32% 26%, #FCEEE9 0%, #D88F79 30%, #9C4A32 65%, #6C2B1B 100%)';
+
   if (variant === 'calm') {
     return (
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
-        {/* Scales (Gold, Top Left) */}
+        {/* Chip 1 - Scales of Justice (Gold) */}
         <div
-          className="absolute rounded-full flex items-center justify-center animate-bounce-slow-a shadow-[0_10px_24px_rgba(23,51,48,0.16),inset_0_2px_4px_rgba(255,255,255,0.7),inset_0_-4px_8px_rgba(0,0,0,0.1)] pointer-events-auto cursor-pointer"
+          className="ficon absolute rounded-full flex items-center justify-center pointer-events-auto cursor-pointer transition-transform hover:scale-110"
           style={{
             width: '54px',
             height: '54px',
             top: '18%',
             left: '6%',
-            background: 'radial-gradient(circle at 30% 25%, #FBF2DC 0%, #ECC575 32%, #C6902E 68%, #9C6F1F 100%)',
+            background: goldGradient,
+            boxShadow: glossyShadow,
+            animationDuration: '6.5s',
+            animationDelay: '0.2s',
           }}
           title="Scales of Justice"
           onClick={() => onNavigate && onNavigate({ type: 'practice-areas' })}
         >
-          <svg className="w-[52%] h-[52%]" viewBox="0 0 60 60" fill="none">
+          <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
             <path
-              d="M30 12 V48 M20 20 H40 M20 20 L13 32 A7 6 0 0 0 27 32 Z M40 20 L33 32 A7 6 0 0 0 47 32 Z M24 48 H36"
+              d="M20 7 V33 M13 14 H27 M13 14 L8 22 A5 4 0 0 0 18 22 Z M27 14 L22 22 A5 4 0 0 0 32 22 Z M15 33 H25"
               stroke="#173330"
-              strokeWidth="2.8"
+              strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
           </svg>
         </div>
 
-        {/* Passport / Immigration (Teal, Top Right) */}
+        {/* Chip 2 - Globe / Immigration (Teal) */}
         <div
-          className="absolute rounded-full items-center justify-center animate-bounce-slow-b shadow-[0_10px_24px_rgba(23,51,48,0.16),inset_0_2px_4px_rgba(255,255,255,0.7),inset_0_-4px_8px_rgba(0,0,0,0.1)] hidden sm:flex pointer-events-auto cursor-pointer"
+          className="ficon absolute rounded-full hidden sm:flex items-center justify-center pointer-events-auto cursor-pointer transition-transform hover:scale-110"
           style={{
             width: '50px',
             height: '50px',
-            top: '22%',
+            top: '20%',
             right: '8%',
-            background: 'radial-gradient(circle at 30% 25%, #E3F2EE 0%, #89B3A9 32%, #2E5951 68%, #173330 100%)',
+            background: tealGradient,
+            boxShadow: glossyShadow,
+            animationDuration: '7.2s',
+            animationDelay: '1.1s',
           }}
           title="Immigration Law"
           onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'immigration-law' })}
         >
-          <svg className="w-[52%] h-[52%]" viewBox="0 0 60 60" fill="none">
-            <rect x="14" y="14" width="24" height="32" rx="3" stroke="#F1F4EC" strokeWidth="2.6" />
-            <circle cx="26" cy="27" r="5" stroke="#F1F4EC" strokeWidth="2" />
-            <line x1="21" y1="27" x2="31" y2="27" stroke="#F1F4EC" strokeWidth="1.8" />
-            <circle cx="38" cy="24" r="6" stroke="#ECC575" strokeWidth="2" strokeDasharray="2 2" />
+          <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="14" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+            <line x1="6" y1="20" x2="34" y2="20" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" />
+            <ellipse cx="20" cy="20" rx="7" ry="14" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
 
-        {/* Corporate Towers (Brick, Bottom Right) */}
+        {/* Chip 3 - Gavel (Brick) */}
         <div
-          className="absolute rounded-full items-center justify-center animate-bounce-slow-c shadow-[0_10px_24px_rgba(23,51,48,0.16),inset_0_2px_4px_rgba(255,255,255,0.7),inset_0_-4px_8px_rgba(0,0,0,0.1)] hidden md:flex pointer-events-auto cursor-pointer"
+          className="ficon absolute rounded-full hidden md:flex items-center justify-center pointer-events-auto cursor-pointer transition-transform hover:scale-110"
           style={{
-            width: '46px',
-            height: '46px',
-            bottom: '16%',
-            right: '18%',
-            background: 'radial-gradient(circle at 30% 25%, #F7DFD2 0%, #D48E6E 32%, #9C4A32 68%, #723220 100%)',
+            width: '48px',
+            height: '48px',
+            bottom: '18%',
+            right: '16%',
+            background: brickGradient,
+            boxShadow: glossyShadow,
+            animationDuration: '5.8s',
+            animationDelay: '0.6s',
           }}
-          title="Corporate Law"
-          onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'corporate-law' })}
+          title="Criminal Law"
+          onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'criminal-law' })}
         >
-          <svg className="w-[52%] h-[52%]" viewBox="0 0 60 60" fill="none">
-            <path d="M16 48 V20 L30 14 V48" stroke="#173330" strokeWidth="2.6" strokeLinejoin="round" />
-            <path d="M30 24 L42 19 V48" stroke="#173330" strokeWidth="2.6" strokeLinejoin="round" />
-            <line x1="12" y1="48" x2="46" y2="48" stroke="#173330" strokeWidth="2.6" strokeLinecap="round" />
+          <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
+            <path d="M11 13 L18 20 L14 24 L7 17 Z" stroke="#F1F4EC" strokeWidth="3" strokeLinejoin="round" strokeLinecap="round" />
+            <path d="M16 18 L31 33" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" />
+            <path d="M7 33 H21" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" />
           </svg>
         </div>
       </div>
     );
   }
 
-  // Full 6 chips for Home Hero — bouncing on their own with staggered independent loops (NO mouse parallax)
+  // Full 6 chips for HomePage Hero — following the exact specification:
+  // - Class: .ficon (explicit longhand animation properties defined in CSS, no shorthand)
+  // - Duration & Delay set per chip instance
+  // - Sizes varying 46px - 64px
+  // - Glossy radial-gradient background rotated across Gold, Teal, Brick
+  // - Spec box-shadow
+  // - Stroke-only inline SVG (stroke-width: 3, rounded caps/joins) sized to ~52% of chip
+  // - Scatter positioning around edges, avoiding centered text
+  // - Responsive: chips 4 & 6 hidden on mobile below 820px to prevent clutter
   return (
     <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none" aria-hidden="true">
-      {/* 1. Scales of Justice (Gold - Top Left) */}
+      {/* 1. Scales of Justice (Gold / Mustard) - Top Left */}
       <div
-        className="absolute pointer-events-auto cursor-pointer"
+        className="ficon absolute rounded-full flex items-center justify-center pointer-events-auto cursor-pointer transition-transform hover:scale-110"
         style={{
-          top: '12%',
+          width: '62px',
+          height: '62px',
+          top: '13%',
           left: '7%',
+          background: goldGradient,
+          boxShadow: glossyShadow,
+          animationDuration: '6.5s',
+          animationDelay: '0.2s',
         }}
-        title="Scales of Justice"
+        title="Litigation & Justice"
         onClick={() => onNavigate && onNavigate({ type: 'practice-areas' })}
       >
-        <div
-          className="rounded-full flex items-center justify-center animate-bounce-slow-a shadow-[0_12px_28px_rgba(23,51,48,0.18),inset_0_2px_4px_rgba(255,255,255,0.7),inset_0_-4px_8px_rgba(0,0,0,0.12)] transition-transform hover:scale-110"
-          style={{
-            width: '68px',
-            height: '68px',
-            background: 'radial-gradient(circle at 30% 25%, #FBF2DC 0%, #ECC575 32%, #C6902E 68%, #9C6F1F 100%)',
-          }}
-        >
-          <svg className="w-[52%] h-[52%]" viewBox="0 0 60 60" fill="none">
-            <path
-              d="M30 12 V48 M20 20 H40 M20 20 L13 32 A7 6 0 0 0 27 32 Z M40 20 L33 32 A7 6 0 0 0 47 32 Z M24 48 H36"
-              stroke="#173330"
-              strokeWidth="2.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
+        <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
+          <path
+            d="M20 7 V33 M13 14 H27 M13 14 L8 22 A5 4 0 0 0 18 22 Z M27 14 L22 22 A5 4 0 0 0 32 22 Z M15 33 H25"
+            stroke="#173330"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </div>
 
-      {/* 2. Passport & Visa Entry Stamp / Immigration (Teal - Top Right) */}
+      {/* 2. Globe / World Mobility (Teal) - Top Right */}
       <div
-        className="absolute pointer-events-auto cursor-pointer hidden sm:block"
+        className="ficon absolute rounded-full hidden sm:flex items-center justify-center pointer-events-auto cursor-pointer transition-transform hover:scale-110"
         style={{
-          top: '9%',
-          right: '10%',
+          width: '54px',
+          height: '54px',
+          top: '11%',
+          right: '9%',
+          background: tealGradient,
+          boxShadow: glossyShadow,
+          animationDuration: '7.2s',
+          animationDelay: '1.1s',
         }}
-        title="Immigration Law & Visas"
+        title="Immigration Law & Global Mobility"
         onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'immigration-law' })}
       >
-        <div
-          className="rounded-full flex items-center justify-center animate-bounce-slow-b shadow-[0_12px_28px_rgba(23,51,48,0.18),inset_0_2px_4px_rgba(255,255,255,0.7),inset_0_-4px_8px_rgba(0,0,0,0.12)] transition-transform hover:scale-110"
-          style={{
-            width: '56px',
-            height: '56px',
-            background: 'radial-gradient(circle at 30% 25%, #E3F2EE 0%, #89B3A9 32%, #2E5951 68%, #173330 100%)',
-          }}
-        >
-          <svg className="w-[52%] h-[52%]" viewBox="0 0 60 60" fill="none">
-            {/* Passport booklet with globe */}
-            <rect x="13" y="14" width="24" height="32" rx="3" stroke="#F1F4EC" strokeWidth="2.4" />
-            <circle cx="25" cy="27" r="5" stroke="#F1F4EC" strokeWidth="1.8" />
-            <line x1="20" y1="27" x2="30" y2="27" stroke="#F1F4EC" strokeWidth="1.6" />
-            {/* Approved Visa Seal */}
-            <circle cx="38" cy="23" r="6" stroke="#ECC575" strokeWidth="1.8" strokeDasharray="2 2" />
-            <path d="M35 23 L37 25 L42 20" stroke="#ECC575" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
+        <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="14" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <line x1="6" y1="20" x2="34" y2="20" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" />
+          <ellipse cx="20" cy="20" rx="7" ry="14" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </div>
 
-      {/* 3. Gavel on Strike Block / Criminal (Brick - Mid Left) */}
+      {/* 3. Judge's Gavel (Brick) - Mid-Left */}
       <div
-        className="absolute pointer-events-auto cursor-pointer"
+        className="ficon absolute rounded-full flex items-center justify-center pointer-events-auto cursor-pointer transition-transform hover:scale-110"
         style={{
+          width: '60px',
+          height: '60px',
           top: '55%',
           left: '5%',
+          background: brickGradient,
+          boxShadow: glossyShadow,
+          animationDuration: '5.8s',
+          animationDelay: '0.6s',
         }}
-        title="Criminal Defense & Trial"
+        title="Criminal Defense & Courtroom Trial"
         onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'criminal-law' })}
       >
-        <div
-          className="rounded-full flex items-center justify-center animate-bounce-slow-c shadow-[0_12px_28px_rgba(23,51,48,0.18),inset_0_2px_4px_rgba(255,255,255,0.7),inset_0_-4px_8px_rgba(0,0,0,0.12)] transition-transform hover:scale-110"
-          style={{
-            width: '64px',
-            height: '64px',
-            background: 'radial-gradient(circle at 30% 25%, #F7DFD2 0%, #D48E6E 32%, #9C4A32 68%, #723220 100%)',
-          }}
-        >
-          <svg className="w-[52%] h-[52%]" viewBox="0 0 60 60" fill="none">
-            <path d="M16 18 L26 28 L21 33 L11 23 Z" stroke="#173330" strokeWidth="2.6" strokeLinejoin="round" />
-            <path d="M24 23 L44 43" stroke="#173330" strokeWidth="2.6" strokeLinecap="round" />
-            <ellipse cx="18" cy="46" rx="11" ry="3.5" stroke="#173330" strokeWidth="2.4" />
-            <path d="M8 46 V49 C8 51 12 52.5 18 52.5 C24 52.5 28 51 28 49 V46" stroke="#173330" strokeWidth="2.4" />
-          </svg>
-        </div>
+        <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
+          <path d="M11 13 L18 20 L14 24 L7 17 Z" stroke="#F1F4EC" strokeWidth="3" strokeLinejoin="round" strokeLinecap="round" />
+          <path d="M16 18 L31 33" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" />
+          <path d="M7 33 H21" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" />
+        </svg>
       </div>
 
-      {/* 4. House with Real Estate Key (Gold - Mid Right) */}
+      {/* 4. Corporate Handshake (Gold / Mustard) - Mid-Right (Hidden on mobile <820px) */}
       <div
-        className="absolute pointer-events-auto cursor-pointer hidden sm:block"
+        className="ficon absolute rounded-full hidden min-[820px]:flex items-center justify-center pointer-events-auto cursor-pointer transition-transform hover:scale-110"
         style={{
-          top: '58%',
-          right: '7%',
+          width: '48px',
+          height: '48px',
+          top: '56%',
+          right: '6%',
+          background: goldGradient,
+          boxShadow: glossyShadow,
+          animationDuration: '6.9s',
+          animationDelay: '1.6s',
         }}
-        title="Real Estate & Property"
-        onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'real-estate-law' })}
-      >
-        <div
-          className="rounded-full flex items-center justify-center animate-bounce-slow-a shadow-[0_12px_28px_rgba(23,51,48,0.18),inset_0_2px_4px_rgba(255,255,255,0.7),inset_0_-4px_8px_rgba(0,0,0,0.12)] transition-transform hover:scale-110"
-          style={{
-            width: '54px',
-            height: '54px',
-            background: 'radial-gradient(circle at 30% 25%, #FBF2DC 0%, #ECC575 32%, #C6902E 68%, #9C6F1F 100%)',
-          }}
-        >
-          <svg className="w-[52%] h-[52%]" viewBox="0 0 60 60" fill="none">
-            <path d="M12 28 L26 16 L40 28 V46 H12 Z" stroke="#173330" strokeWidth="2.5" strokeLinejoin="round" />
-            <path d="M22 46 V34 H30 V46" stroke="#173330" strokeWidth="2.5" strokeLinejoin="round" />
-            {/* Key */}
-            <circle cx="39" cy="36" r="4" stroke="#173330" strokeWidth="2" />
-            <path d="M39 40 V48 M39 44 H42" stroke="#173330" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-        </div>
-      </div>
-
-      {/* 5. Caduceus Staff & ECG Pulse / Medical (Teal - Bottom Left) */}
-      <div
-        className="absolute pointer-events-auto cursor-pointer"
-        style={{
-          bottom: '8%',
-          left: '20%',
-        }}
-        title="Medical & Clinical Law"
-        onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'medical-law' })}
-      >
-        <div
-          className="rounded-full flex items-center justify-center animate-bounce-slow-b shadow-[0_12px_28px_rgba(23,51,48,0.18),inset_0_2px_4px_rgba(255,255,255,0.7),inset_0_-4px_8px_rgba(0,0,0,0.12)] transition-transform hover:scale-110"
-          style={{
-            width: '58px',
-            height: '58px',
-            background: 'radial-gradient(circle at 30% 25%, #E3F2EE 0%, #89B3A9 32%, #2E5951 68%, #173330 100%)',
-          }}
-        >
-          <svg className="w-[52%] h-[52%]" viewBox="0 0 60 60" fill="none">
-            <line x1="30" y1="12" x2="30" y2="48" stroke="#F1F4EC" strokeWidth="2.6" strokeLinecap="round" />
-            <circle cx="30" cy="12" r="3" fill="#ECC575" stroke="#F1F4EC" strokeWidth="1.5" />
-            {/* Coiled Serpent */}
-            <path
-              d="M23 20 C37 22 37 30 23 32 C23 34 37 36 37 42 C37 46 25 46 25 48"
-              stroke="#F1F4EC"
-              strokeWidth="2.4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            {/* ECG pulse line */}
-            <path d="M12 30 H20 L24 22 L28 38 L32 28 L36 32 H48" stroke="#ECC575" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
-      </div>
-
-      {/* 6. Corporate Skyscrapers & Growth / Business (Brick - Bottom Right) */}
-      <div
-        className="absolute pointer-events-auto cursor-pointer hidden md:block"
-        style={{
-          bottom: '10%',
-          right: '22%',
-        }}
-        title="Corporate Law & Enterprises"
+        title="Corporate Law & Agreements"
         onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'corporate-law' })}
       >
-        <div
-          className="rounded-full flex items-center justify-center animate-bounce-slow-c shadow-[0_12px_28px_rgba(23,51,48,0.18),inset_0_2px_4px_rgba(255,255,255,0.7),inset_0_-4px_8px_rgba(0,0,0,0.12)] transition-transform hover:scale-110"
-          style={{
-            width: '52px',
-            height: '52px',
-            background: 'radial-gradient(circle at 30% 25%, #F7DFD2 0%, #D48E6E 32%, #9C4A32 68%, #723220 100%)',
-          }}
-        >
-          <svg className="w-[52%] h-[52%]" viewBox="0 0 60 60" fill="none">
-            <path d="M16 48 V18 L32 10 V48" stroke="#173330" strokeWidth="2.6" strokeLinejoin="round" />
-            <path d="M32 22 L44 16 V48" stroke="#173330" strokeWidth="2.6" strokeLinejoin="round" />
-            <line x1="12" y1="48" x2="48" y2="48" stroke="#173330" strokeWidth="2.6" strokeLinecap="round" />
-            <line x1="22" y1="22" x2="26" y2="22" stroke="#173330" strokeWidth="2" strokeLinecap="round" />
-            <line x1="22" y1="30" x2="26" y2="30" stroke="#173330" strokeWidth="2" strokeLinecap="round" />
-            <line x1="22" y1="38" x2="26" y2="38" stroke="#173330" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-        </div>
+        <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
+          {/* Handshake line art */}
+          <path d="M7 23 L13 18 L19 22 L24 18 L33 23" stroke="#173330" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M17 20 L21 24 L18 27 L14 23" stroke="#173330" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M21 24 L25 28 L28 25" stroke="#173330" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </div>
+
+      {/* 5. Medical Staff & Pulse (Teal) - Bottom-Left */}
+      <div
+        className="ficon absolute rounded-full flex items-center justify-center pointer-events-auto cursor-pointer transition-transform hover:scale-110"
+        style={{
+          width: '56px',
+          height: '56px',
+          bottom: '8%',
+          left: '18%',
+          background: tealGradient,
+          boxShadow: glossyShadow,
+          animationDuration: '6.2s',
+          animationDelay: '0.9s',
+        }}
+        title="Medical Negligence & Health Law"
+        onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'medical-law' })}
+      >
+        <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
+          <line x1="20" y1="7" x2="20" y2="33" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" />
+          <circle cx="20" cy="7" r="2.5" fill="#ECC575" stroke="#F1F4EC" strokeWidth="1.5" />
+          <path d="M8 20 H14 L17 14 L20 26 L23 17 L26 20 H32" stroke="#ECC575" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </div>
+
+      {/* 6. Real Estate Architectural House & Key (Brick) - Bottom-Right (Hidden on mobile <820px) */}
+      <div
+        className="ficon absolute rounded-full hidden min-[820px]:flex items-center justify-center pointer-events-auto cursor-pointer transition-transform hover:scale-110"
+        style={{
+          width: '50px',
+          height: '50px',
+          bottom: '9%',
+          right: '20%',
+          background: brickGradient,
+          boxShadow: glossyShadow,
+          animationDuration: '7.6s',
+          animationDelay: '0.3s',
+        }}
+        title="Real Estate & Property Law"
+        onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'real-estate-law' })}
+      >
+        <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
+          <path d="M8 19 L20 9 L32 19 V32 H8 Z" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M16 32 V23 H24 V32" stroke="#F1F4EC" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </div>
     </div>
   );

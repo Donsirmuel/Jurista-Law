@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { PageRoute, PracticeSlug } from './types';
+import { useScrollReveal } from './hooks/useScrollReveal';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ConsultationModal } from './components/ConsultationModal';
@@ -23,6 +24,8 @@ import { BlogPostDetailPage } from './pages/BlogPostDetailPage';
 import { ContactPage } from './pages/ContactPage';
 
 export default function App() {
+  useScrollReveal();
+
   const [currentRoute, setCurrentRoute] = useState<PageRoute>(() => {
     // Parse initial route from location hash if present
     const hash = window.location.hash.replace(/^#\/?/, '');
@@ -228,7 +231,7 @@ export default function App() {
       </main>
 
       {/* Shared Footer */}
-      <Footer onNavigate={handleNavigate} />
+      <Footer onNavigate={handleNavigate} onOpenBooking={() => openBookingModal()} />
 
       {/* Interactive Consultation Modal */}
       <ConsultationModal
