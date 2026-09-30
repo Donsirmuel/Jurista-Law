@@ -71,7 +71,7 @@ export const PracticeAreaDetailPage: React.FC<PracticeAreaDetailPageProps> = ({
           >
             <div>
               <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-1">
-                Practice Area
+                Practice area
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-[#173330] tracking-tight mb-2">
                 {currentPractice.name}
@@ -85,7 +85,7 @@ export const PracticeAreaDetailPage: React.FC<PracticeAreaDetailPageProps> = ({
               onClick={onOpenBooking}
               className="bg-[#C6902E] hover:bg-[#d49c33] text-[#173330] px-7 py-3 rounded-full font-bold text-sm sm:text-base transition-all transform hover:-translate-y-0.5 shadow-md self-start md:self-auto cursor-pointer whitespace-nowrap"
             >
-              Consult with this team
+              Book a consultation
             </button>
           </motion.div>
         </div>
@@ -99,7 +99,7 @@ export const PracticeAreaDetailPage: React.FC<PracticeAreaDetailPageProps> = ({
             {/* Practice Areas Mini-Nav */}
             <div className="bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-6 shadow-sm">
               <h3 className="text-xs uppercase font-bold tracking-wider text-[#173330] mb-4 pb-2 border-b border-[#173330]/8">
-                Practice Areas
+                Practice areas
               </h3>
               <nav className="space-y-2 text-sm font-medium">
                 {PRACTICE_AREAS.map((pa) => {
@@ -125,7 +125,7 @@ export const PracticeAreaDetailPage: React.FC<PracticeAreaDetailPageProps> = ({
             {/* Lead Attorney Card */}
             <div className="bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-6 shadow-sm text-center">
               <span className="text-[0.75rem] font-bold uppercase tracking-wider text-[#9C4A32] block mb-3">
-                Lead Practitioner
+                Lead attorney
               </span>
               <div
                 onClick={() => onNavigate({ type: 'attorney-detail', id: leadAttorney.id })}
@@ -168,7 +168,7 @@ export const PracticeAreaDetailPage: React.FC<PracticeAreaDetailPageProps> = ({
 
             {/* Fee Transparency Box */}
             <div className="bg-[#E6E4D2]/40 border border-[#173330]/10 rounded-xl p-5 text-xs text-[#2E4C47]">
-              <span className="font-bold text-[#173330] block mb-1">Fee Structure</span>
+              <span className="font-bold text-[#173330] block mb-1">Fee structure</span>
               <p className="leading-relaxed">{currentPractice.feeStructure}</p>
             </div>
           </aside>
@@ -203,10 +203,10 @@ export const PracticeAreaDetailPage: React.FC<PracticeAreaDetailPageProps> = ({
               </div>
               <div className="max-w-md">
                 <h4 className="font-serif font-semibold text-xl text-[#173330] mb-2">
-                  Dedicated {currentPractice.name} Practice
+                  {currentPractice.name} team
                 </h4>
                 <p className="text-sm text-[#2E4C47] leading-relaxed">
-                  Every document, negotiation, or court appearance is handled exclusively by attorneys who focus on this field day in and day out.
+                  Every document, contract review, or court appearance is handled directly by attorneys who focus on this field every day.
                 </p>
               </div>
             </motion.div>
@@ -221,13 +221,13 @@ export const PracticeAreaDetailPage: React.FC<PracticeAreaDetailPageProps> = ({
                 className="mb-6"
               >
                 <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-1">
-                  Scope of Representation
+                  What we handle
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-[#173330]">
-                  Specific Capabilities
+                  Matters we take on
                 </h3>
                 <p className="text-sm text-[#2E4C47] mt-1">
-                  What we routinely draft, litigate, and negotiate in {currentPractice.name}.
+                  What we routinely draft, resolve, and negotiate in {currentPractice.name.toLowerCase()}.
                 </p>
               </motion.div>
 
@@ -260,13 +260,13 @@ export const PracticeAreaDetailPage: React.FC<PracticeAreaDetailPageProps> = ({
                 className="mb-6"
               >
                 <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-1">
-                  Methodology
+                  Process
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-[#173330]">
-                  Our Approach
+                  How we work
                 </h3>
                 <p className="text-sm text-[#2E4C47] mt-1">
-                  How we progress from initial evaluation to conclusive resolution.
+                  Four clear stages from our first call to final resolution.
                 </p>
               </motion.div>
 
@@ -302,10 +302,10 @@ export const PracticeAreaDetailPage: React.FC<PracticeAreaDetailPageProps> = ({
                 <div className="mb-6 flex items-center justify-between">
                   <div>
                     <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-1">
-                      Track Record
+                      Past work
                     </span>
                     <h3 className="text-2xl font-serif font-semibold text-[#173330]">
-                      Related Case Results
+                      Related case studies
                     </h3>
                   </div>
                   <button

@@ -41,13 +41,13 @@ export const AttorneysIndexPage: React.FC<AttorneysIndexPageProps> = ({
             className="max-w-2xl mt-4"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Our Practitioners
+              Our team
             </span>
             <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-4">
-              Our Attorneys
+              Our attorneys
             </h1>
             <p className="text-base sm:text-lg text-[#2E4C47] leading-relaxed">
-              Every attorney at Jurista Law concentrates exclusively in their specific domain, giving you focused insight rather than generic legal platitudes.
+              You work directly with the attorney handling your file. Every lawyer at our firm focuses on one specific discipline rather than handling whatever comes along.
             </p>
           </motion.div>
         </div>
@@ -66,7 +66,7 @@ export const AttorneysIndexPage: React.FC<AttorneysIndexPageProps> = ({
                   : 'text-[#2E4C47] hover:bg-[#E6E4D2]/50'
               }`}
             >
-              All Attorneys ({ATTORNEYS.length})
+              All attorneys ({ATTORNEYS.length})
             </button>
             {PRACTICE_AREAS.map((pa) => (
               <button

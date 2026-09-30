@@ -53,8 +53,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
         <div className="max-w-[1140px] mx-auto px-6 sm:px-8 relative z-10 text-center">
           <div className="max-w-[720px] mx-auto">
             {/* Staggered Serif Headline with motion */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.8rem] font-serif font-semibold text-[#173330] tracking-tight leading-[1.08] mb-6">
-              {['Law,', 'balanced', 'in', 'your', 'favor.'].map((word, i) => (
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.8rem] font-serif font-semibold text-[#173330] tracking-tight leading-[1.12] mb-6">
+              {['Legal', 'clarity.', 'Human', 'perspective.'].map((word, i) => (
                 <motion.span
                   key={i}
                   initial={{ opacity: 0, y: 22 }}
@@ -71,9 +71,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="text-lg sm:text-xl text-[#2E4C47] leading-relaxed max-w-[44ch] mx-auto mb-8 font-normal"
+              className="text-lg sm:text-xl text-[#2E4C47] leading-relaxed max-w-[48ch] mx-auto mb-8 font-normal"
             >
-              No jargon, no theatrics — just a clear read on where you stand and a plan to move it forward.
+              We cut through the legal complexity to show you exactly where you stand and how we win.
             </motion.p>
 
             {/* Actions */}
@@ -161,13 +161,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
             {/* Left text column */}
             <div className="lg:col-span-6">
               <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-3">
-                Our Firm
+                Our firm
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-5">
                 Built around one idea.
               </h2>
               <p className="text-[#2E4C47] text-base sm:text-lg leading-relaxed mb-6 font-normal">
-                Every client deserves to understand exactly what’s happening in their case — not just be told to trust us. So we explain the reasoning behind every recommendation, put timelines in writing, and treat questions as part of the job, not an interruption to it.
+                Most people hire a lawyer because they are dealing with a difficult situation and cannot afford to make a mistake. What they usually encounter is thirty-page memos, calls routed through assistants, and invoices with unexpected line items.
+              </p>
+              <p className="text-[#2E4C47] text-base sm:text-lg leading-relaxed mb-6 font-normal">
+                We built our firm to do the opposite. You work directly with the attorney handling your file. We explain the reasoning behind every recommendation, put timelines in writing, and treat questions as an essential part of the work.
               </p>
               <button
                 onClick={() => onNavigate({ type: 'attorneys' })}
@@ -181,10 +184,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
             {/* Right value stack with staggered entry */}
             <div className="lg:col-span-6 space-y-4">
               {[
-                'Direct access to the attorney handling your case, not a rotating point of contact.',
-                'Upfront pricing wherever the practice area allows for it.',
-                'Plain-language updates at every stage — no legal jargon left unexplained.',
-                'Specialists in each practice area, not generalists spread thin.',
+                'Direct access to the attorney handling your case, not a rotating assistant.',
+                'Upfront fee quotes wherever the practice area allows for it.',
+                'Plain-language updates at every stage, with no legal jargon left unexplained.',
+                'Specialized attorneys in each practice area, not generalists trying to handle everything.',
               ].map((valueText, idx) => (
                 <motion.div
                   key={idx}
@@ -216,13 +219,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
             className="max-w-xl mb-12 sm:mb-14"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Practice Areas
+              Practice areas
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-3">
               Six ways we help.
             </h2>
             <p className="text-[#2E4C47] text-base leading-relaxed">
-              Each area below is handled by attorneys who work in it exclusively — not generalists spread thin across every kind of case.
+              Each area below is handled by attorneys who practice in it exclusively, not generalists taking on every kind of case.
             </p>
           </motion.div>
 
@@ -270,22 +273,22 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
             className="max-w-xl mb-12 sm:mb-14"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              How It Works
+              How it works
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-3">
               How a case moves.
             </h2>
             <p className="text-[#2E4C47] text-base leading-relaxed">
-              Four stages, the same for every practice area — so you always know what happens next.
+              Four stages, the same for every practice area, so you always know what happens next.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { num: '01', title: 'Consultation', desc: 'We listen first. No recommendation before we understand the full picture.' },
-              { num: '02', title: 'Case review', desc: 'We assess the facts, exposure and options, and put it in writing.' },
-              { num: '03', title: 'Strategy', desc: 'You get a plan you can actually read, with clear next steps.' },
-              { num: '04', title: 'Representation', desc: 'We act on your behalf, with updates at every stage.' },
+              { num: '01', title: 'Consultation', desc: 'We listen first. We never recommend a strategy before we understand the full picture.' },
+              { num: '02', title: 'Case review', desc: 'We assess the facts, potential exposure, and realistic options, then put our assessment in writing.' },
+              { num: '03', title: 'Strategy', desc: 'You receive a plan you can actually read, with clear next steps and cost expectations.' },
+              { num: '04', title: 'Representation', desc: 'We act on your behalf and send plain-language updates at every milestone.' },
             ].map((step, idx) => (
               <motion.div
                 key={idx}
@@ -335,20 +338,20 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
             {/* Quote on the other side */}
             <div className="md:col-span-8">
               <blockquote className="font-serif italic text-xl sm:text-2xl lg:text-[1.75rem] text-[#173330] leading-snug mb-6">
-                “Clients deserve to understand exactly what’s happening in their case — not just be told to trust us.”
+                “Clients deserve to understand what is happening in their case, not just be told to trust us.”
               </blockquote>
               <div>
                 <div className="font-bold text-[#173330] text-base">
                   William Ashford Sr.
                 </div>
                 <div className="text-[#2E4C47] text-sm">
-                  Founder &amp; Managing Partner, Jurista Law
+                  Partner, Jurista Law
                 </div>
                 <button
                   onClick={() => onNavigate({ type: 'attorney-detail', id: 'william-ashford' })}
                   className="text-[#9C4A32] font-semibold text-xs uppercase tracking-wider mt-3 inline-block hover:underline cursor-pointer"
                 >
-                  View Profile &amp; Background →
+                  View profile and background →
                 </button>
               </div>
             </div>
@@ -367,29 +370,29 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
             className="max-w-xl mb-12"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Client Stories
+              Client stories
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-[#173330] tracking-tight leading-tight">
-              Real results, real relief.
+              What clients say about working with us.
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
-                quote: '“From the first call, I understood exactly where I stood — no guesswork, no waiting around.”',
+                quote: '“From the first call, I understood where I stood. No guesswork and no waiting around.”',
                 author: 'Jonathan Sterling',
-                tag: 'Personal Injury / Medical Case',
+                tag: 'Medical negligence claim',
               },
               {
                 quote: '“They walked me through every option before I had to decide anything. I never felt rushed.”',
                 author: 'Amara Reyes',
-                tag: 'Immigration Case',
+                tag: 'Immigration visa petition',
               },
               {
-                quote: '“No surprises, no jargon — just a clear plan we could actually execute on.”',
+                quote: '“No surprises and no jargon. Just a clear plan we could execute on.”',
                 author: 'Michael Chen',
-                tag: 'Corporate Client',
+                tag: 'Corporate acquisition',
               },
             ].map((testi, idx) => (
               <motion.div
@@ -429,10 +432,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
           >
             <div>
               <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-                Our Team
+                Our team
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-[#173330] tracking-tight leading-tight">
-                The people on your case.
+                The attorneys on your case.
               </h2>
             </div>
             <button
@@ -485,10 +488,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
         <div className="max-w-[820px] mx-auto px-6 sm:px-8">
           <div className="text-center mb-12">
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              FAQ
+              Questions
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-[#173330] tracking-tight leading-tight">
-              Common questions.
+              Questions people ask us.
             </h2>
           </div>
 

@@ -49,7 +49,7 @@ export const PracticeAreasIndexPage: React.FC<PracticeAreasIndexPageProps> = ({
         <FloatingChips variant="calm" onNavigate={onNavigate} />
 
         <div className="max-w-[1140px] mx-auto px-6 sm:px-8 relative z-10">
-          <Breadcrumb items={[{ label: 'Practice Areas' }]} onNavigate={onNavigate} />
+          <Breadcrumb items={[{ label: 'Practice areas' }]} onNavigate={onNavigate} />
 
           <motion.div
             initial={{ opacity: 0, y: 22 }}
@@ -58,13 +58,13 @@ export const PracticeAreasIndexPage: React.FC<PracticeAreasIndexPageProps> = ({
             className="max-w-2xl mt-4"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Our Disciplines
+              Areas of practice
             </span>
             <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-4">
-              Practice Areas
+              Practice areas
             </h1>
             <p className="text-base sm:text-lg text-[#2E4C47] leading-relaxed">
-              We focus on six core disciplines where deep statutory knowledge and evidentiary preparation produce tangible outcomes for our clients.
+              We work across six specific areas of law. Every matter is handled by an attorney who practices in that area every day, not a generalist taking on whatever comes through the door.
             </p>
           </motion.div>
         </div>
@@ -136,7 +136,7 @@ export const PracticeAreasIndexPage: React.FC<PracticeAreasIndexPageProps> = ({
                 Not sure which area fits your situation?
               </h3>
               <p className="text-sm sm:text-base text-[#2E4C47] leading-relaxed">
-                Book a free initial consultation and our senior intake team will review your facts and point you toward the exact specialist for your case.
+                Send us a note or book a consultation. One of our attorneys will review your facts and let you know which practice area fits your situation best.
               </p>
             </div>
             <button

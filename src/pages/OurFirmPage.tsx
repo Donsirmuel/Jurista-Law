@@ -33,10 +33,10 @@ export const OurFirmPage: React.FC<OurFirmPageProps> = ({ onNavigate, onOpenBook
               About Jurista Law
             </span>
             <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-4">
-              Our Firm
+              Our firm
             </h1>
             <p className="text-base sm:text-lg text-[#2E4C47] leading-relaxed">
-              Founded on the belief that legal counsel should be unambiguous, accessible, and structured around the client’s real-world objectives rather than procedural inertia.
+              We started this firm with a simple operating standard: speak plainly, quote your fees upfront, and never leave a client guessing about what is happening in their case.
             </p>
           </motion.div>
         </div>
@@ -55,19 +55,19 @@ export const OurFirmPage: React.FC<OurFirmPageProps> = ({ onNavigate, onOpenBook
             {/* Left Story Text */}
             <div className="lg:col-span-6 space-y-5 text-[#2E4C47] text-base leading-relaxed">
               <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block">
-                The Philosophy
+                The philosophy
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-[#173330] tracking-tight leading-tight">
                 Counsel you can actually follow.
               </h2>
               <p>
-                When William Ashford Sr. established Jurista Law in 2011, he saw a legal industry increasingly detached from the people it was built to protect. Complex matters were frequently obscured behind Latinate phrasing, opaque billing practices, and layers of junior associates who rarely had strategic ownership over the outcome.
+                When William Ashford Sr. established Jurista Law in 2011, he saw a legal industry that seemed more interested in billing hours than giving straightforward answers. Routine contracts were buried in legal boilerplate, calls were routed through multiple layers of assistants, and invoices arrived with surprise charges.
               </p>
               <p>
-                We built Jurista around the opposite principles: direct attorney accessibility, upfront fee transparency, and explanations written in plain language. If a client doesn’t understand the strategic trade-offs of a contract clause or an immigration waiver, that isn’t the client’s failing — it is our responsibility to make it crystal clear.
+                We built Jurista Law around the opposite principles: direct attorney access, upfront fee transparency, and explanations in plain English. If you do not understand the practical trade-offs of a contract clause or an immigration waiver, that is not your failing. It is our job to make it clear.
               </p>
               <p>
-                Today, our partnership has grown to encompass six specialized disciplines, yet every attorney still adheres to the same standard: we explain the reasoning behind every recommendation, put timelines in writing, and treat questions as an essential part of the work.
+                Today, our firm includes six practice disciplines, but our standard remains the same. You deal directly with the attorney handling your file, we explain the reasoning behind our recommendations, and we put costs in writing before we begin.
               </p>
             </div>
 
@@ -77,7 +77,7 @@ export const OurFirmPage: React.FC<OurFirmPageProps> = ({ onNavigate, onOpenBook
                 <OfficeSceneIllustration />
                 <div className="text-center mt-4">
                   <span className="text-xs text-[#2E4C47]/70 italic">
-                    The Jurista Law drafting desk — where precision meets transparent advocacy.
+                    The consultation and drafting desk at Jurista Law.
                   </span>
                 </div>
               </div>
@@ -97,13 +97,13 @@ export const OurFirmPage: React.FC<OurFirmPageProps> = ({ onNavigate, onOpenBook
             className="max-w-xl mb-12"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Guiding Principles
+              Our standards
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-3">
-              How we measure ourselves.
+              How we work with clients.
             </h2>
             <p className="text-[#2E4C47] text-base leading-relaxed">
-              Every case we undertake is anchored by four foundational values that dictate how we communicate, bill, and advocate.
+              Four operating rules that guide every engagement we accept.
             </p>
           </motion.div>
 
@@ -145,13 +145,13 @@ export const OurFirmPage: React.FC<OurFirmPageProps> = ({ onNavigate, onOpenBook
             className="text-center max-w-xl mx-auto mb-14"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Our Journey
+              Milestones
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-3">
               Fifteen years in practice.
             </h2>
             <p className="text-[#2E4C47] text-base leading-relaxed">
-              From our first corporate desk in Manhattan to a multi-disciplinary practice representing clients worldwide.
+              From our first corporate office in Manhattan to a collaborative six-discipline partnership.
             </p>
           </motion.div>
 
@@ -224,17 +224,17 @@ export const OurFirmPage: React.FC<OurFirmPageProps> = ({ onNavigate, onOpenBook
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
             <div>
               <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-                Our Attorneys
+                Attorneys
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-[#173330] tracking-tight leading-tight">
-                Experienced practitioners.
+                Attorneys who focus on one area of law.
               </h2>
             </div>
             <button
               onClick={() => onNavigate({ type: 'attorneys' })}
               className="text-[#9C4A32] hover:text-[#173330] font-bold text-sm border-b border-[#9C4A32] pb-0.5 cursor-pointer self-start sm:self-auto"
             >
-              Meet the full team (all 6) →
+              Meet the team →
             </button>
           </div>
 

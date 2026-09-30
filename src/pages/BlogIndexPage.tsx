@@ -36,7 +36,7 @@ export const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate, onOpen
         <FloatingChips variant="calm" onNavigate={onNavigate} />
 
         <div className="max-w-[1140px] mx-auto px-6 sm:px-8 relative z-10">
-          <Breadcrumb items={[{ label: 'Blog & Insights' }]} onNavigate={onNavigate} />
+          <Breadcrumb items={[{ label: 'Blog' }]} onNavigate={onNavigate} />
 
           <motion.div
             initial={{ opacity: 0, y: 22 }}
@@ -45,13 +45,13 @@ export const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate, onOpen
             className="max-w-2xl mt-4"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Legal Perspectives
+              Articles
             </span>
             <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-4">
-              Insights &amp; Commentary
+              Articles on the law
             </h1>
             <p className="text-base sm:text-lg text-[#2E4C47] leading-relaxed">
-              Analytical essays, statutory updates, and practical guidance written directly by our practicing attorneys — in plain language without condescension.
+              Practical explanations of contracts, immigration rules, property laws, and court decisions. Written by the attorneys who work on these cases every day.
             </p>
           </motion.div>
         </div>
@@ -78,7 +78,7 @@ export const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate, onOpen
               <span>·</span>
               <span>{featuredPost.readTime}</span>
               <span className="bg-[#C6902E]/20 text-[#173330] px-2.5 py-0.5 rounded-full font-bold">
-                Featured Analysis
+                Featured article
               </span>
             </div>
 
@@ -142,7 +142,7 @@ export const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate, onOpen
                   <div className="pt-4 border-t border-[#173330]/8 flex items-center justify-between text-xs">
                     <span className="text-[#2E4C47]">{post.date}</span>
                     <span className="font-bold text-[#173330] group-hover:text-[#9C4A32] transition-colors">
-                      Read full article →
+                      Read article →
                     </span>
                   </div>
                 </motion.article>
@@ -159,13 +159,13 @@ export const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate, onOpen
             className="mt-20 bg-[#E6E4D2]/60 border border-[#173330]/12 rounded-2xl p-8 sm:p-12 text-center max-w-3xl mx-auto"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Monthly Dispatch
+              Updates
             </span>
             <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-[#173330] mb-3">
-              Subscribe for legal insights.
+              Get our monthly email.
             </h3>
             <p className="text-sm sm:text-base text-[#2E4C47] max-w-lg mx-auto mb-6 leading-relaxed">
-              No promotional sales pitches. Just curated briefings on statutory changes, precedent cases, and plain-language contract advice once a month.
+              One email a month. Practical legal explanations and updates on new rules, without marketing fluff.
             </p>
 
             {!isSubscribed ? (
@@ -187,7 +187,7 @@ export const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate, onOpen
               </form>
             ) : (
               <div className="bg-[#FAFCF6] border border-[#173330]/10 p-4 rounded-xl max-w-md mx-auto text-sm text-[#173330] font-semibold">
-                ✓ You are subscribed to our monthly legal dispatch.
+                ✓ You are subscribed. We'll send our next update to your inbox.
               </div>
             )}
           </motion.div>

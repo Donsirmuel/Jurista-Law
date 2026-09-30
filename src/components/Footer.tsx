@@ -22,13 +22,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
         <div className="max-w-[1140px] mx-auto px-6 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-1">
-              Confidential Inquiry
+              Confidential inquiry
             </span>
             <h3 className="font-serif text-xl sm:text-2xl font-semibold text-[#173330]">
               Need clarity on an active legal question?
             </h3>
             <p className="text-sm text-[#2E4C47] mt-1 max-w-[50ch]">
-              Consultations are conducted in strict confidence with experienced partners.
+              Consultations are confidential and conducted directly with practicing partners.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4 shrink-0">
@@ -44,14 +44,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                 onClick={onOpenBooking}
                 className="bg-[#C6902E] hover:bg-[#d49c33] text-[#173330] px-6 py-2.5 rounded-full font-bold text-sm shadow-sm transition-all hover:shadow-md cursor-pointer"
               >
-                Schedule Consultation
+                Book a consultation
               </button>
             ) : (
               <button
                 onClick={() => onNavigate({ type: 'contact' })}
                 className="bg-[#C6902E] hover:bg-[#d49c33] text-[#173330] px-6 py-2.5 rounded-full font-bold text-sm shadow-sm transition-all hover:shadow-md cursor-pointer"
               >
-                Schedule Consultation
+                Book a consultation
               </button>
             )}
           </div>
@@ -73,20 +73,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
               <span>Jurista Law</span>
             </button>
             <p className="text-[#2E4C47] text-sm leading-relaxed mb-6 font-normal">
-              A boutique partnership dedicated to plain-language legal counsel. We replace bureaucratic opacity with predictable timelines, upfront fees, and direct attorney access.
+              We give clients direct answers, upfront pricing, and written phase budgets. You talk directly with the attorney handling your file, not an administrative middleman.
             </p>
             <div className="space-y-2 text-xs text-[#2E4C47] border-l-2 border-[#C6902E] pl-3 py-0.5">
-              <div className="font-semibold text-[#173330]">Bar Admission &amp; Compliance</div>
+              <div className="font-semibold text-[#173330]">Bar admission and compliance</div>
               <div>State Bar of New York · Massachusetts · California</div>
-              <div>Ethics &amp; Confidentiality Guarantee Under Rule 1.6</div>
+              <div>Strict confidentiality under Bar Rule 1.6</div>
             </div>
           </div>
 
-          {/* Column 2: Practice Disciplines (3 cols) */}
+          {/* Column 2: Practice Areas (3 cols) */}
           <div className="lg:col-span-3">
             <h4 className="text-xs uppercase font-bold tracking-wider text-[#173330] mb-4 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C6902E]" />
-              <span>Practice Disciplines</span>
+              <span>Practice areas</span>
             </h4>
             <ul className="space-y-2.5 text-sm text-[#2E4C47]">
               <li>
@@ -130,7 +130,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                   onClick={() => onNavigate({ type: 'practice-detail', slug: 'medical-law' })}
                   className="hover:text-[#9C4A32] transition-colors cursor-pointer text-left flex items-center justify-between w-full group"
                 >
-                  <span>Medical Negligence &amp; Litigation</span>
+                  <span>Medical Law</span>
                   <span className="text-xs text-[#9C4A32] opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </button>
               </li>
@@ -139,18 +139,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                   onClick={() => onNavigate({ type: 'practice-detail', slug: 'family-law' })}
                   className="hover:text-[#9C4A32] transition-colors cursor-pointer text-left flex items-center justify-between w-full group"
                 >
-                  <span>Family Law &amp; Mediation</span>
+                  <span>Family Law</span>
                   <span className="text-xs text-[#9C4A32] opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: The Firm & Perspectives (2 cols) */}
+          {/* Column 3: The Firm (2 cols) */}
           <div className="lg:col-span-2">
             <h4 className="text-xs uppercase font-bold tracking-wider text-[#173330] mb-4 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#9C4A32]" />
-              <span>The Firm</span>
+              <span>Firm</span>
             </h4>
             <ul className="space-y-2.5 text-sm text-[#2E4C47]">
               <li>
@@ -158,7 +158,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                   onClick={() => onNavigate({ type: 'our-firm' })}
                   className="hover:text-[#9C4A32] transition-colors cursor-pointer text-left"
                 >
-                  About Our Firm
+                  Our firm
                 </button>
               </li>
               <li>
@@ -166,7 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                   onClick={() => onNavigate({ type: 'attorneys' })}
                   className="hover:text-[#9C4A32] transition-colors cursor-pointer text-left"
                 >
-                  Our Attorneys
+                  Attorneys
                 </button>
               </li>
               <li>
@@ -174,7 +174,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                   onClick={() => onNavigate({ type: 'case-studies' })}
                   className="hover:text-[#9C4A32] transition-colors cursor-pointer text-left"
                 >
-                  Case Studies
+                  Case studies
                 </button>
               </li>
               <li>
@@ -182,7 +182,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                   onClick={() => onNavigate({ type: 'blog' })}
                   className="hover:text-[#9C4A32] transition-colors cursor-pointer text-left"
                 >
-                  Legal Insights
+                  Blog
                 </button>
               </li>
               <li>
@@ -190,23 +190,23 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                   onClick={() => onNavigate({ type: 'contact' })}
                   className="hover:text-[#9C4A32] transition-colors cursor-pointer text-left"
                 >
-                  Contact &amp; Map
+                  Contact
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Metropolitan Offices (3 cols) */}
+          {/* Column 4: Offices (3 cols) */}
           <div className="lg:col-span-3">
             <h4 className="text-xs uppercase font-bold tracking-wider text-[#173330] mb-4 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#173330]" />
-              <span>Office Locations</span>
+              <span>Office locations</span>
             </h4>
             <div className="space-y-4 text-xs text-[#2E4C47]">
               <div className="bg-[#E6E4D2]/40 p-3 rounded-lg border border-[#173330]/8">
                 <div className="font-bold text-sm text-[#173330] mb-1 flex items-center gap-1.5">
                   <LocationPinIcon size={14} className="text-[#9C4A32]" />
-                  <span>New York Headquarters</span>
+                  <span>New York office</span>
                 </div>
                 <p>450 Lexington Avenue, Suite 2400</p>
                 <p>New York, NY 10017</p>
@@ -216,7 +216,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
               <div className="bg-[#E6E4D2]/40 p-3 rounded-lg border border-[#173330]/8">
                 <div className="font-bold text-sm text-[#173330] mb-1 flex items-center gap-1.5">
                   <LocationPinIcon size={14} className="text-[#9C4A32]" />
-                  <span>Boston Affiliate Office</span>
+                  <span>Boston office</span>
                 </div>
                 <p>100 High Street, 18th Floor</p>
                 <p>Boston, MA 02110</p>
@@ -238,9 +238,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
         {/* Bar Advertising Disclosure */}
         <div className="bg-[#E6E4D2]/35 border border-[#173330]/10 rounded-xl p-4 text-[11.5px] leading-relaxed text-[#2E4C47] mb-8">
           <span className="font-bold text-[#173330] uppercase tracking-wider block mb-1">
-            Attorney Advertising &amp; Legal Notices:
+            Attorney advertising notice:
           </span>
-          Prior results do not guarantee a similar outcome in future legal matters. The content presented on this website is for general informational purposes only and does not constitute formal legal counsel. Transmission or receipt of information through this website does not create or constitute an attorney-client relationship until a written engagement retainer has been formally executed by both parties.
+          Prior results do not guarantee a similar outcome. The information on this website is for general understanding only and is not formal legal advice. Contacting our office or sending information does not establish an attorney-client relationship until both sides sign a written engagement agreement.
         </div>
 
         {/* Bottom Sub-Footer Bar */}
@@ -254,20 +254,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
               onClick={() => setModalContent('privacy')}
               className="hover:text-[#9C4A32] transition-colors cursor-pointer underline underline-offset-2"
             >
-              Privacy &amp; Privilege Policy
+              Privacy policy
             </button>
             <span>·</span>
             <button
               onClick={() => setModalContent('terms')}
               className="hover:text-[#9C4A32] transition-colors cursor-pointer underline underline-offset-2"
             >
-              Terms of Engagement
+              Terms of engagement
             </button>
           </div>
         </div>
       </div>
 
-      {/* Interactive Modal for Privacy Policy & Terms of Service (No alert() calls!) */}
+      {/* Interactive Modal for Privacy Policy & Terms of Service */}
       {modalContent && (
         <div
           className="fixed inset-0 z-50 bg-[#173330]/60 backdrop-blur-sm flex items-center justify-center p-4"
@@ -290,23 +290,23 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
             {modalContent === 'privacy' ? (
               <div>
                 <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-1">
-                  Confidentiality Standards
+                  Confidentiality standards
                 </span>
                 <h3 className="font-serif text-2xl font-semibold text-[#173330] mb-4">
-                  Privacy Policy &amp; Attorney-Client Privilege
+                  Privacy policy and confidentiality
                 </h3>
                 <div className="text-sm text-[#2E4C47] space-y-3 leading-relaxed">
                   <p>
-                    Jurista Law adheres strictly to the American Bar Association (ABA) Model Rules of Professional Conduct, particularly Rule 1.6 regarding the confidentiality of information provided by existing and prospective clients.
+                    Jurista Law follows the American Bar Association Model Rules of Professional Conduct, including Rule 1.6 regarding the confidentiality of information shared by clients and prospective clients.
                   </p>
                   <p>
-                    <strong>Information Collection:</strong> We collect only the contact information and preliminary matter outlines that you voluntarily submit through our consultation booking portal or email channels.
+                    <strong>Information we collect:</strong> We collect only the contact information and preliminary matter descriptions you voluntarily send through our consultation form or email.
                   </p>
                   <p>
-                    <strong>No Third-Party Monetization:</strong> Jurista Law will never sell, lease, or monetize client contact information to advertisers, data brokers, or third parties under any circumstances.
+                    <strong>No selling of data:</strong> We never sell, rent, or share client contact information with marketing companies, data brokers, or third parties.
                   </p>
                   <p>
-                    <strong>Encryption &amp; Digital Hygiene:</strong> All transmitted case notes and intake inquiries are guarded by enterprise-grade cryptographic standards and archived within secure, access-restricted repositories.
+                    <strong>Data protection:</strong> All case notes, intake inquiries, and client files are stored on secure, encrypted systems accessible only to our legal staff.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-[#173330]/10 flex justify-end">
@@ -314,30 +314,30 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                     onClick={() => setModalContent(null)}
                     className="bg-[#173330] text-[#F1F4EC] px-5 py-2 rounded-full text-xs font-bold hover:bg-[#2E4C47] transition-colors cursor-pointer"
                   >
-                    I Understand
+                    I understand
                   </button>
                 </div>
               </div>
             ) : (
               <div>
                 <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-1">
-                  Client Engagement
+                  Client engagement
                 </span>
                 <h3 className="font-serif text-2xl font-semibold text-[#173330] mb-4">
-                  Terms of Service &amp; Engagement
+                  Terms of engagement
                 </h3>
                 <div className="text-sm text-[#2E4C47] space-y-3 leading-relaxed">
                   <p>
-                    <strong>No Attorney-Client Relationship:</strong> Browsing this website, submitting an inquiry form, or contacting our office via phone or electronic mail does not establish an attorney-client relationship.
+                    <strong>No attorney-client relationship:</strong> Visiting this website, filling out a form, or sending an email does not create an attorney-client relationship.
                   </p>
                   <p>
-                    <strong>Written Retainer Required:</strong> Formal representation by Jurista Law commences solely upon the execution of a written retainer agreement signed by both the client and an authorized partner of the firm, accompanied by the designated fee deposit.
+                    <strong>Written agreement required:</strong> We formally represent a client only after both sides sign a written engagement letter specifying the scope of work and fee terms.
                   </p>
                   <p>
-                    <strong>Statute of Limitations Notice:</strong> Legal rights and claims are subject to strict statutory deadlines known as statutes of limitations. Delaying legal action can permanently bar recovery. Do not withhold urgent claims pending website review.
+                    <strong>Filing deadlines (statute of limitations):</strong> Legal claims have strict deadlines set by law, known as statutes of limitations. Missing a deadline can permanently prevent you from taking legal action. If your matter is urgent, contact an attorney immediately rather than waiting for an email response.
                   </p>
                   <p>
-                    <strong>Jurisdictional Limits:</strong> Our attorneys are licensed to practice law in specific jurisdictions as noted in their individual biographies. We do not provide advice regarding jurisdictions where our attorneys are not admitted.
+                    <strong>Where we practice:</strong> Our attorneys are admitted to practice law in the specific state and federal jurisdictions listed on their profile pages. We do not provide advice regarding jurisdictions where we are not licensed.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-[#173330]/10 flex justify-end">
@@ -345,7 +345,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                     onClick={() => setModalContent(null)}
                     className="bg-[#173330] text-[#F1F4EC] px-5 py-2 rounded-full text-xs font-bold hover:bg-[#2E4C47] transition-colors cursor-pointer"
                   >
-                    Close Terms
+                    Close
                   </button>
                 </div>
               </div>

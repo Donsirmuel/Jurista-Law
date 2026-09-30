@@ -315,7 +315,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate, onOpen
               }}
               className="text-left py-2 hover:text-[#9C4A32] border-b border-[#173330]/8"
             >
-              Blog &amp; Insights
+              Blog
             </button>
 
             <button
@@ -325,7 +325,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate, onOpen
               }}
               className="text-left py-2 hover:text-[#9C4A32]"
             >
-              Contact Us
+              Contact
             </button>
 
             <div className="pt-3">
@@ -336,7 +336,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate, onOpen
                 }}
                 className="w-full bg-[#C6902E] text-[#173330] font-bold py-3 rounded-full text-center shadow-md cursor-pointer"
               >
-                Book a Consultation
+                Book a consultation
               </button>
             </div>
           </div>

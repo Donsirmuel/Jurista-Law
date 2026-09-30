@@ -47,13 +47,13 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
             className="max-w-2xl mt-4"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Direct Communication
+              Contact
             </span>
             <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-4">
               Get in touch.
             </h1>
             <p className="text-base sm:text-lg text-[#2E4C47] leading-relaxed">
-              Every inquiry is reviewed directly by an attorney in the relevant practice area. We respond with a written case review within 48 hours.
+              Every inquiry is reviewed directly by an attorney in the relevant practice area. We respond with a written assessment within two business days.
             </p>
           </motion.div>
         </div>
@@ -74,7 +74,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               {!isSubmitted ? (
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-[#173330] mb-2">
-                    Send an Inquiry
+                    Send us a message
                   </h2>
                   <p className="text-sm text-[#2E4C47] mb-8">
                     Confidential and protected under attorney-client privilege.
@@ -84,7 +84,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     {/* Practice Area Dropdown */}
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-[#173330] mb-1.5">
-                        Practice Area *
+                        Practice area *
                       </label>
                       <select
                         value={practice}
@@ -104,7 +104,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-bold uppercase tracking-wider text-[#173330] mb-1.5">
-                          Full Name *
+                          Full name *
                         </label>
                         <input
                           type="text"
@@ -117,7 +117,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                       </div>
                       <div>
                         <label className="block text-xs font-bold uppercase tracking-wider text-[#173330] mb-1.5">
-                          Email Address *
+                          Email address *
                         </label>
                         <input
                           type="email"
@@ -133,7 +133,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     {/* Phone */}
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-[#173330] mb-1.5">
-                        Phone Number *
+                        Phone number *
                       </label>
                       <input
                         type="tel"
@@ -180,7 +180,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                         type="submit"
                         className="w-full bg-[#C6902E] hover:bg-[#d49c33] text-[#173330] font-bold py-3.5 rounded-full shadow-md transition-all transform hover:-translate-y-0.5 cursor-pointer text-base"
                       >
-                        Submit Consultation Request
+                        Send message
                       </button>
                     </div>
                   </form>
@@ -192,16 +192,16 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     <BrickCheckIcon size={32} />
                   </div>
                   <h3 className="text-2xl font-serif font-semibold text-[#173330]">
-                    Inquiry Received
+                    Message received
                   </h3>
                   <p className="text-sm text-[#2E4C47] max-w-md mx-auto leading-relaxed">
-                    Thank you, <b>{fullName}</b>. Your details have been transmitted directly to our lead attorneys. You will receive an acknowledgment at <b>{email}</b> shortly.
+                    Thank you, <b>{fullName}</b>. An attorney will review your message and contact you at <b>{email}</b> within two business days.
                   </p>
                   <button
                     onClick={() => setIsSubmitted(false)}
                     className="mt-4 bg-[#173330] text-[#F1F4EC] px-6 py-2.5 rounded-full text-xs font-bold hover:bg-[#2E4C47] transition-colors cursor-pointer"
                   >
-                    Send Another Message
+                    Send another message
                   </button>
                 </div>
               )}
@@ -219,7 +219,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               <div className="bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-6 sm:p-8 shadow-sm text-center">
                 <BuildingMapIllustration />
                 <div className="text-xs text-[#2E4C47]/70 italic mt-3">
-                  Jurista Law Headquarters · 450 Lexington Avenue, New York, NY
+                  Jurista Law · 450 Lexington Avenue, New York, NY
                 </div>
               </div>
 
@@ -227,7 +227,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               <div className="bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
                 <div>
                   <h3 className="text-xs uppercase font-bold tracking-wider text-[#9C4A32] mb-3">
-                    Office Location
+                    Office location
                   </h3>
                   <div className="flex items-start gap-3 text-sm text-[#2E4C47]">
                     <LocationPinIcon size={18} className="mt-0.5 text-[#9C4A32]" />
@@ -241,7 +241,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
                 <div className="pt-4 border-t border-[#173330]/8">
                   <h3 className="text-xs uppercase font-bold tracking-wider text-[#9C4A32] mb-3">
-                    Telephone &amp; Telefax
+                    Phone and email
                   </h3>
                   <div className="space-y-2 text-sm text-[#2E4C47]">
                     <div className="flex items-center gap-3">
@@ -253,7 +253,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     <div className="flex items-center gap-3">
                       <MailLineIcon size={18} className="text-[#9C4A32]" />
                       <a href="mailto:w.ashford@jurista.com" className="hover:underline">
-                        W.Ashford@Jurista.com
+                        w.ashford@jurista.com
                       </a>
                     </div>
                   </div>
@@ -261,14 +261,14 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
                 <div className="pt-4 border-t border-[#173330]/8">
                   <h3 className="text-xs uppercase font-bold tracking-wider text-[#9C4A32] mb-3">
-                    Office Hours
+                    Office hours
                   </h3>
                   <div className="flex items-start gap-3 text-sm text-[#2E4C47]">
                     <ClockLineIcon size={18} className="mt-0.5 text-[#9C4A32]" />
                     <div className="leading-relaxed text-xs sm:text-sm">
                       <div>Monday – Friday: 8:30 AM – 6:30 PM EST</div>
-                      <div>Saturday: By appointment for active trial hearings</div>
-                      <div>Sunday: Closed (Emergency arraignment desk on call)</div>
+                      <div>Saturday: By appointment for urgent matters</div>
+                      <div>Sunday: Closed</div>
                     </div>
                   </div>
                 </div>

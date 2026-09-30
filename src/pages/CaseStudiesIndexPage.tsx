@@ -56,7 +56,7 @@ export const CaseStudiesIndexPage: React.FC<CaseStudiesIndexPageProps> = ({
         <FloatingChips variant="calm" onNavigate={onNavigate} />
 
         <div className="max-w-[1140px] mx-auto px-6 sm:px-8 relative z-10">
-          <Breadcrumb items={[{ label: 'Case Studies' }]} onNavigate={onNavigate} />
+          <Breadcrumb items={[{ label: 'Case studies' }]} onNavigate={onNavigate} />
 
           <motion.div
             initial={{ opacity: 0, y: 22 }}
@@ -65,13 +65,13 @@ export const CaseStudiesIndexPage: React.FC<CaseStudiesIndexPageProps> = ({
             className="max-w-2xl mt-4"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Representative Matters
+              Representative cases
             </span>
             <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-4">
-              Case Studies
+              Case studies
             </h1>
             <p className="text-base sm:text-lg text-[#2E4C47] leading-relaxed">
-              Real legal challenges solved through disciplined evidence preparation and plain-language advocacy. All client identities remain anonymized to preserve privilege.
+              Detailed summaries of real matters we have handled across our practice areas. Client names and identifying details have been changed to maintain attorney-client confidentiality.
             </p>
           </motion.div>
         </div>
@@ -90,7 +90,7 @@ export const CaseStudiesIndexPage: React.FC<CaseStudiesIndexPageProps> = ({
                   : 'text-[#2E4C47] hover:bg-[#E6E4D2]/50'
               }`}
             >
-              All Case Studies ({CASE_STUDIES.length})
+              All case studies ({CASE_STUDIES.length})
             </button>
             {PRACTICE_AREAS.map((pa) => (
               <button
@@ -148,7 +148,7 @@ export const CaseStudiesIndexPage: React.FC<CaseStudiesIndexPageProps> = ({
 
                   <div className="pt-4 border-t border-[#173330]/8 flex items-center justify-between">
                     <span className="text-xs font-bold text-[#173330] group-hover:text-[#9C4A32] transition-colors">
-                      Read the story →
+                      Read case study →
                     </span>
                     <span className="text-xs font-bold text-[#9C4A32]">
                       {cs.summaryStats.outcome}

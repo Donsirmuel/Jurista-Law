@@ -126,7 +126,7 @@ export const FloatingChips: React.FC<FloatingChipsProps> = ({
           animationDuration: '6.5s',
           animationDelay: '0.2s',
         }}
-        title="Litigation & Justice"
+        title="Litigation"
         onClick={() => onNavigate && onNavigate({ type: 'practice-areas' })}
       >
         <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
@@ -153,7 +153,7 @@ export const FloatingChips: React.FC<FloatingChipsProps> = ({
           animationDuration: '7.2s',
           animationDelay: '1.1s',
         }}
-        title="Immigration Law & Global Mobility"
+        title="Immigration Law"
         onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'immigration-law' })}
       >
         <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
@@ -176,7 +176,7 @@ export const FloatingChips: React.FC<FloatingChipsProps> = ({
           animationDuration: '5.8s',
           animationDelay: '0.6s',
         }}
-        title="Criminal Defense & Courtroom Trial"
+        title="Criminal Defense"
         onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'criminal-law' })}
       >
         <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
@@ -199,7 +199,7 @@ export const FloatingChips: React.FC<FloatingChipsProps> = ({
           animationDuration: '6.9s',
           animationDelay: '1.6s',
         }}
-        title="Corporate Law & Agreements"
+        title="Corporate Law"
         onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'corporate-law' })}
       >
         <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
@@ -223,7 +223,7 @@ export const FloatingChips: React.FC<FloatingChipsProps> = ({
           animationDuration: '6.2s',
           animationDelay: '0.9s',
         }}
-        title="Medical Negligence & Health Law"
+        title="Medical Law"
         onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'medical-law' })}
       >
         <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">
@@ -246,7 +246,7 @@ export const FloatingChips: React.FC<FloatingChipsProps> = ({
           animationDuration: '7.6s',
           animationDelay: '0.3s',
         }}
-        title="Real Estate & Property Law"
+        title="Real Estate Law"
         onClick={() => onNavigate && onNavigate({ type: 'practice-detail', slug: 'real-estate-law' })}
       >
         <svg className="w-[52%] h-[52%]" viewBox="0 0 40 40" fill="none">

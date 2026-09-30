@@ -120,12 +120,12 @@ export const CaseStudyDetailPage: React.FC<CaseStudyDetailPageProps> = ({
                     1
                   </div>
                   <h2 className="font-serif font-semibold text-2xl text-[#173330]">
-                    The Situation
+                    The situation
                   </h2>
                 </div>
                 <div className="bg-[#FAFCF6] border border-[#173330]/10 p-6 sm:p-7 rounded-xl shadow-sm space-y-3 text-base text-[#2E4C47] leading-relaxed">
                   <p className="font-medium text-[#173330]">
-                    Client Context: {caseStudy.clientContext}
+                    Background: {caseStudy.clientContext}
                   </p>
                   {caseStudy.situation.map((para, i) => (
                     <p key={i}>{para}</p>
@@ -140,7 +140,7 @@ export const CaseStudyDetailPage: React.FC<CaseStudyDetailPageProps> = ({
                     2
                   </div>
                   <h2 className="font-serif font-semibold text-2xl text-[#173330]">
-                    Our Legal Strategy &amp; Approach
+                    Our strategy and approach
                   </h2>
                 </div>
                 <div className="bg-[#FAFCF6] border border-[#173330]/10 p-6 sm:p-7 rounded-xl shadow-sm space-y-3 text-base text-[#2E4C47] leading-relaxed">
@@ -157,7 +157,7 @@ export const CaseStudyDetailPage: React.FC<CaseStudyDetailPageProps> = ({
                     3
                   </div>
                   <h2 className="font-serif font-semibold text-2xl text-[#173330]">
-                    The Conclusive Outcome
+                    The outcome
                   </h2>
                 </div>
                 <div className="bg-[#FAFCF6] border border-[#173330]/10 p-6 sm:p-7 rounded-xl shadow-sm space-y-3 text-base text-[#2E4C47] leading-relaxed">
@@ -165,6 +165,9 @@ export const CaseStudyDetailPage: React.FC<CaseStudyDetailPageProps> = ({
                     <p key={i}>{para}</p>
                   ))}
                 </div>
+                <p className="text-xs text-[#2E4C47]/80 italic pt-1">
+                  Every legal matter depends on its specific facts and applicable statutes. Prior results do not guarantee a similar outcome.
+                </p>
               </section>
 
               {/* Client Quote Card (if present) */}
@@ -190,7 +193,7 @@ export const CaseStudyDetailPage: React.FC<CaseStudyDetailPageProps> = ({
               {leadAttorney && (
                 <div className="bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-6 shadow-sm text-center">
                   <span className="text-[0.75rem] font-bold uppercase tracking-wider text-[#9C4A32] block mb-3">
-                    Lead Counsel on This Matter
+                    Lead attorney on this matter
                   </span>
                   <div
                     onClick={() => onNavigate({ type: 'attorney-detail', id: leadAttorney.id })}
@@ -212,7 +215,7 @@ export const CaseStudyDetailPage: React.FC<CaseStudyDetailPageProps> = ({
                     onClick={onOpenBooking}
                     className="w-full bg-[#173330] hover:bg-[#2E4C47] text-[#F1F4EC] py-2.5 rounded-full text-xs font-bold transition-colors cursor-pointer"
                   >
-                    Consult on a Similar Matter
+                    Discuss a similar matter
                   </button>
                 </div>
               )}
@@ -220,7 +223,7 @@ export const CaseStudyDetailPage: React.FC<CaseStudyDetailPageProps> = ({
               {/* Related Case Studies */}
               <div className="bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-6 shadow-sm">
                 <h4 className="text-xs uppercase font-bold tracking-wider text-[#173330] mb-4 pb-2 border-b border-[#173330]/8">
-                  Other Representative Matters
+                  Other case studies
                 </h4>
                 <div className="space-y-4">
                   {otherCases.map((cs) => (

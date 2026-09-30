@@ -4,134 +4,134 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   {
     id: 'corporate-law',
     name: 'Corporate Law',
-    shortDesc: 'Formation, governance and contracts for growing businesses.',
-    tagline: 'Strategic counsel for founders, partnerships, and evolving enterprises.',
-    heroCopy: 'Whether incorporating your first venture or structuring a cross-border equity buyout, our corporate team delivers unambiguous legal architectures designed for operational clarity.',
+    shortDesc: 'Company setup, equity arrangements, and commercial contracts.',
+    tagline: 'Clean legal structures and contracts that protect you when circumstances change.',
+    heroCopy: 'Starting a company or bringing on investors involves terms that can limit you years down the line if written carelessly. We write founder vesting agreements, clean up cap tables, and draft contracts in plain English so you know what you are agreeing to before you sign.',
     iconType: 'corporate',
     leadAttorneyId: 'william-ashford',
-    feeStructure: 'Flat fees for standard entity formation & governance packages; transparent blended hourly rates for transactions and complex negotiations.',
+    feeStructure: 'Fixed fees for routine entity formation and contract packages. Transparent hourly billing with written phase budgets for acquisitions and negotiations.',
     overview: [
-      'We guide founders, private equity investors, and growing enterprises through the critical legal milestones that dictate long-term stability.',
-      'Unlike massive corporate firms with bloated associate pyramids, you work directly with experienced partners who examine contracts with an entrepreneur’s sense of practical risk.',
-      'From shareholder operating pacts to intellectual property licensing and vendor safeguards, we draft terms in plain language that protect your upside without derailing deal velocity.'
+      'Most contract disputes happen because two people thought they agreed on something, but neither one put the details in writing. We help business owners put solid ground rules in place before problems start.',
+      'You deal directly with the partner handling your file. We look at your business the way an operator does, weighing the practical risk of each term instead of burying you in twenty pages of standard legal text that nobody reads.',
+      'We write founder agreements, customer contracts, vendor agreements, and licensing terms that protect your business without slowing down your day-to-day operations.'
     ],
     capabilities: [
-      'Entity formation (LLC, C-Corp, B-Corp) and cross-jurisdictional registration',
-      'Founder vesting agreements, equity allocation, and cap-table hygiene',
-      'Commercial contract drafting, vendor negotiations, and SaaS licensing',
-      'Mergers, asset acquisitions, and growth equity financing counsel',
-      'Corporate governance, board resolutions, and fiduciary compliance'
+      'Entity formation (LLC, C-Corp, B-Corp) and state registration',
+      'Founder vesting agreements and equity allocation (cap tables)',
+      'Commercial contracts, vendor terms, and software licensing',
+      'Asset purchases, business sales, and equity financing',
+      'Shareholder agreements and corporate governance records'
     ],
     approachSteps: [
       {
         number: '01',
-        title: 'Structural Audit',
-        description: 'We examine your company charter, current ownership covenants, and commercial exposure before proposing any drafting changes.'
+        title: 'Review existing documents',
+        description: 'We read your formation papers, current agreements, and ownership records to spot terms that could cause trouble later.'
       },
       {
         number: '02',
-        title: 'Plain-Language Drafting',
-        description: 'Every covenant is written to be executable by business managers, stripped of Latinate boilerplate and ambiguous dispute clauses.'
+        title: 'Draft in plain language',
+        description: 'Every clause is written so managers and investors can understand it without translating Latin terms.'
       },
       {
         number: '03',
-        title: 'Direct Negotiation',
-        description: 'Our lead corporate partners represent you at the bargaining table, protecting your core interests while keeping counterparties aligned.'
+        title: 'Negotiate the terms',
+        description: 'We negotiate directly with the other side’s counsel, keeping the deal moving while protecting your position.'
       },
       {
         number: '04',
-        title: 'Ongoing Governance',
-        description: 'We set up repeatable compliance cadences, annual board minutes, and filing checklists to ensure regulatory resilience.'
+        title: 'Ongoing compliance',
+        description: 'We give you a simple calendar for annual filings, board consents, and corporate record updates.'
       }
     ],
-    relatedCaseStudyIds: ['cs-cross-border-merger', 'cs-saas-vendor-licensing']
+    relatedCaseStudyIds: ['cs-cross-border-merger']
   },
   {
     id: 'immigration-law',
     name: 'Immigration Law',
-    shortDesc: 'Visas, residency and citizenship handled with patience.',
-    tagline: 'Clear, compassionate pathways through complex immigration systems.',
-    heroCopy: 'Navigating federal immigration agencies requires meticulous documentary evidence and relentless follow-through. We handle employment visas, family petitions, and naturalization with thorough care.',
+    shortDesc: 'Work visas, family green cards, and naturalization.',
+    tagline: 'Careful paperwork and thorough preparation for federal immigration filings.',
+    heroCopy: 'Immigration agencies deny petitions over minor documentary gaps. We review every requirement before filing, organize your supporting evidence, and prepare you personally for agency interviews.',
     iconType: 'immigration',
     leadAttorneyId: 'priya-nandan',
-    feeStructure: '100% transparent flat fees established before filing. No surprise administrative add-ons or billing surprises.',
+    feeStructure: 'Fixed fees quoted upfront before we start on your petition. No surprise administrative add-ons or billing surprises.',
     overview: [
-      'Federal immigration law is notorious for bureaucratic friction and shifting administrative criteria. We provide families and businesses with a calm, orderly path forward.',
-      'Our immigration practice specializes in employment-based visas (O-1, H-1B, L-1, EB-1), family reunification petitions, lawful permanent residence, and naturalization.',
-      'Every petition packet undergoes a dual-attorney audit prior to submission to eliminate evidentiary deficiencies and avoid costly Requests for Evidence (RFEs).'
+      'Federal immigration rules are strict, and processing times are long. A missing document or an unclear job description can delay your case by months or trigger a formal request for evidence.',
+      'We handle employment visas (including O-1 for individuals with extraordinary ability and H-1B specialty occupation visas), family-based immigrant petitions, and citizenship applications.',
+      'Two attorneys review every petition before it leaves our office. That extra check catches missing exhibits and inconsistencies that cause delays.'
     ],
     capabilities: [
-      'Employment visas for exceptional talent, tech founders, and specialized executives (O-1, EB-1, EB-2 NIW)',
-      'Family-based immigrant petitions, marriage green cards, and adjustment of status',
-      'Corporate immigration compliance, PERM labor certifications, and I-9 audit readiness',
-      'Citizenship, naturalization hearings, and complex continuous residency exceptions',
-      'Consular processing representation and expedited waiver requests'
+      'Employment visas for researchers, founders, and specialized talent (O-1, EB-1, EB-2 NIW)',
+      'Family green cards, marriage petitions, and adjustment of status',
+      'Employer immigration compliance and labor certifications',
+      'Citizenship hearings and naturalization applications',
+      'Consular processing and expedited travel waivers'
     ],
     approachSteps: [
       {
         number: '01',
-        title: 'Documentary Evaluation',
-        description: 'We review employment records, publications, family ties, and prior immigration history to identify the strongest statutory route.'
+        title: 'Case assessment',
+        description: 'We examine your employment history, publications, or family relationships to pick the visa category with the highest likelihood of approval.'
       },
       {
         number: '02',
-        title: 'Evidence Architecture',
-        description: 'We compile comprehensive, cross-indexed exhibit binders and expert testimonial letters that preempt adjudicator skepticism.'
+        title: 'Evidence collection',
+        description: 'We help you gather specific letters and work records that meet federal agency standards, organizing them into a clear exhibit packet.'
       },
       {
         number: '03',
-        title: 'Expedited Filing & Tracking',
-        description: 'Petitions are filed electronically with immediate priority tracking, accompanied by direct attorney receipt notices.'
+        title: 'Filing and tracking',
+        description: 'We file your petition electronically where permitted and send you the official receipt notice as soon as it arrives.'
       },
       {
         number: '04',
-        title: 'Interview Preparation',
-        description: 'We conduct full simulation interviews with you and family members, ensuring complete confidence before entering USCIS field offices.'
+        title: 'Interview preparation',
+        description: 'We run a practice interview with you and your family so you know what questions to expect at the field office.'
       }
     ],
-    relatedCaseStudyIds: ['cs-eb1-extraordinary-ability', 'cs-family-residency-waiver']
+    relatedCaseStudyIds: ['cs-eb1-extraordinary-ability']
   },
   {
     id: 'real-estate-law',
     name: 'Real Estate Law',
-    shortDesc: 'Transactions, leases and disputes over property.',
-    tagline: 'Protecting capital, titles, and property boundaries with rigorous title oversight.',
-    heroCopy: 'Whether negotiating a commercial ground lease, closing a luxury residential acquisition, or resolving a municipal zoning easement, we safeguard your property rights at every closing table.',
+    shortDesc: 'Property purchases, commercial leases, and title issues.',
+    tagline: 'Examining titles, contracts, and boundary rights before your money is locked in.',
+    heroCopy: 'Buying property or signing a commercial lease means taking on obligations that affect your money for years. We review title commitments, flag unrecorded easements, and correct contract terms before your deposit becomes non-refundable.',
     iconType: 'real-estate',
     leadAttorneyId: 'marcus-vance',
-    feeStructure: 'Predetermined closing fee packages for acquisitions; transparent hourly rates for land use, boundary disputes, and commercial lease drafting.',
+    feeStructure: 'Flat closing packages for standard property acquisitions. Hourly rates with estimates for lease negotiations and zoning matters.',
     overview: [
-      'Real estate investments represent foundational assets. A single defective title covenant or unexamined environmental easement can tie up capital for years.',
-      'We represent commercial developers, commercial tenants, family offices, and private buyers through acquisitions, disposals, financing, and municipal zoning permits.',
-      'Our team scrutinizes title insurance commitments, municipal permits, and environmental surveys with meticulous precision so closing day is calm and routine.'
+      'A title defect or an overlooked municipal permit can tie up real estate capital indefinitely. Our role is to find those issues before closing, when you still have the leverage to fix them or walk away.',
+      'We represent buyers, commercial tenants, developers, and property owners across purchases, commercial leases, and local zoning hearings.',
+      'We examine the title commitment — the title company’s formal promise to insure your ownership — and survey maps line by line so you do not inherit someone else’s property disputes.'
     ],
     capabilities: [
-      'Commercial purchase and sale agreements (office, retail, multi-family, industrial)',
-      'High-value residential purchases, escrow management, and title curative actions',
-      'Commercial lease review, subleases, assignment rights, and landlord-tenant negotiations',
-      'Zoning variances, land development entitlements, and municipal planning approvals',
-      'Boundary disputes, prescriptive easements, and quiet title litigation'
+      'Commercial purchase and sale agreements for retail, office, and industrial properties',
+      'Residential purchases, escrow oversight, and title curative actions',
+      'Commercial lease reviews, sublease clauses, and tenant negotiations',
+      'Zoning variances and municipal land-use permits',
+      'Boundary disputes, easements, and quiet title actions'
     ],
     approachSteps: [
       {
         number: '01',
-        title: 'Title & Survey Examination',
-        description: 'We drill into municipal records, encumbrances, setback restrictions, and title commitments before earnest money becomes non-refundable.'
+        title: 'Title and survey review',
+        description: 'We search town records, deed restrictions, and easements — legal rights that let neighbors or utilities cross your land — before your deposit is locked in.'
       },
       {
         number: '02',
-        title: 'Contract Fortification',
-        description: 'We rewrite customary boilerplate contingencies to protect financing outs, environmental inspection timelines, and representations.'
+        title: 'Contract negotiation',
+        description: 'We rewrite standard purchase agreements to make sure inspection deadlines and mortgage contingencies protect you.'
       },
       {
         number: '03',
-        title: 'Closing Table Escrow Oversight',
-        description: 'Funds and deeds are verified through independent escrow accounts with verified payoffs and title endorsements in place.'
+        title: 'Closing preparation',
+        description: 'We verify payoffs, deeds, and escrow funds through independent escrow accounts before anyone signs.'
       },
       {
         number: '04',
-        title: 'Post-Closing Perfection',
-        description: 'We ensure immediate deed recordation, title policy issuance, and tenant estoppel deliveries.'
+        title: 'Post-closing perfection',
+        description: 'We make sure your deed is recorded with the registry and your final title insurance policy is issued without delay.'
       }
     ],
     relatedCaseStudyIds: ['cs-mixed-use-zoning-entitlement']
@@ -139,44 +139,44 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   {
     id: 'criminal-law',
     name: 'Criminal Law',
-    shortDesc: 'Defense built carefully on the facts of the record.',
-    tagline: 'Disciplined, constitutional defense when your freedom and reputation are on the line.',
-    heroCopy: 'In criminal proceedings, the prosecution’s timeline is rarely the whole truth. We deconstruct evidence, challenge illegal searches, and hold the state strictly to its burden of proof.',
+    shortDesc: 'Defense built on physical evidence, police reports, and trial preparation.',
+    tagline: 'Direct, constitutional defense when your freedom and record are on the line.',
+    heroCopy: 'When the police charge you with a crime, the incident report is only one version of events. We obtain the radio dispatch records, 911 recordings, and camera footage ourselves, look for unconstitutional searches, and hold prosecutors to their legal burden of proof.',
     iconType: 'criminal',
     leadAttorneyId: 'daniel-okoye',
-    feeStructure: 'Structured tiered flat fees covering pre-charge investigation, preliminary hearings, and trial defense. Written fee clarity from day one.',
+    feeStructure: 'Clear flat fees covering defined stages: investigation, preliminary hearings, and trial defense. Written fee agreement before any work begins.',
     overview: [
-      'Being accused of a criminal offense is deeply destabilizing. We bring immediate clarity and fierce advocacy to safeguard your constitutional rights.',
-      'We handle white-collar allegations, federal investigations, serious vehicular charges, and state felony matters with relentless evidentiary discipline.',
-      'We do not simply negotiate hasty pleas; our reputation with prosecutors rests on our willingness to dismantle faulty police reports and file substantive suppression motions.'
+      'Being charged with a criminal offense is frightening and disorienting. You need an attorney who tells you where your case actually stands, not someone who makes wild promises or pressures you into a fast plea.',
+      'We represent clients facing white-collar financial allegations, state felonies, serious driving charges, and federal investigations.',
+      'We prepare every case as though it will be tried before a jury. When prosecutors know an attorney is ready to examine witnesses in court, settlement talks happen on better terms.'
     ],
     capabilities: [
-      'White-collar criminal defense, corporate fraud allegations, and regulatory compliance',
-      'Fourth Amendment constitutional suppression motions and unlawful search challenges',
-      'Pre-indictment government intervention and grand jury representation',
-      'Felony and misdemeanor defense in state and federal district courts',
-      'Post-conviction record expungement and professional license preservation'
+      'White-collar defense, corporate allegations, and government subpoenas',
+      'Motions to suppress evidence obtained through unlawful stops or searches',
+      'Pre-indictment defense and grand jury representation',
+      'Trial defense in state and federal court',
+      'Record expungement and professional license protection'
     ],
     approachSteps: [
       {
         number: '01',
-        title: 'Immediate Evidentiary Preservation',
-        description: 'Within hours of retention, we issue formal preservation subpoenas for body camera footage, digital surveillance, and witness testimonies.'
+        title: 'Secure the evidence',
+        description: 'We request body camera video, cruiser footage, and witness statements right away before municipal servers overwrite them.'
       },
       {
         number: '02',
-        title: 'Constitutional Challenge',
-        description: 'We systematically scrutinize search warrants and interrogation tactics to file aggressive motions to dismiss tainted evidence.'
+        title: 'Check police conduct',
+        description: 'We review how the stop, search, and questioning were handled. If officers violated your Fourth Amendment rights, we ask the judge to throw out that evidence.'
       },
       {
         number: '03',
-        title: 'Independent Forensic Review',
-        description: 'We work with recognized forensic, digital, and financial analysts to counter the state’s forensic narrative.'
+        title: 'Independent investigation',
+        description: 'We interview defense witnesses and work with technical specialists to test the prosecution’s theory of what happened.'
       },
       {
         number: '04',
-        title: 'Trial-Ready Posture',
-        description: 'Every case is prepared as if going to trial before a jury, providing optimal leverage in settlement discussions or courtroom battles.'
+        title: 'Courtroom readiness',
+        description: 'We prepare your defense for trial, giving you the information you need to decide whether to negotiate or take the case to a jury.'
       }
     ],
     relatedCaseStudyIds: ['cs-wire-fraud-acquittal']
@@ -184,44 +184,44 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   {
     id: 'medical-law',
     name: 'Medical Law',
-    shortDesc: 'Where clinical fact meets legal obligation.',
-    tagline: 'Bridging complex clinical medicine and legal standards of care with integrity.',
-    heroCopy: 'Medical disputes demand a rare dual literacy: the ability to dissect dense hospital charting and the courtroom skill to translate clinical negligence into compelling advocacy.',
+    shortDesc: 'Clinical malpractice claims and healthcare regulatory defense.',
+    tagline: 'Holding hospitals and medical providers accountable to proper care standards.',
+    heroCopy: 'A disappointing medical outcome is not always malpractice. But when a surgeon or hospital ignores clear treatment standards, the harm to a patient can be permanent. We read the electronic health records and bedside monitoring data to determine what actually took place.',
     iconType: 'medical',
     leadAttorneyId: 'elena-rostova',
-    feeStructure: 'Contingency fee basis for serious personal injury and medical negligence (no legal fees unless we recover damages); hourly for provider regulatory defense.',
+    feeStructure: 'Contingency fees for injury and negligence claims: you pay no legal fee unless we recover money for you. Hourly rates for clinician licensing defense.',
     overview: [
-      'When clinical standards are breached or catastrophic injuries occur, patients and families deserve straightforward answers, not medical jargon or institutional deflection.',
-      'Our medical law practice represents individuals suffering from severe surgical errors, misdiagnosis, pharmaceutical harm, as well as healthcare providers facing credentialing inquiries.',
-      'We maintain an active network of board-certified physician consultants and life-care planners who verify the validity of every claim before proceeding.'
+      'When clinical mistakes happen, hospitals rarely volunteer the full story. Families are often left with medical bills and conflicting explanations.',
+      'We represent patients injured by surgical mistakes, missed diagnoses, and medication errors, as well as doctors and nurses facing state licensing board complaints.',
+      'Every malpractice case we take is reviewed by independent, practicing physicians. We do not file speculative claims. If the medical record does not show a clear violation of the standard of care, we tell you directly.'
     ],
     capabilities: [
-      'Complex surgical error and hospital negligence investigation',
-      'Diagnostic failure and delayed oncology intervention claims',
-      'Catastrophic birth injury and neonatal standard-of-care claims',
-      'Life-care cost calculation and future medical economic recovery',
-      'Medical professional licensing defense before state regulatory boards'
+      'Surgical error and operating room negligence claims',
+      'Delayed diagnosis of cancer and acute medical conditions',
+      'Hospital monitoring failures and post-operative complications',
+      'Calculation of lifetime medical care costs and lost earnings',
+      'Medical provider licensing defense before state disciplinary boards'
     ],
     approachSteps: [
       {
         number: '01',
-        title: 'Complete Charting Audit',
-        description: 'We obtain and index every page of electronic health records, nursing flow sheets, and telemetry logs, checking for retrospective edits.'
+        title: 'Audit the hospital records',
+        description: 'We order your complete medical file, including the electronic metadata that logs when nursing notes and vital signs were entered.'
       },
       {
         number: '02',
-        title: 'Independent Medical Review',
-        description: 'Neutral, board-certified medical specialists review the timeline to determine whether clinical deviation caused tangible harm.'
+        title: 'Physician review',
+        description: 'Independent board-certified specialists examine the timeline to determine whether the care fell below accepted medical standards.'
       },
       {
         number: '03',
-        title: 'Actuarial Economic Assessment',
-        description: 'We work with forensic economists to project long-term medical care costs, lost earning capacity, and physical rehabilitation expenses.'
+        title: 'Calculate real expenses',
+        description: 'We work with economic analysts to calculate the cost of your future medical care, adaptive equipment, and lost income.'
       },
       {
         number: '04',
-        title: 'Trial Presentation',
-        description: 'We utilize state-of-the-art medical animation and timeline exhibits to convey intricate physiological facts clearly to juries.'
+        title: 'Settlement or trial',
+        description: 'We present the clinical facts clearly to insurance adjusters or a jury, focusing on objective medical evidence rather than rhetoric.'
       }
     ],
     relatedCaseStudyIds: ['cs-workplace-surgical-settlement']
@@ -229,44 +229,44 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   {
     id: 'family-law',
     name: 'Family Law',
-    shortDesc: 'Custody, support and separation, argued with care.',
-    tagline: 'Protecting children and personal balance during life’s most vulnerable transitions.',
-    heroCopy: 'Family legal disputes are not merely transactions; they shape how your children grow up and how your future financial independence is structured. We advocate with emotional intelligence and unwavering firmness.',
+    shortDesc: 'Divorce, custody arrangements, and marital property division.',
+    tagline: 'Protecting children and personal stability through difficult domestic transitions.',
+    heroCopy: 'Family law matters decide where your children sleep, how parenting decisions get made, and how your savings are divided. We keep negotiations grounded, avoid unnecessary court fights, and stand firm when your parental rights or financial assets are threatened.',
     iconType: 'family',
     leadAttorneyId: 'sophia-sterling',
-    feeStructure: 'Clear initial retainer agreements with itemized monthly accountings down to the minute. No vague block-billing.',
+    feeStructure: 'Clear initial retainers with detailed monthly billing statements down to the tenth of an hour. No lump-sum guesswork.',
     overview: [
-      'We believe family law requires a balanced demeanor: cooperative when resolving marital estates peacefully, yet unyielding when protecting parental rights or hiding marital assets.',
-      'We represent clients in high-net-worth divorce, child custody determinations, premarital agreements, and complex asset division involving private businesses and stock options.',
-      'Our priority is always shielding children from adversarial trauma while ensuring our clients receive a fair, dignified settlement.'
+      'Family disputes do not need to be dragged out in court to be resolved fairly. Prolonged litigation burns through marital savings and hurts children.',
+      'We represent clients in divorce, custody arrangements, prenuptial agreements, and asset division involving family businesses or retirement accounts.',
+      'We work toward fair agreements through mediation whenever possible. But if the other side hides assets or refuses to negotiate in good faith, we take the matter to court without hesitation.'
     ],
     capabilities: [
-      'High-net-worth marital dissolution and private business valuation',
-      'Child custody arrangements, parenting time schedules, and relocation disputes',
-      'Premarital and postmarital asset protection agreements (prenups)',
-      'Spousal support calculations, modification petitions, and post-decree enforcement',
-      'Collaborative divorce mediation and private dispute resolution'
+      'Divorce involving family businesses, real estate, and stock options',
+      'Child custody agreements and parenting schedules',
+      'Prenuptial and postnuptial agreements',
+      'Child support and spousal maintenance calculations',
+      'Collaborative mediation and separation agreements'
     ],
     approachSteps: [
       {
         number: '01',
-        title: 'Asset & Parenting Blueprint',
-        description: 'We conduct a confidential review of marital holdings, real estate, debts, and child developmental needs.'
+        title: 'Financial review',
+        description: 'We assemble a complete picture of your marital assets, debts, real estate, and parenting schedules.'
       },
       {
         number: '02',
-        title: 'Collaborative Settlement Framework',
-        description: 'We propose realistic, sensible distribution models designed to resolve matters without high-conflict courtroom drama.'
+        title: 'Settlement proposals',
+        description: 'We draft realistic, enforceable separation terms aimed at resolving the dispute without the stress of an open trial.'
       },
       {
         number: '03',
-        title: 'Forensic Accounting',
-        description: 'If assets or income streams are concealed, we deploy forensic financial investigators to trace accounts and verify fair valuations.'
+        title: 'Asset investigation',
+        description: 'If you suspect accounts or business revenues are being concealed, we work with financial analysts to trace the funds.'
       },
       {
         number: '04',
-        title: 'Decree Enforcement',
-        description: 'We structure finalized court orders with precise enforcement provisions to safeguard your rights well into the future.'
+        title: 'Court order enforcement',
+        description: 'We write clear, specific court orders so there is no ambiguity about custody schedules or property transfers later.'
       }
     ],
     relatedCaseStudyIds: ['cs-high-net-worth-dissolution']
@@ -277,115 +277,115 @@ export const ATTORNEYS: Attorney[] = [
   {
     id: 'william-ashford',
     name: 'William Ashford Sr.',
-    role: 'Founding Partner — Corporate & Real Estate',
-    shortSpecialty: 'Corporate governance, commercial real estate, and strategic advisory.',
+    role: 'Partner — Corporate & Real Estate',
+    shortSpecialty: 'Corporate agreements, commercial transactions, and business governance.',
     portraitStyle: 'founder',
-    credentials: ['Bar Admitted 2009', 'Corporate Law Specialist', 'Chambers Recognized'],
+    credentials: ['Bar Admitted 2009', 'Columbia Law School', 'Commercial Counsel'],
     bio: [
-      'William Ashford Sr. founded Jurista Law on the core premise that legal counsel should clarify business reality rather than obscure it behind prohibitive jargon and bloated retainers.',
-      'Over sixteen years of practice, William has counseled more than 400 corporate leaders, mid-market founders, and real estate developers through debt-equity reorganizations, commercial acquisitions, and multi-tenant leases.',
-      'He serves as outside general counsel to multiple regional tech scale-ups and manufacturing concerns, maintaining an active desk at the intersection of contract architecture and executive governance.'
+      'William Ashford Sr. started Jurista Law in 2011 because he noticed clients were paying large bills for advice they could barely understand. He wanted a firm where business owners could talk directly to their lawyer and get straight answers.',
+      'Over sixteen years in practice, William has advised more than four hundred company founders, commercial tenants, and real estate owners on contracts, equity sales, and leases.',
+      'He acts as outside general counsel to several regional companies, helping them negotiate vendor contracts, hire executives, and handle shareholder votes without unnecessary friction.'
     ],
-    philosophyQuote: 'Clients deserve to understand exactly what’s happening in their case — not just be told to trust us.',
+    philosophyQuote: 'A client should understand what is happening in their case at every step, not just be told to trust us.',
     practices: ['corporate-law', 'real-estate-law'],
     email: 'w.ashford@jurista.com',
     phone: '+2 011 611-4574',
-    barAdmissions: ['State Bar of New York (2009)', 'U.S. District Court, Southern District of NY (2011)'],
-    education: ['J.D., Columbia Law School, Harlan Fiske Stone Scholar', 'B.A. in Philosophy & Economics, Cornell University']
+    barAdmissions: ['New York State Bar (2009)', 'U.S. District Court, Southern District of NY (2011)'],
+    education: ['J.D., Columbia Law School', 'B.A. in Philosophy & Economics, Cornell University']
   },
   {
     id: 'priya-nandan',
     name: 'Priya Nandan',
     role: 'Senior Associate — Immigration Law',
-    shortSpecialty: 'Employment visas, extraordinary ability petitions, and family naturalization.',
+    shortSpecialty: 'Employment visas, extraordinary ability petitions, and green cards.',
     portraitStyle: 'associate-priya',
-    credentials: ['Bar Admitted 2014', 'Immigration Bar Liaison', 'AILA Member'],
+    credentials: ['Bar Admitted 2014', 'UC Berkeley Law', 'AILA Member'],
     bio: [
-      'Priya Nandan leads Jurista Law’s immigration practice with patience, documentary rigor, and personal empathy. Having guided hundreds of researchers, tech engineers, and separated families through federal bureaucracy, she knows that behind every receipt number is a human life.',
-      'She is known among clients for her exhaustive evidentiary compilations that consistently secure first-round approvals for O-1 and EB-1 petitions without burdensome agency requests for evidence.',
-      'Priya frequently lectures on international talent mobility and conducts pro bono naturalization clinics for community members across the metropolitan area.'
+      'Priya Nandan leads our immigration practice. She has helped hundreds of software engineers, university researchers, and families obtain visas and lawful permanent residence in the United States.',
+      'Her focus is on employment-based petitions (O-1, EB-1, and EB-2 National Interest Waivers). She is known for compiling organized evidence binders that satisfy federal adjudicators on the first review.',
+      'Priya also conducts volunteer citizenship workshops in the local community to help lawful permanent residents navigate naturalization exams.'
     ],
-    philosophyQuote: 'Immigration is not paperwork — it is the legal architecture of a family’s or a founder’s entire future.',
+    philosophyQuote: 'Immigration is not just forms. It is the legal permission for a family or a founder to build their life here.',
     practices: ['immigration-law'],
     email: 'p.nandan@jurista.com',
     phone: '+2 011 611-4575',
-    barAdmissions: ['State Bar of California (2014)', 'American Immigration Lawyers Association (2015)'],
+    barAdmissions: ['California State Bar (2014)', 'American Immigration Lawyers Association (2015)'],
     education: ['J.D., UC Berkeley School of Law', 'B.S. in International Relations, Georgetown University']
   },
   {
     id: 'daniel-okoye',
     name: 'Daniel Okoye',
     role: 'Senior Associate — Criminal Defense',
-    shortSpecialty: 'White-collar investigations, constitutional suppression, and trial advocacy.',
+    shortSpecialty: 'Constitutional suppression motions, financial fraud investigations, and jury trials.',
     portraitStyle: 'associate-daniel',
-    credentials: ['Bar Admitted 2015', 'Former Federal Defender', 'NACDL Fellow'],
+    credentials: ['Bar Admitted 2015', 'Former Federal Defender', 'Northwestern Law'],
     bio: [
-      'Daniel Okoye is a trial attorney who approaches every criminal indictment with quiet, methodical precision. Prior to joining Jurista Law, Daniel served as an assistant federal public defender where he tried twenty-two jury trials to verdict.',
-      'Daniel’s work focuses on Fourth Amendment suppression motions, complex financial fraud inquiries, and defending individuals facing serious state and federal prosecutions.',
-      'Colleagues and judges respect his candid, fact-focused courtroom presence. Daniel avoids theatrical bluster, choosing instead to systematically dismantle weak prosecution witnesses with the recorded facts.'
+      'Daniel Okoye is a trial lawyer who approaches criminal defense through the evidence on record. Before joining Jurista Law, he served as an assistant federal public defender, taking twenty-two jury cases to verdict.',
+      'Daniel represents clients in state and federal court facing white-collar allegations, serious driving offenses, and felony charges.',
+      'Judges and opposing counsel know Daniel for his factual preparation. He spends his time examining police logs, surveillance audio, and search warrant affidavits rather than relying on courtroom speeches.'
     ],
-    philosophyQuote: 'A defense is not built on speeches. It is built on preserving evidence that the government overlooked.',
+    philosophyQuote: 'A defense is not built on speeches. It is built on preserving the physical evidence that investigators missed.',
     practices: ['criminal-law'],
     email: 'd.okoye@jurista.com',
     phone: '+2 011 611-4576',
-    barAdmissions: ['State Bar of Illinois (2015)', 'U.S. Court of Appeals for the Seventh Circuit (2017)'],
+    barAdmissions: ['Illinois State Bar (2015)', 'U.S. Court of Appeals for the Seventh Circuit (2017)'],
     education: ['J.D., Northwestern University Pritzker School of Law', 'B.A. in Criminology, University of Michigan']
   },
   {
     id: 'elena-rostova',
     name: 'Elena Rostova',
-    role: 'Partner — Medical Law & Complex Healthcare',
-    shortSpecialty: 'Clinical standard of care, catastrophic surgical injury, and healthcare licensing.',
+    role: 'Partner — Medical Law & Healthcare',
+    shortSpecialty: 'Clinical malpractice claims, hospital standards, and healthcare licensing.',
     portraitStyle: 'partner-elena',
-    credentials: ['Bar Admitted 2012', 'Dual Degree J.D. / M.S.', 'Trial Lawyers Ass’n'],
+    credentials: ['Bar Admitted 2012', 'Penn Law & Bioethics M.S.', 'Trial Practice'],
     bio: [
-      'Elena Rostova brings an analytical medical background to her litigation practice, holding a master’s degree in bioethics alongside her law degree. Her practice focuses on representing patients and families affected by major clinical lapses.',
-      'She is renowned for her ability to cross-examine hospital risk managers and defense expert physicians on the fine points of electronic medical telemetry and hospital medication administration protocols.',
-      'Elena has secured over $42 million in structured settlements and verdicts, ensuring lifelong clinical and rehabilitative security for injured clients.'
+      'Elena Rostova brings an analytical medical background to her litigation practice. She earned a master’s degree in bioethics alongside her law degree, giving her the ability to evaluate hospital electronic health records and nursing charts directly.',
+      'Elena focuses on claims involving surgical mistakes, delayed diagnosis, and medication errors. She also defends doctors and nurses in state licensing board proceedings.',
+      'She works closely with practicing clinical consultants to verify the facts of every claim before taking it to settlement talks or trial.'
     ],
-    philosophyQuote: 'The law cannot undo physical harm, but it can ensure that medical realities are acknowledged and long-term care is fully funded.',
+    philosophyQuote: 'The law cannot undo physical injury, but it can make sure families receive the care and financial support they need.',
     practices: ['medical-law'],
     email: 'e.rostova@jurista.com',
     phone: '+2 011 611-4577',
-    barAdmissions: ['State Bar of New York (2012)', 'State Bar of New Jersey (2013)'],
+    barAdmissions: ['New York State Bar (2012)', 'New Jersey State Bar (2013)'],
     education: ['J.D. & M.S. in Bioethics, University of Pennsylvania', 'B.S. in Neuroscience, Johns Hopkins University']
   },
   {
     id: 'marcus-vance',
     name: 'Marcus Vance',
     role: 'Senior Associate — Real Estate & Land Use',
-    shortSpecialty: 'Zoning approvals, commercial transactions, and property title defense.',
+    shortSpecialty: 'Commercial acquisitions, zoning variances, and lease negotiations.',
     portraitStyle: 'associate-marcus',
-    credentials: ['Bar Admitted 2016', 'Urban Land Institute', 'Real Property Section'],
+    credentials: ['Bar Admitted 2016', 'Boston College Law', 'MIT Urban Planning'],
     bio: [
-      'Marcus Vance represents commercial property developers, real estate investment trusts, and private owners across mixed-use acquisitions, lease structuring, and municipal variance hearings.',
-      'His background in municipal planning prior to law school provides clients with an insider understanding of how regional zoning boards, environmental review agencies, and historical commissions evaluate land entitlements.',
-      'Marcus has successfully navigated contentious land-use appeals and negotiated commercial lease packages exceeding two million square feet of retail and light-industrial space.'
+      'Marcus Vance represents property owners, tenants, and small developers in real estate transactions, boundary disputes, and zoning board hearings.',
+      'Before law school, Marcus worked in city planning. That experience gives his clients practical insight into how planning boards, building inspectors, and conservation commissions evaluate development applications.',
+      'He reviews commercial leases, easements, and title commitments to make sure clients understand their long-term property rights.'
     ],
-    philosophyQuote: 'Every square foot of real estate comes with legal covenants. Our job is to know every one before you ink the deed.',
+    philosophyQuote: 'Every parcel of land comes with legal restrictions. Our job is to know every one before you sign the deed.',
     practices: ['real-estate-law'],
     email: 'm.vance@jurista.com',
     phone: '+2 011 611-4578',
-    barAdmissions: ['State Bar of Massachusetts (2016)', 'State Bar of New York (2018)'],
+    barAdmissions: ['Massachusetts State Bar (2016)', 'New York State Bar (2018)'],
     education: ['J.D., Boston College Law School', 'B.S. in Urban Planning, MIT']
   },
   {
     id: 'sophia-sterling',
     name: 'Sophia Sterling',
     role: 'Senior Associate — Family Law & Mediation',
-    shortSpecialty: 'High-net-worth divorce, complex asset distribution, and child custody.',
+    shortSpecialty: 'Divorce, marital asset division, and custody arrangements.',
     portraitStyle: 'associate-sophia',
-    credentials: ['Bar Admitted 2017', 'Certified Family Mediator', 'AAML Fellow'],
+    credentials: ['Bar Admitted 2017', 'Certified Mediator', 'UT Austin Law'],
     bio: [
-      'Sophia Sterling leads family law and mediation matters with emotional steadiness, strategic discretion, and rigorous financial analysis. She routinely handles marital dissolutions involving family trusts, equity options, and private enterprise holdings.',
-      'Sophia believes that family conflicts should not be monetized through needless courtroom warfare. She strives to achieve sensible, enforceable settlements through structured mediation whenever possible.',
-      'When high-conflict situations or asset concealment arise, however, Sophia advocates forcefully to protect her client’s financial sovereignty and child custody rights.'
+      'Sophia Sterling handles divorce, child custody, and marital property matters with steady judgment and careful financial analysis.',
+      'She encourages mediation whenever both spouses are willing to negotiate in good faith, saving clients time and money while keeping sensitive family matters out of public court records.',
+      'When an amicable resolution is not possible, Sophia advocates firmly in court to protect her client’s parenting time and financial independence.'
     ],
-    philosophyQuote: 'A successful family law outcome leaves clients prepared for their next chapter with dignity and financial stability.',
+    philosophyQuote: 'A good family law outcome lets both sides move forward with their dignity and financial stability intact.',
     practices: ['family-law'],
     email: 's.sterling@jurista.com',
     phone: '+2 011 611-4579',
-    barAdmissions: ['State Bar of Texas (2017)', 'Certified Family Law Arbitrator (2020)'],
+    barAdmissions: ['Texas State Bar (2017)', 'Certified Family Law Mediator (2020)'],
     education: ['J.D., University of Texas School of Law', 'B.A. in Psychology, Vanderbilt University']
   }
 ];
@@ -393,163 +393,163 @@ export const ATTORNEYS: Attorney[] = [
 export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'cs-workplace-surgical-settlement',
-    title: 'Securing a Fair Settlement After a Complex Surgical Error',
+    title: 'Resolving a surgical error claim after a post-operative complication',
     practiceSlug: 'medical-law',
-    outcomeSummary: 'Overcame hospital liability denial to achieve a $3.4M comprehensive settlement covering lifetime rehabilitative care.',
+    outcomeSummary: 'Recovered a $3.4M settlement covering ongoing physical therapy and lost household earnings.',
     summaryStats: {
-      timeline: '8 Months',
-      outcome: 'Full $3.4M Recovery',
+      timeline: '8 months',
+      outcome: '$3.4M settlement',
       practice: 'Medical Law'
     },
     clientContext: 'A 42-year-old logistics supervisor suffered nerve damage and respiratory trauma due to unmonitored anesthesia during routine spinal surgery.',
     situation: [
-      'The client entered an outpatient surgical center for an elective microdiscectomy. Following the procedure, inadequate recovery room monitoring led to undetected airway constriction and localized neurological impairment.',
-      'The regional hospital system’s risk management team immediately denied responsibility, alleging the client had undisclosed pre-existing metabolic vulnerabilities that caused the neurological deficit.'
+      'The client entered an outpatient surgical center for an elective microdiscectomy. Following the procedure, inadequate recovery room monitoring led to airway constriction and localized neurological impairment.',
+      'The hospital insurer denied the claim, asserting that the complication stemmed from pre-existing metabolic vulnerabilities rather than post-operative monitoring failures.'
     ],
     approach: [
-      'Elena Rostova initiated an immediate audit of raw hospital telemetry data, discovering an unrecorded seventeen-minute gap in vital sign monitoring by recovery room nursing staff.',
-      'We engaged two independent board-certified anesthesiologists who demonstrated that basic hospital monitoring standards had been abandoned during a nursing shift change.',
-      'Rather than accepting an initial nominal settlement offer, we drafted an extensive trial mediation brief accompanied by an actuarial life-care model illustrating future medical expenses.'
+      'Elena Rostova reviewed the raw electronic medical telemetry, discovering an unrecorded seventeen-minute gap in vital sign monitoring during a nursing shift transition.',
+      'We consulted two board-certified anesthesiologists who testified that standard post-anesthesia protocols had been interrupted.',
+      'We presented a detailed economic breakdown of future medical equipment and physical therapy costs rather than accepting an early nominal offer.'
     ],
     outcome: [
-      'Faced with irrefutable telemetry discrepancies and our trial-ready posture, the hospital insurer agreed to mediation without forcing our client through prolonged trial trauma.',
-      'The case concluded with a $3,400,000 settlement structured in an annuity trust to cover all ongoing physical therapy, adaptive home equipment, and lost household earnings.'
+      'Presented with the telemetry records, the hospital insurer agreed to formal mediation.',
+      'The claim resolved with a $3,400,000 settlement structured in an annuity trust to cover ongoing medical expenses, adaptive home equipment, and lost household wages.'
     ],
     clientQuote: {
-      quote: 'From the first call, I understood exactly where I stood — no guesswork, no waiting around. Elena treated my family with genuine respect and fought for what we actually needed.',
+      quote: 'From the first call, I understood where I stood. Elena explained the medical records clearly, treated my family with respect, and focused on our actual long-term needs.',
       author: 'Jonathan Sterling',
-      roleOrTitle: 'Medical Law Client'
+      roleOrTitle: 'Client'
     },
     leadAttorneyId: 'elena-rostova'
   },
   {
     id: 'cs-eb1-extraordinary-ability',
-    title: 'EB-1 Extraordinary Ability Green Card for Artificial Intelligence Researcher',
+    title: 'Securing an EB-1A extraordinary ability green card for an AI researcher',
     practiceSlug: 'immigration-law',
-    outcomeSummary: 'First-round USCIS approval without RFE for a leading machine learning scientist facing tight visa expiration deadlines.',
+    outcomeSummary: 'First-round approval from USCIS without a request for additional evidence.',
     summaryStats: {
-      timeline: '4 Months',
-      outcome: 'Approval (Zero RFEs)',
+      timeline: '4 months',
+      outcome: 'Approved without RFE',
       practice: 'Immigration Law'
     },
-    clientContext: 'A senior computer vision researcher from South America whose existing O-1 visa was nearing its statutory cap.',
+    clientContext: 'A computer vision scientist whose temporary work visa was nearing its statutory cap.',
     situation: [
-      'The client held numerous citations and patents in autonomous neural perception, but their previous firm had assembled disorganized documentation resulting in high agency skepticism.',
-      'With less than five months before their authorized stay expired, the researcher needed an airtight EB-1A self-petition to secure permanent residency without relying on corporate sponsor whims.'
+      'The researcher held numerous peer citations and patents, but a previous petition filed by another representative was disorganized and rejected by the agency.',
+      'With under five months remaining on authorized status, the client needed a properly documented self-petition that did not rely on an employer sponsor.'
     ],
     approach: [
-      'Priya Nandan conducted a line-by-line review of the client’s academic citations, peer-review invitations, and contributions to open-source foundation models.',
-      'We secured six independent expert letters from global research chairs at Oxford, Stanford, and the Max Planck Institute, each drafted to address USCIS Kazarian evidentiary benchmarks.',
-      'The petition was compiled into a structured 380-page exhibit binder with cross-referenced indices clearly proving original contributions of major significance.'
+      'Priya Nandan audited the client’s academic citations, peer reviews, and open-source contributions.',
+      'We gathered six independent expert letters from senior university department chairs, drafted to address regulatory criteria directly.',
+      'We indexed each piece of evidence clearly so the agency examiner could verify every claim without searching through loose papers.'
     ],
     outcome: [
-      'USCIS approved the EB-1A petition within 12 business days of premium processing receipt without issuing a Request for Evidence.',
-      'The client and their spouse received their lawful permanent resident cards three months later, giving them permanent freedom to found their own research lab.'
+      'USCIS approved the EB-1A petition within twelve business days under premium processing with zero requests for additional evidence.',
+      'The client and their spouse received lawful permanent resident cards shortly after, giving them the freedom to conduct research independently.'
     ],
     clientQuote: {
-      quote: 'They walked me through every option before I had to decide anything. I never felt rushed, and Priya knew the technical nuances of my work as well as my peers did.',
+      quote: 'Priya walked me through every option before I had to decide anything. She knew the technical aspects of my work and made sure the petition was organized properly.',
       author: 'Amara Reyes',
-      roleOrTitle: 'Immigration Case'
+      roleOrTitle: 'Client'
     },
     leadAttorneyId: 'priya-nandan'
   },
   {
     id: 'cs-cross-border-merger',
-    title: 'Cross-Border Tech Acquisition and IP Assignment Structure',
+    title: 'Structuring an asset sale and intellectual property transfer',
     practiceSlug: 'corporate-law',
-    outcomeSummary: 'Structured an $18M asset buyout across US and European subsidiaries, preserving enterprise valuation and key employee vesting.',
+    outcomeSummary: 'Structured an $18M asset sale across two corporate subsidiaries, protecting founder equity and key employee vesting.',
     summaryStats: {
-      timeline: '5 Months',
-      outcome: '$18M Asset Buyout',
+      timeline: '5 months',
+      outcome: '$18M transaction closed',
       practice: 'Corporate Law'
     },
-    clientContext: 'A high-growth enterprise software provider acquired by an international communications conglomerate.',
+    clientContext: 'A software company acquired by an international communications group.',
     situation: [
-      'The founders had received multiple competing term sheets, but the acquirer’s initial agreement contained onerous indemnity holdbacks and ambiguous non-compete covenants that would have paralyzed the founders from future work.',
-      'Additionally, open-source license audits revealed potential contamination in two core algorithmic components that threatened to derail closing.'
+      'The founders received a purchase agreement containing uncapped indemnity clauses, meaning they could be held personally liable for unexpected liabilities well after closing.',
+      'An open-source code audit also raised questions about third-party software licenses that needed immediate resolution.'
     ],
     approach: [
-      'William Ashford Sr. stepped in as lead transaction counsel, rewriting the purchase agreement to replace the uncapped indemnity clause with a capped escrow indemnification backed by representation and warranty insurance.',
-      'We executed clean IP assignment cure agreements with former contractors across three countries, eliminating the software licensing objection.',
-      'Our team structured tax-efficient earnout tranches tied to verifiable ARR metrics rather than subjective management discretion.'
+      'William Ashford Sr. replaced the uncapped indemnity clause with a capped escrow holdback backed by representation and warranty insurance.',
+      'We resolved the software licensing questions by executing clean assignment agreements with former contractors across three countries.',
+      'We tied earnout milestones to objective revenue targets rather than discretionary buyer assessments.'
     ],
     outcome: [
-      'The deal closed smoothly on schedule at the full $18,000,000 purchase price with zero post-closing escrow disputes.',
-      'The founders retained 100% of their equity upside with plain-language vesting acceleration upon change of control.'
+      'The transaction closed on schedule at the full purchase price without post-closing escrow disputes.',
+      'The founders retained their equity rights under clear acceleration terms if control of the combined company changed.'
     ],
     clientQuote: {
-      quote: 'No surprises, no jargon — just a clear plan we could actually execute on. William kept the acquirer’s attorneys from bogging down the entire company in needless legal sand.',
+      quote: 'William kept the buyer’s lawyers from tying up our sale in endless legal arguments. We got straight answers and closed on schedule.',
       author: 'Michael Chen',
-      roleOrTitle: 'Corporate Client'
+      roleOrTitle: 'Client'
     },
     leadAttorneyId: 'william-ashford'
   },
   {
     id: 'cs-mixed-use-zoning-entitlement',
-    title: 'Municipal Zoning Variance and Historic Easement Approval',
+    title: 'Obtaining zoning variances for a residential property conversion',
     practiceSlug: 'real-estate-law',
-    outcomeSummary: 'Secured full planning board clearance for a 48-unit residential conversion of a historic mill property.',
+    outcomeSummary: 'Secured unanimous planning board approval for a 48-unit residential conversion of a historic mill building.',
     summaryStats: {
-      timeline: '7 Months',
-      outcome: 'Unanimous Variance Approval',
+      timeline: '7 months',
+      outcome: 'Unanimous approval',
       practice: 'Real Estate Law'
     },
-    clientContext: 'A regional urban revitalization developer encountering neighborhood zoning appeals and historic commission moratoriums.',
+    clientContext: 'A regional developer facing neighborhood zoning objections and historical commission requirements.',
     situation: [
-      'The developer sought to convert an underutilized 19th-century manufacturing mill into transit-oriented loft housing. Vocal community opposition threatened to trigger an indefinite statutory zoning delay.'
+      'The owner wanted to convert an underused 19th-century mill building into apartments, but local zoning rules restricted multi-family residential density.'
     ],
     approach: [
-      'Marcus Vance spearheaded negotiations with the municipal planning council, drafting a binding community benefits agreement that set aside 20% workforce housing while protecting architectural facade integrity.',
-      'We conducted detailed traffic impact and stormwater easement surveys that directly rebutted the opposition’s technical complaints.'
+      'Marcus Vance negotiated with the municipal planning council, proposing a community agreement that preserved the historic brick facade while dedicating units for workforce housing.',
+      'We conducted traffic and stormwater impact assessments to address neighbors’ specific concerns before the formal public hearing.'
     ],
     outcome: [
-      'The municipal zoning board of appeals granted unanimous entitlement clearance, enabling the client to break ground on time without appellate court intervention.'
+      'The municipal zoning board granted unanimous variance approval, allowing construction to begin without appellate litigation.'
     ],
     leadAttorneyId: 'marcus-vance'
   },
   {
     id: 'cs-wire-fraud-acquittal',
-    title: 'Complete Dismissal of Federal Wire Fraud Allegations',
+    title: 'Pre-indictment dismissal of corporate accounting allegations',
     practiceSlug: 'criminal-law',
-    outcomeSummary: 'Conducted forensic audit proving lack of fraudulent intent; prosecution agreed to formal voluntary dismissal.',
+    outcomeSummary: 'Conducted an independent financial audit showing absence of criminal intent; federal prosecutors closed the inquiry with zero charges filed.',
     summaryStats: {
-      timeline: '9 Months',
-      outcome: 'Full Pre-Trial Dismissal',
+      timeline: '9 months',
+      outcome: 'Case closed with zero charges',
       practice: 'Criminal Law'
     },
-    clientContext: 'A corporate chief financial officer targeted in an interstate supplier invoice overpayment investigation.',
+    clientContext: 'A company finance officer received a target letter alleging approval of irregular vendor payments.',
     situation: [
-      'Federal prosecutors served target letters alleging our client had knowingly approved falsified vendor billing statements totaling $1.2M.'
+      'Federal investigators sent formal inquiry notices regarding vendor payment discrepancies totaling $1.2M.'
     ],
     approach: [
-      'Daniel Okoye intervened prior to grand jury indictment, securing complete internal server emails and financial logs that demonstrated our client had in fact flagged the billing anomalies to external auditors months earlier.',
-      'We presented a comprehensive defense proffer to the United States Attorney’s Office demonstrating complete lack of scienter and supervisory good faith.'
+      'Daniel Okoye intervened before the grand jury met, obtaining server email archives and internal memos showing our client had flagged the billing anomalies to external auditors months before the government investigation began.',
+      'We presented a written defense proffer to prosecutors showing good-faith compliance with internal accounting standards.'
     ],
     outcome: [
-      'The federal prosecutor’s office officially closed the inquiry with zero charges filed against our client, completely protecting their professional reputation.'
+      'Federal prosecutors officially closed the file without issuing an indictment, preserving our client’s professional license and reputation.'
     ],
     leadAttorneyId: 'daniel-okoye'
   },
   {
     id: 'cs-high-net-worth-dissolution',
-    title: 'Equitable Separation of Multi-Asset Family Trust and Business Holding',
+    title: 'Resolving complex marital property division through mediation',
     practiceSlug: 'family-law',
-    outcomeSummary: 'Settled complex $14M marital estate via collaborative mediation without contentious trial publicity.',
+    outcomeSummary: 'Settled an estate division through structured mediation without public court litigation.',
     summaryStats: {
-      timeline: '6 Months',
-      outcome: 'Private Mediated Decree',
+      timeline: '6 months',
+      outcome: 'Private mediated agreement',
       practice: 'Family Law'
     },
-    clientContext: 'Spouse of a private equity partner negotiating marital division involving illiquid carry allocations and multiple properties.',
+    clientContext: 'A spouse negotiating division of real estate holdings and private business equity interests.',
     situation: [
-      'The opposing counsel initially attempted to value the partnership carry interests at zero, arguing they were purely speculative future expectations.'
+      'Opposing counsel initially claimed private partnership interests had zero value, arguing future returns were purely speculative.'
     ],
     approach: [
-      'Sophia Sterling retained forensic valuation experts to benchmark historical carried interest disbursements and structured a clean deferred sharing mechanism.',
-      'Sophia guided the parties through confidential mediation sessions that kept sensitive financial disclosures out of public court dockets.'
+      'Sophia Sterling worked with valuation analysts to benchmark historical distributions and proposed a deferred payment structure tied to actual returns.',
+      'We kept negotiations in private mediation sessions, preventing confidential business financials from entering public court filings.'
     ],
     outcome: [
-      'Both parties signed a balanced separation decree ensuring equitable asset distribution, fully funded children’s educational trusts, and mutual non-disparagement agreements.'
+      'Both parties signed a balanced separation agreement that resolved property division and established funded college educational accounts for the children.'
     ],
     leadAttorneyId: 'sophia-sterling'
   }
@@ -558,163 +558,166 @@ export const CASE_STUDIES: CaseStudy[] = [
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'transparent-fee-structures-law-firm',
-    title: 'Why Hourly Billing Incentivizes the Wrong Outcomes in Law',
-    excerpt: 'How upfront fee certainty aligns attorney incentives with swift, definitive resolution rather than protracted procedural posturing.',
+    title: 'Why hourly billing causes problems for clients',
+    excerpt: 'How fixed fees align attorney incentives with fast, clear answers instead of prolonged paperwork.',
     date: 'September 18, 2026',
-    readTime: '5 min read',
+    readTime: '4 min read',
     practiceSlug: 'corporate-law',
     authorId: 'william-ashford',
     isFeatured: true,
     content: [
       {
-        heading: 'The Flaw in the Traditional Clock',
+        heading: 'The problem with billing by the minute',
         paragraphs: [
-          'For nearly a century, the billable hour has been the standard currency of American jurisprudence. On paper, it appears objective: pay for the time an attorney devotes to your matter.',
-          'In practice, however, hourly billing creates an unmistakable moral hazard. It rewards inefficiency, encourages thirty-page memos when a three-paragraph email would suffice, and penalizes the experienced partner who solves a crisis in fifteen minutes because they’ve handled it for twenty years.'
+          'For decades, most law firms have billed by the hour. On paper, it sounds reasonable: you pay for the time a lawyer spends on your case.',
+          'In practice, it creates the wrong incentives. An attorney who solves your problem in twenty minutes makes less money than one who spends three weeks researching standard law and writing thirty pages of memos. That penalizes experience and rewards slowness.'
         ]
       },
       {
-        heading: 'Pricing Outcomes, Not Elapsed Time',
+        heading: 'Pricing outcomes instead of elapsed time',
         paragraphs: [
-          'When we founded Jurista Law, we deliberately structured our firm to eliminate billing surprises. For defined matters — entity formation, immigration petitions, residential closings, and mediation — we quote flat, all-inclusive fees upfront.',
-          'When hourly engagements are strictly necessary, such as active courtroom trials, we provide binding monthly phase caps and plain-English statements of work so you never open an invoice in disbelief.'
+          'For standard matters like company formations, trademark filings, real estate closings, and visa petitions, we quote a flat fee upfront. You know the exact number before we start.',
+          'When litigation or trial work requires hourly billing, we give you written phase budgets with monthly estimates. You should never open a legal bill and be surprised by what is on it.'
         ]
       },
       {
-        heading: 'What Clients Should Expect',
+        heading: 'What clients should expect',
         paragraphs: [
-          'A modern legal partnership should be grounded in predictability. You should always know who is working on your file, what step is next, and what that step will cost before the work begins.'
+          'A working relationship with your attorney should be predictable. You should always know who is working on your file, what step comes next, and what that step will cost.'
         ]
       }
     ],
     keyTakeaways: [
-      'Hourly billing intrinsically penalizes speed and technical efficiency.',
-      'Flat-fee structures provide budgetary certainty for founders and families.',
-      'Clients should always demand itemized phase budgets before signing retainers.'
+      'Hourly billing rewards slow work and penalizes efficiency.',
+      'Flat fees give business owners and families budgetary certainty.',
+      'Always ask for a written phase estimate before signing a retainer agreement.'
     ]
   },
   {
     slug: 'eb1a-kazarian-framework-guide',
-    title: 'Demystifying the EB-1A Visa: Navigating the Kazarian Two-Step Audit',
-    excerpt: 'A practical breakdown of how USCIS adjudicators evaluate extraordinary ability petitions and how to compile irrefutable peer evidence.',
+    title: 'What immigration examiners actually look for in an EB-1A petition',
+    excerpt: 'Meeting three regulatory criteria is not enough on its own. How the two-step evaluation works in practice.',
     date: 'September 04, 2026',
-    readTime: '7 min read',
+    readTime: '6 min read',
     practiceSlug: 'immigration-law',
     authorId: 'priya-nandan',
     content: [
       {
-        heading: 'Beyond the Ten Regulatory Criteria',
+        heading: 'The two-step review',
         paragraphs: [
-          'Many applicants believe that satisfying three of the ten regulatory criteria guarantees an EB-1A approval. In reality, under the landmark Kazarian v. USCIS precedent, adjudicators apply a strict two-step determination.',
-          'Step one checks the numerical criteria; step two is a subjective "final merits determination" asking whether the petitioner has risen to the very top of their endeavor.'
+          'Many applicants believe that checking off three out of ten regulatory criteria guarantees an EB-1A extraordinary ability approval. It does not.',
+          'Under immigration agency precedent, examiners use a two-step test. First, they count whether your evidence meets at least three formal categories. Second, they make a subjective final merits evaluation to decide whether your record shows sustained national or international acclaim.'
         ]
       },
       {
-        heading: 'Crafting Independent Expert Testimony',
+        heading: 'Independent recommendation letters',
         paragraphs: [
-          'Adjudicators discount generic letters of praise from close colleagues. We focus on securing testimonials from recognized global figures who have never met the petitioner but utilize their published methodologies in practice.'
+          'Examiners give little weight to letters written by close colleagues and direct managers. They look for testimonials from senior peers in your field who know your work solely through its practical impact on the industry.'
         ]
       }
     ],
     keyTakeaways: [
-      'Documentary evidence must demonstrate tangible industry-wide impact.',
-      'Independent citations outweigh raw publication counts.',
-      'Dual-attorney petition audits reduce RFE issuance rates dramatically.'
+      'Documentary evidence must show direct industry or academic impact.',
+      'Independent citations and real adoption carry more weight than publication count alone.',
+      'Thorough exhibit indexing reduces the likelihood of requests for evidence.'
     ]
   },
   {
     slug: 'commercial-lease-pitfalls-tenants',
-    title: 'Five Hidden Covenants in Commercial Leases That Cost Tenants Thousands',
-    excerpt: 'From CAM expense escalations to restoration liabilities, here is what retail and office tenants must negotiate before signing.',
+    title: 'Commercial lease terms that catch business tenants by surprise',
+    excerpt: 'From operating expense pass-throughs to restoration clauses, what you should review before signing.',
     date: 'August 22, 2026',
-    readTime: '6 min read',
+    readTime: '5 min read',
     practiceSlug: 'real-estate-law',
     authorId: 'marcus-vance',
     content: [
       {
-        heading: 'The Danger of Vague Common Area Maintenance (CAM)',
+        heading: 'Common area maintenance charges',
         paragraphs: [
-          'Landlords frequently include capital improvements and structural roof repairs in annual CAM pass-throughs. Commercial tenants should strictly cap annual controllable operating expenses at no more than 3% to 5%.'
+          'Commercial leases often pass property operating expenses through to tenants under common area maintenance clauses. Landlords sometimes tuck roof repairs, structural work, or capital improvements into these annual bills.',
+          'Tenants should negotiate a specific cap on annual controllable operating expenses, generally between three and five percent.'
         ]
       },
       {
-        heading: 'Sublease and Assignment Freedoms',
+        heading: 'Sublease and assignment rights',
         paragraphs: [
-          'If your business pivots or requires downsizing, your lease should allow reasonable assignment rights without the landlord retaining unreasonable recapture or profit-skimming powers.'
+          'If your business grows quickly or needs to downsize, you need the right to assign the lease or sublet unused space to a qualified tenant without unreasonable landlord resistance.'
         ]
       }
     ],
     keyTakeaways: [
-      'Cap annual CAM escalations to controllable operational line items.',
-      'Audit landlord restoration and surrender obligations prior to occupancy.',
-      'Negotiate early termination rights tied to co-tenancy thresholds.'
+      'Cap annual operating expense pass-throughs to controllable line items.',
+      'Review surrender conditions so you are not forced to remove standard improvements when moving out.',
+      'Negotiate reasonable sublease permissions early in the process.'
     ]
   },
   {
     slug: 'fourth-amendment-digital-searches',
-    title: 'The Constitution and Your Smartphone: Modern Fourth Amendment Limits',
-    excerpt: 'Examining recent appellate court precedents on mobile device searches at borders and during routine traffic stops.',
+    title: 'Can police search your phone during a traffic stop?',
+    excerpt: 'Constitutional limits on warrantless digital searches and what the courts require.',
     date: 'August 10, 2026',
     readTime: '5 min read',
     practiceSlug: 'criminal-law',
     authorId: 'daniel-okoye',
     content: [
       {
-        heading: 'The Digital Persona',
+        heading: 'Your phone is not an ordinary container',
         paragraphs: [
-          'The Supreme Court’s decision in Riley v. California recognized that modern smartphones are not simple physical containers like wallets; they hold the intimate sum of a citizen’s private life.',
-          'Law enforcement officers cannot search your phone during an arrest without an independent, particularized search warrant issued by a neutral magistrate.'
+          'The Supreme Court confirmed years ago that smartphones are not like wallets or backpacks. They hold photos, banking records, private correspondence, and location history.',
+          'Police officers cannot search your phone during an arrest without a specific search warrant signed by a judge, unless there is an immediate emergency involving imminent harm.'
         ]
       }
     ],
     keyTakeaways: [
-      'Password protections offer stronger legal barriers than biometric unlocks.',
-      'Never consent to voluntary device inspection without legal counsel present.',
-      'Warrantless digital seizures remain subject to immediate suppression motions.'
+      'Passcode locks provide stronger legal and physical protection than facial recognition.',
+      'Never consent to a voluntary phone search without speaking to a lawyer.',
+      'Evidence found during an unlawful search can be suppressed in court.'
     ]
   },
   {
     slug: 'hospital-records-medical-litigation',
-    title: 'How Electronic Medical Records (EMRs) Reveal the Truth in Negligence Claims',
-    excerpt: 'Audit trails and audit logs frequently tell a very different story than the typed narrative summaries in patient charts.',
+    title: 'What electronic medical records show in a negligence claim',
+    excerpt: 'How timestamped audit trails help verify what actually happened in the hospital.',
     date: 'July 28, 2026',
-    readTime: '6 min read',
+    readTime: '5 min read',
     practiceSlug: 'medical-law',
     authorId: 'elena-rostova',
     content: [
       {
-        heading: 'The Power of the EMR Metadata Audit Trail',
+        heading: 'The electronic audit trail',
         paragraphs: [
-          'When medical mishaps occur, hospital staff sometimes add retrospective entries to justify treatment decisions. Modern hospital software, however, logs every keystroke, view, and modification with microsecond timestamps.'
+          'When something goes wrong during surgery or intensive care, typed nursing summaries do not always tell the whole story. Fortunately, modern hospital software records an audit trail.',
+          'The audit log tracks the exact second a nurse opened a chart, viewed lab values, or altered a note after the fact. That data creates an objective timeline of patient care.'
         ]
       }
     ],
     keyTakeaways: [
-      'Demand raw EMR metadata audit trails, not merely printed PDF charts.',
-      'Telemetry alarms often provide objective timelines of patient distress.',
-      'Life-care plans must be calculated by credentialed medical actuaries.'
+      'Always request the complete electronic audit trail, not just a printed chart summary.',
+      'Vital sign monitoring logs show how staff responded to signs of distress.',
+      'Consult credentialed medical specialists to evaluate standard of care.'
     ]
   },
   {
     slug: 'prenuptial-agreements-modern-marriage',
-    title: 'Why Modern Prenuptial Agreements Are an Exercise in Financial Transparency',
-    excerpt: 'Dispelling the myth that prenups signify distrust. How healthy couples use legal clarity to build stronger partnerships.',
+    title: 'How prenuptial agreements work and why couples use them',
+    excerpt: 'Dispelling myths about premarital agreements and how they protect both partners.',
     date: 'July 14, 2026',
     readTime: '4 min read',
     practiceSlug: 'family-law',
     authorId: 'sophia-sterling',
     content: [
       {
-        heading: 'Reframing the Marital Contract',
+        heading: 'Clarifying expectations early',
         paragraphs: [
-          'Every married couple has a prenuptial agreement — it is either the one they intentionally drafted together, or the default state statutory code imposed upon them by a judge in the event of separation.'
+          'Every married couple has a prenuptial agreement. It is either the one you wrote together, or the default state statutory rules applied to you by a judge if you ever divorce.',
+          'A prenuptial agreement allows both partners to identify pre-existing assets, protect family businesses, and agree on fair spousal support terms while they are on good terms.'
         ]
       }
     ],
     keyTakeaways: [
-      'Full, voluntary financial disclosure is essential to enforceability.',
-      'Each party must have independent legal representation.',
-      'Agreements should be executed well in advance of the wedding date.'
+      'Full financial disclosure by both partners is required for the agreement to hold up in court.',
+      'Each person must have their own independent attorney.',
+      'Sign the agreement well before the wedding day to avoid claims of duress.'
     ]
   }
 ];
@@ -722,55 +725,55 @@ export const BLOG_POSTS: BlogPost[] = [
 export const TIMELINE_MILESTONES: TimelineMilestone[] = [
   {
     year: '2011',
-    title: 'Firm Founded by William Ashford Sr.',
-    description: 'Established as an independent boutique in Manhattan focusing on transparent corporate counsel and plain-language client agreements.'
+    title: 'Firm founded by William Ashford Sr.',
+    description: 'Started as an independent corporate practice in New York focused on plain-language contracts and upfront fee estimates.'
   },
   {
     year: '2015',
-    title: 'Expansion into Immigration & Criminal Defense',
-    description: 'Joined by Priya Nandan and Daniel Okoye, adding federal immigration and trial-tested criminal defense to our core practice.'
+    title: 'Immigration and criminal defense practice added',
+    description: 'Priya Nandan and Daniel Okoye joined the firm, adding federal visa filings and trial defense.'
   },
   {
     year: '2018',
-    title: 'Establishment of Healthcare & Medical Law Desk',
-    description: 'Elena Rostova brings specialized dual-degree medical litigation expertise, handling complex standard-of-care cases.'
+    title: 'Medical law and healthcare practice established',
+    description: 'Elena Rostova brought dual-degree clinical and bioethics litigation experience to handle negligence claims.'
   },
   {
     year: '2021',
-    title: 'Launch of Upfront Fixed-Fee Guarantee',
-    description: 'Transitioned all standard business formation, estate, and immigration petitions to 100% transparent flat fees.'
+    title: 'Fixed fees adopted across routine filings',
+    description: 'Shifted standard business setup, visa petitions, and residential closings to transparent flat rates.'
   },
   {
     year: '2024',
-    title: 'Surpassing 900+ Matters Resolved',
-    description: 'Recognized by regional bar associations for maintaining a 98% client satisfaction rate and industry-leading transparency standards.'
+    title: 'Over 900 client matters resolved',
+    description: 'Recognized for client communication and practical advocacy across our core disciplines.'
   },
   {
     year: '2026',
-    title: 'A Unified Multi-Practice Partnership',
-    description: 'Six specialized disciplines working under one collaborative roof, providing balanced, plain-language advocacy for clients worldwide.'
+    title: 'A unified six-discipline partnership',
+    description: 'Six practice groups working together to give clients straightforward, accessible legal advice.'
   }
 ];
 
 export const FIRM_VALUES: FirmValue[] = [
   {
-    title: 'Transparency',
-    description: 'Direct attorney access, written timelines, and upfront pricing wherever a practice area allows.',
+    title: 'Upfront pricing',
+    description: 'Direct fee quotes and written phase budgets so you never receive an invoice you did not expect.',
     icon: 'check'
   },
   {
-    title: 'Accessibility',
-    description: 'Plain-language legal counsel without Latinate jargon or condescending theatrics.',
+    title: 'Plain language',
+    description: 'Every recommendation is explained in words you understand, without Latin phrases or legal theatre.',
     icon: 'scale'
   },
   {
-    title: 'Specialization',
-    description: 'Dedicated attorneys who focus on their specific practice area exclusively, not generalists spread thin.',
+    title: 'Focused attorneys',
+    description: 'You work with a lawyer who focuses exclusively on their discipline, not a generalist trying to cover everything.',
     icon: 'shield'
   },
   {
-    title: 'Accountability',
-    description: 'Every recommendation is documented with clear reasoning and a concrete plan to move forward.',
+    title: 'Written plans',
+    description: 'We put timelines and strategy in writing after your first consultation so you know what happens next.',
     icon: 'users'
   }
 ];
@@ -778,35 +781,35 @@ export const FIRM_VALUES: FirmValue[] = [
 export const FAQS: FAQItem[] = [
   {
     question: 'How much does a consultation cost?',
-    answer: 'Initial consultations are free for most practice areas, so you can understand your options before committing to anything. For complex corporate transaction reviews, we quote any preliminary audit fee in writing before you spend a single dollar.'
+    answer: 'Initial consultations are free for most practice areas so you can understand your options before spending money. For complex corporate transaction reviews, we quote any audit fee in writing before we begin.'
   },
   {
-    question: 'How soon will someone review my case?',
-    answer: 'Most inquiries receive a written case review within 48 hours of your consultation. Urgent criminal arraignments or active deportation filings receive immediate priority same-day response.'
+    question: 'How soon will an attorney review my case?',
+    answer: 'We review most inquiries and send a written assessment within two business days. Urgent criminal arraignments or active deportation hearings receive same-day priority.'
   },
   {
     question: 'Do you offer flat fees?',
-    answer: 'Where the practice area allows it — immigration and real estate matters, for example — we quote flat fees upfront. There are no hidden printing charges, surprise filing fee markups, or vague billing blocks.'
+    answer: 'Yes, wherever the work allows it. We use flat fees for company formations, visa filings, and property closings. You get an all-inclusive number with no hidden copy costs or administrative markups.'
   },
   {
-    question: 'What happens after I submit an inquiry?',
-    answer: 'An attorney in the relevant practice area reaches out directly to schedule your consultation — no call center, no routing. You speak directly with the lawyer who would handle your file.'
+    question: 'What happens after I send a message?',
+    answer: 'An attorney who practices in that specific area reads your note and contacts you directly to set up a call. You do not get routed through a call center or intake screener.'
   },
   {
-    question: 'Can I consult with an attorney remotely via video conference?',
-    answer: 'Yes. We routinely conduct secure, encrypted video consultations and client intake sessions for clients across the country and overseas.'
+    question: 'Can we meet by video call?',
+    answer: 'Yes. We routinely conduct secure video consultations for clients across the country and abroad.'
   },
   {
-    question: 'How do you keep clients updated on case progress?',
-    answer: 'You receive written progress summaries whenever a milestone or agency filing occurs, along with direct email and phone access to your assigned lead attorney.'
+    question: 'How do you keep me updated on my case?',
+    answer: 'We send written updates whenever a court deadline, agency filing, or milestone occurs, and you have direct email and phone access to the attorney handling your file.'
   }
 ];
 
 export const TRUST_PHRASES = [
-  'Free Initial Consultation',
-  '48-Hour Case Review',
-  '900+ Clients Represented',
-  'Board-Certified Attorneys',
-  'Transparent Fee Structures',
-  '15 Years in Practice'
+  'Free initial consultation',
+  '48-hour case review',
+  '900+ clients represented',
+  'Six dedicated practice areas',
+  'Upfront fee agreements',
+  '15 years in practice'
 ];

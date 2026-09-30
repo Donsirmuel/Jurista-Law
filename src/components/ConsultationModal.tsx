@@ -83,7 +83,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
               {/* Practice Area Selection */}
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-[#173330] mb-1.5">
-                  Practice Area *
+                  Practice area *
                 </label>
                 <select
                   value={practice}
@@ -102,14 +102,14 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
               {/* Preferred Attorney */}
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-[#173330] mb-1.5">
-                  Preferred Attorney (Optional)
+                  Preferred attorney (optional)
                 </label>
                 <select
                   value={attorneyId}
                   onChange={(e) => setAttorneyId(e.target.value)}
                   className="w-full bg-[#F1F4EC] border border-[#173330]/20 rounded-xl px-3.5 py-2.5 text-[#173330] font-medium focus:outline-none focus:ring-2 focus:ring-[#C6902E]"
                 >
-                  <option value="any">First available specialist in this practice</option>
+                  <option value="any">First available attorney in this practice</option>
                   {ATTORNEYS.map((att) => (
                     <option key={att.id} value={att.id}>
                       {att.name} ({att.role.split('—')[1]?.trim() || att.role})
@@ -122,7 +122,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#173330] mb-1.5">
-                    Full Name *
+                    Full name *
                   </label>
                   <input
                     type="text"
@@ -135,7 +135,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                 </div>
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#173330] mb-1.5">
-                    Email Address *
+                    Email address *
                   </label>
                   <input
                     type="email"
@@ -152,7 +152,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#173330] mb-1.5">
-                    Phone Number *
+                    Phone number *
                   </label>
                   <input
                     type="tel"
@@ -165,7 +165,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                 </div>
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#173330] mb-1.5">
-                    Preferred Time of Day
+                    Preferred time of day
                   </label>
                   <select
                     value={timeOfDay}
@@ -182,7 +182,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
               {/* Notes */}
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-[#173330] mb-1.5">
-                  Brief Summary of Your Matter
+                  Brief summary of your situation
                 </label>
                 <textarea
                   rows={3}
@@ -213,7 +213,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                   type="submit"
                   className="w-full bg-[#C6902E] hover:bg-[#d49c33] text-[#173330] font-bold py-3.5 rounded-full shadow-[0_4px_14px_rgba(198,144,46,0.3)] transition-all cursor-pointer text-base"
                 >
-                  Confirm Consultation Request
+                  Request consultation
                 </button>
                 <p className="text-center text-[0.75rem] text-[#2E4C47]/80 mt-2">
                   Submissions are covered by strict attorney-client privilege.
@@ -265,7 +265,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
               onClick={handleReset}
               className="bg-[#173330] text-[#F1F4EC] px-8 py-3 rounded-full font-bold text-sm hover:bg-[#2E4C47] transition-colors cursor-pointer"
             >
-              Done &amp; Return to Site
+              Close
             </button>
           </div>
         )}

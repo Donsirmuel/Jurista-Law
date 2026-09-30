@@ -70,7 +70,7 @@ export const AttorneyDetailPage: React.FC<AttorneyDetailPageProps> = ({
             {/* Header Meta */}
             <div className="md:col-span-8">
               <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-1">
-                Jurista Practitioner
+                Attorney
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-[#173330] tracking-tight mb-2">
                 {attorney.name}
@@ -95,14 +95,14 @@ export const AttorneyDetailPage: React.FC<AttorneyDetailPageProps> = ({
                   onClick={onOpenBooking}
                   className="bg-[#C6902E] hover:bg-[#d49c33] text-[#173330] px-6 py-2.5 rounded-full font-bold text-sm transition-all transform hover:-translate-y-0.5 shadow-md cursor-pointer"
                 >
-                  Book consultation with {attorney.name.split(' ')[0]}
+                  Book a consultation with {attorney.name.split(' ')[0]}
                 </button>
                 <a
                   href={`mailto:${attorney.email}`}
                   className="bg-[#FAFCF6] border border-[#173330]/20 hover:border-[#173330]/50 text-[#173330] px-5 py-2.5 rounded-full font-bold text-sm transition-colors flex items-center gap-2"
                 >
                   <MailLineIcon size={16} />
-                  <span>Email Directly</span>
+                  <span>Send an email</span>
                 </a>
               </div>
             </div>
@@ -129,7 +129,7 @@ export const AttorneyDetailPage: React.FC<AttorneyDetailPageProps> = ({
               {/* Bio Paragraphs */}
               <div className="space-y-4 text-base sm:text-lg text-[#2E4C47] leading-relaxed">
                 <h3 className="text-2xl font-serif font-semibold text-[#173330]">
-                  Background &amp; Advocacy Approach
+                  Background and approach
                 </h3>
                 {attorney.bio.map((para, i) => (
                   <p key={i}>{para}</p>
@@ -139,7 +139,7 @@ export const AttorneyDetailPage: React.FC<AttorneyDetailPageProps> = ({
               {/* Practices Handled with Icons */}
               <div className="pt-6 border-t border-[#173330]/10">
                 <h3 className="text-xl font-serif font-semibold text-[#173330] mb-4">
-                  Practices Handled
+                  Practice areas
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {attorney.practices.map((pSlug) => {
@@ -174,7 +174,7 @@ export const AttorneyDetailPage: React.FC<AttorneyDetailPageProps> = ({
               {/* Contact Card */}
               <div className="bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-6 shadow-sm">
                 <h3 className="text-xs uppercase font-bold tracking-wider text-[#173330] mb-4 pb-2 border-b border-[#173330]/8">
-                  Direct Contact
+                  Direct contact
                 </h3>
                 <div className="space-y-3 text-sm text-[#2E4C47]">
                   <div className="flex items-center gap-2.5">
@@ -196,7 +196,7 @@ export const AttorneyDetailPage: React.FC<AttorneyDetailPageProps> = ({
                     onClick={onOpenBooking}
                     className="w-full bg-[#173330] hover:bg-[#2E4C47] text-[#F1F4EC] py-3 rounded-full text-xs font-bold transition-colors cursor-pointer"
                   >
-                    Request Consultation
+                    Book a consultation
                   </button>
                 </div>
               </div>
@@ -205,7 +205,7 @@ export const AttorneyDetailPage: React.FC<AttorneyDetailPageProps> = ({
               <div className="bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-6 shadow-sm text-xs text-[#2E4C47] space-y-5">
                 <div>
                   <h4 className="font-bold text-[#173330] uppercase tracking-wider mb-2">
-                    Bar Admissions
+                    Bar admissions
                   </h4>
                   <ul className="space-y-1.5 list-disc list-inside">
                     {attorney.barAdmissions.map((bar, i) => (

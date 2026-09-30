@@ -29,7 +29,7 @@ export const BlogPostDetailPage: React.FC<BlogPostDetailPageProps> = ({
         <div className="max-w-[820px] mx-auto px-6 sm:px-8">
           <Breadcrumb
             items={[
-              { label: 'Blog & Insights', route: { type: 'blog' } },
+              { label: 'Blog', route: { type: 'blog' } },
               { label: post.title },
             ]}
             onNavigate={onNavigate}
@@ -99,7 +99,7 @@ export const BlogPostDetailPage: React.FC<BlogPostDetailPageProps> = ({
           {post.keyTakeaways && post.keyTakeaways.length > 0 && (
             <div className="mt-12 bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-6 sm:p-8 shadow-sm">
               <h3 className="text-xs font-bold uppercase tracking-wider text-[#9C4A32] mb-3">
-                Key Legal Takeaways
+                Key takeaways
               </h3>
               <ul className="space-y-3 text-sm sm:text-base text-[#173330]">
                 {post.keyTakeaways.map((takeaway, i) => (
@@ -112,15 +112,21 @@ export const BlogPostDetailPage: React.FC<BlogPostDetailPageProps> = ({
             </div>
           )}
 
+          {/* Plain General Information Disclaimer */}
+          <div className="mt-8 bg-[#E6E4D2]/40 border border-[#173330]/10 rounded-xl p-4 text-xs text-[#2E4C47] leading-relaxed">
+            <span className="font-bold text-[#173330] block mb-1">General information notice:</span>
+            This article explains general legal principles, not legal advice for your specific situation. Legal rules change, and how they apply depends on the exact facts of your case. Speak directly with an attorney before making legal decisions.
+          </div>
+
           {/* Author Byline at bottom */}
           {author && (
-            <div className="mt-14 pt-8 border-t border-[#173330]/10 flex flex-col sm:flex-row items-center sm:items-start gap-5 bg-[#FAFCF6] border border-[#173330]/12 p-6 rounded-2xl">
+            <div className="mt-10 pt-8 border-t border-[#173330]/10 flex flex-col sm:flex-row items-center sm:items-start gap-5 bg-[#FAFCF6] border border-[#173330]/12 p-6 rounded-2xl">
               <div className="w-16 h-16 shrink-0">
                 <AttorneyPortrait styleId={author.portraitStyle} size="100%" />
               </div>
               <div>
                 <span className="text-[0.75rem] uppercase font-bold tracking-wider text-[#9C4A32] block mb-1">
-                  About the Author
+                  About the author
                 </span>
                 <h4
                   onClick={() => onNavigate({ type: 'attorney-detail', id: author.id })}
@@ -148,7 +154,7 @@ export const BlogPostDetailPage: React.FC<BlogPostDetailPageProps> = ({
         <section className="py-16 bg-[#FAFCF6] border-t border-[#173330]/10">
           <div className="max-w-[1140px] mx-auto px-6 sm:px-8">
             <h3 className="font-serif font-semibold text-2xl text-[#173330] mb-8">
-              Related Insights
+              Related articles
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedPosts.map((rPost) => (
