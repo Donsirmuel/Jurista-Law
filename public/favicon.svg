@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3E3A" />
+      <stop offset="100%" stop-color="#122724" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE5A2" />
+      <stop offset="50%" stop-color="#C6902E" />
+      <stop offset="100%" stop-color="#8C5F14" />
+    </linearGradient>
+  </defs>
+
+  <!-- Container badge with rich forest spruce base -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bgGrad)" stroke="#C6902E" stroke-width="2" stroke-opacity="0.4" />
+
+  <!-- Neoclassical Courthouse & Columns Motif -->
+  <!-- Pediment roof -->
+  <path d="M12 25 L32 10 L52 25 Z" fill="url(#goldGrad)" />
+  
+  <!-- Pediment inner shadow line -->
+  <line x1="16" y1="25" x2="48" y2="25" stroke="#122724" stroke-width="1.5" />
+  
+  <!-- Architrave frieze -->
+  <rect x="10" y="25" width="44" height="3" rx="0.5" fill="#F1F4EC" />
+
+  <!-- Central & Flanking Classical Pillars -->
+  <line x1="17" y1="28" x2="17" y2="45" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" />
+  <line x1="27" y1="28" x2="27" y2="45" stroke="#F1F4EC" stroke-width="3" stroke-linecap="round" />
+  <line x1="37" y1="28" x2="37" y2="45" stroke="#F1F4EC" stroke-width="3" stroke-linecap="round" />
+  <line x1="47" y1="28" x2="47" y2="45" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Stepped plinth base -->
+  <rect x="10" y="45" width="44" height="3.5" rx="0.5" fill="#F1F4EC" />
+  <rect x="6" y="48.5" width="52" height="4" rx="1" fill="url(#goldGrad)" />
+</svg>
