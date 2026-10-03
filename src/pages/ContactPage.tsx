@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { PageRoute, PracticeSlug } from '../types';
-import { Breadcrumb } from '../components/Breadcrumb';
-import { FloatingChips } from '../components/FloatingChips';
+import { ContactHero } from '../components/heroes/ContactHero';
 import {
-  BuildingMapIllustration,
   PhoneLineIcon,
   MailLineIcon,
   LocationPinIcon,
@@ -33,31 +31,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
   return (
     <div className="w-full">
-      {/* Intro Band on --panel background */}
-      <section className="relative overflow-hidden bg-[#E6E4D2]/60 pt-6 pb-16 lg:pb-20 border-b border-[#173330]/10">
-        <FloatingChips variant="calm" onNavigate={onNavigate} />
-
-        <div className="max-w-[1140px] mx-auto px-6 sm:px-8 relative z-10">
-          <Breadcrumb items={[{ label: 'Contact' }]} onNavigate={onNavigate} />
-
-          <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-2xl mt-4"
-          >
-            <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Contact
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-4">
-              Get in touch.
-            </h1>
-            <p className="text-base sm:text-lg text-[#2E4C47] leading-relaxed">
-              Every inquiry is reviewed directly by an attorney in the relevant practice area. We respond with a written assessment within two business days.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Distinct Two-Column Contact Hero on --panel background */}
+      <ContactHero onNavigate={onNavigate} />
 
       {/* Main Two-Column Contact Section */}
       <section className="py-16 lg:py-24 bg-[#F1F4EC]">
@@ -207,19 +182,41 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               )}
             </motion.div>
 
-            {/* Right: Contact Info Card + Line-Art Building Illustration */}
+            {/* Right: Response Standard Card + Office Details Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-5 space-y-8"
+              className="lg:col-span-5 space-y-6"
             >
-              {/* Illustrated Map & Building */}
-              <div className="bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-6 sm:p-8 shadow-sm text-center">
-                <BuildingMapIllustration />
-                <div className="text-xs text-[#2E4C47]/70 italic mt-3">
-                  Jurista Law · 450 Lexington Avenue, New York, NY
+              {/* Response Standard Process Card */}
+              <div className="bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-6 sm:p-7 shadow-sm">
+                <span className="text-[#9C4A32] font-semibold text-xs block mb-1">
+                  Response standard
+                </span>
+                <h3 className="font-serif font-semibold text-lg text-[#173330] mb-4">
+                  What happens after you reach out
+                </h3>
+                <div className="space-y-3.5 text-xs sm:text-sm text-[#2E4C47]">
+                  <div className="flex items-start gap-3">
+                    <span className="w-6 h-6 rounded-full bg-[#E6E4D2] text-[#173330] font-bold flex items-center justify-center shrink-0 text-xs">
+                      1
+                    </span>
+                    <span>Confidential intake logged directly to our encrypted database under Bar Rule 1.6.</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-6 h-6 rounded-full bg-[#E6E4D2] text-[#173330] font-bold flex items-center justify-center shrink-0 text-xs">
+                      2
+                    </span>
+                    <span>Reviewed by the practicing partner responsible for your specific practice area.</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-6 h-6 rounded-full bg-[#E6E4D2] text-[#173330] font-bold flex items-center justify-center shrink-0 text-xs">
+                      3
+                    </span>
+                    <span>Written preliminary assessment and consultation time returned within two business days.</span>
+                  </div>
                 </div>
               </div>
 

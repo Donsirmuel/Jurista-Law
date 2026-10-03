@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { PageRoute, PracticeSlug } from '../types';
-import { Breadcrumb } from '../components/Breadcrumb';
-import { FloatingChips } from '../components/FloatingChips';
+import { AttorneysHero } from '../components/heroes/AttorneysHero';
 import { AttorneyPortrait } from '../components/AttorneyPortraits';
 import { FinalCtaBand } from '../components/FinalCtaBand';
 import { ATTORNEYS, PRACTICE_AREAS } from '../data/firmData';
@@ -27,31 +26,8 @@ export const AttorneysIndexPage: React.FC<AttorneysIndexPageProps> = ({
 
   return (
     <div className="w-full">
-      {/* Intro Band on --panel background */}
-      <section className="relative overflow-hidden bg-[#E6E4D2]/60 pt-6 pb-16 lg:pb-20 border-b border-[#173330]/10">
-        <FloatingChips variant="calm" onNavigate={onNavigate} />
-
-        <div className="max-w-[1140px] mx-auto px-6 sm:px-8 relative z-10">
-          <Breadcrumb items={[{ label: 'Attorneys' }]} onNavigate={onNavigate} />
-
-          <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-2xl mt-4"
-          >
-            <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Our team
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-4">
-              Our attorneys
-            </h1>
-            <p className="text-base sm:text-lg text-[#2E4C47] leading-relaxed">
-              You work directly with the attorney handling your file. Every lawyer at our firm focuses on one specific discipline rather than handling whatever comes along.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Distinct Attorneys Hero with Team Silhouette Cluster & Teal Wash */}
+      <AttorneysHero onNavigate={onNavigate} />
 
       {/* Filter Row + Grid */}
       <section className="py-16 lg:py-20 bg-[#F1F4EC]">

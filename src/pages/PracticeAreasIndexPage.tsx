@@ -1,15 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { PageRoute, PracticeSlug } from '../types';
-import { Breadcrumb } from '../components/Breadcrumb';
-import { FloatingChips } from '../components/FloatingChips';
+import { PracticeAreasHero } from '../components/heroes/PracticeAreasHero';
 import {
   CorporateIcon,
   ImmigrationIcon,
   ScalesOfJusticeIcon,
   RealEstateIcon,
   CriminalIcon,
-  MedicalIcon,
   FamilyIcon,
   BrickCheckIcon,
 } from '../components/LineIcons';
@@ -44,31 +42,8 @@ export const PracticeAreasIndexPage: React.FC<PracticeAreasIndexPageProps> = ({
 
   return (
     <div className="w-full">
-      {/* Intro Band on --panel background */}
-      <section className="relative overflow-hidden bg-[#E6E4D2]/60 pt-6 pb-16 lg:pb-20 border-b border-[#173330]/10">
-        <FloatingChips variant="calm" onNavigate={onNavigate} />
-
-        <div className="max-w-[1140px] mx-auto px-6 sm:px-8 relative z-10">
-          <Breadcrumb items={[{ label: 'Practice areas' }]} onNavigate={onNavigate} />
-
-          <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-2xl mt-4"
-          >
-            <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Areas of practice
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-4">
-              Practice areas
-            </h1>
-            <p className="text-base sm:text-lg text-[#2E4C47] leading-relaxed">
-              We work across six specific areas of law. Every matter is handled by an attorney who practices in that area every day, not a generalist taking on whatever comes through the door.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Distinct Practice Areas Hero with Fanned Card Cluster & Mustard Wash */}
+      <PracticeAreasHero onNavigate={onNavigate} />
 
       {/* Full Grid of All 6 Practice Areas */}
       <section className="py-20 lg:py-24 bg-[#F1F4EC]">

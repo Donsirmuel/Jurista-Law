@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { PageRoute } from '../types';
-import { Breadcrumb } from '../components/Breadcrumb';
-import { FloatingChips } from '../components/FloatingChips';
-import { OfficeSceneIllustration, BrickCheckIcon } from '../components/LineIcons';
+import { OurFirmHero } from '../components/heroes/OurFirmHero';
+import { BrickCheckIcon } from '../components/LineIcons';
 import { AttorneyPortrait } from '../components/AttorneyPortraits';
 import { FinalCtaBand } from '../components/FinalCtaBand';
 import { ATTORNEYS, TIMELINE_MILESTONES, FIRM_VALUES } from '../data/firmData';
@@ -16,33 +15,10 @@ interface OurFirmPageProps {
 export const OurFirmPage: React.FC<OurFirmPageProps> = ({ onNavigate, onOpenBooking }) => {
   return (
     <div className="w-full">
-      {/* Intro Band on --panel background */}
-      <section className="relative overflow-hidden bg-[#E6E4D2]/60 pt-6 pb-16 lg:pb-20 border-b border-[#173330]/10">
-        <FloatingChips variant="calm" onNavigate={onNavigate} />
+      {/* Dedicated Two-Column Hero with Office Desk & Scales Illustration */}
+      <OurFirmHero onNavigate={onNavigate} />
 
-        <div className="max-w-[1140px] mx-auto px-6 sm:px-8 relative z-10">
-          <Breadcrumb items={[{ label: 'Our Firm' }]} onNavigate={onNavigate} />
-
-          <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-2xl mt-4"
-          >
-            <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              About Jurista Law
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-4">
-              Our firm
-            </h1>
-            <p className="text-base sm:text-lg text-[#2E4C47] leading-relaxed">
-              We started this firm with a simple operating standard: speak plainly, quote your fees upfront, and never leave a client guessing about what is happening in their case.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Story Section: Two Columns (Left Text, Right Line-Art Office Scene) */}
+      {/* Story Section: Two Columns (Left Text, Right Founding Principle Card) */}
       <motion.section
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +30,7 @@ export const OurFirmPage: React.FC<OurFirmPageProps> = ({ onNavigate, onOpenBook
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Story Text */}
             <div className="lg:col-span-6 space-y-5 text-[#2E4C47] text-base leading-relaxed">
-              <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block">
+              <span className="text-[#9C4A32] font-semibold text-xs sm:text-sm block">
                 The philosophy
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-[#173330] tracking-tight leading-tight">
@@ -71,14 +47,30 @@ export const OurFirmPage: React.FC<OurFirmPageProps> = ({ onNavigate, onOpenBook
               </p>
             </div>
 
-            {/* Right Large Line-Art Office Illustration */}
+            {/* Right Founding Principle & Operating Commitments Card */}
             <div className="lg:col-span-6 flex justify-center">
-              <div className="w-full bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-6 sm:p-10 shadow-sm hover:shadow-md transition-shadow">
-                <OfficeSceneIllustration />
-                <div className="text-center mt-4">
-                  <span className="text-xs text-[#2E4C47]/70 italic">
-                    The consultation and drafting desk at Jurista Law.
-                  </span>
+              <div className="w-full bg-[#FAFCF6] border border-[#173330]/12 rounded-2xl p-7 sm:p-10 shadow-sm space-y-6">
+                <blockquote className="font-serif italic text-xl sm:text-2xl text-[#173330] leading-snug">
+                  “If a client leaves our conference room feeling confused, we have failed at our job. The law is complicated enough without lawyers performing for each other.”
+                </blockquote>
+                <div className="border-t border-[#173330]/10 pt-4 flex items-center justify-between text-xs text-[#2E4C47]">
+                  <span className="font-bold text-[#173330]">William Ashford Sr.</span>
+                  <span>Managing Partner · Bar of NY</span>
+                </div>
+
+                <div className="border-t border-[#173330]/8 pt-5 space-y-3">
+                  <div className="flex items-start gap-2.5 text-xs text-[#2E4C47]">
+                    <BrickCheckIcon size={16} className="mt-0.5 shrink-0" />
+                    <span>Written cost caps agreed before work begins</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 text-xs text-[#2E4C47]">
+                    <BrickCheckIcon size={16} className="mt-0.5 shrink-0" />
+                    <span>Direct phone and email contact with your lead attorney</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 text-xs text-[#2E4C47]">
+                    <BrickCheckIcon size={16} className="mt-0.5 shrink-0" />
+                    <span>Statutory deadlines tracked in real-time with written client updates</span>
+                  </div>
                 </div>
               </div>
             </div>

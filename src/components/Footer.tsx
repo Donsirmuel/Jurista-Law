@@ -1,65 +1,138 @@
 import React, { useState } from 'react';
 import { PageRoute } from '../types';
-import { BrandLogoIcon, CourthouseSkylineSilhouette, PhoneLineIcon, MailLineIcon, LocationPinIcon } from './LineIcons';
+import { BrandLogoIcon, PhoneLineIcon, MailLineIcon, ClockLineIcon } from './LineIcons';
 
 interface FooterProps {
   onNavigate: (route: PageRoute) => void;
   onOpenBooking?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => {
+// Thin line-art courthouse & urban architecture skyline running along the top edge of the footer
+const FooterSkylineIllustration: React.FC = () => (
+  <svg
+    viewBox="0 0 1200 64"
+    fill="none"
+    preserveAspectRatio="none"
+    className="w-full h-12 sm:h-14 lg:h-16 text-[#173330] pointer-events-none select-none"
+    aria-hidden="true"
+  >
+    {/* Continuous top ground line */}
+    <line x1="0" y1="62" x2="1200" y2="62" stroke="currentColor" strokeWidth="1.6" opacity="0.25" />
+
+    {/* Skyline structures across the full width */}
+    <g stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.22">
+      {/* Far Left urban buildings */}
+      <path d="M20 62 V46 H55 V62" />
+      <line x1="32" y1="50" x2="43" y2="50" opacity="0.6" />
+      <line x1="32" y1="56" x2="43" y2="56" opacity="0.6" />
+      <path d="M70 62 V38 H115 V62" />
+      <path d="M85 38 V32 H100 V38" />
+      <line x1="82" y1="44" x2="103" y2="44" opacity="0.6" />
+      <line x1="82" y1="52" x2="103" y2="52" opacity="0.6" />
+      <path d="M130 62 V48 H175 V62" />
+
+      {/* Mid Left architectural block */}
+      <path d="M195 62 V34 H255 V62" />
+      <path d="M205 34 L225 24 L245 34" />
+      <line x1="212" y1="42" x2="238" y2="42" opacity="0.6" />
+      <line x1="212" y1="50" x2="238" y2="50" opacity="0.6" />
+      <path d="M275 62 V42 H320 V62" />
+      <path d="M340 62 V50 H380 V62" />
+
+      {/* Center Neoclassical Courthouse with triangular pediment & columns */}
+      <path d="M490 38 L550 14 L610 38 Z" />
+      <rect x="480" y="38" width="140" height="4" rx="0.5" />
+      <line x1="504" y1="42" x2="504" y2="62" strokeWidth="2" />
+      <line x1="524" y1="42" x2="524" y2="62" strokeWidth="2" />
+      <line x1="544" y1="42" x2="544" y2="62" strokeWidth="2" />
+      <line x1="564" y1="42" x2="564" y2="62" strokeWidth="2" />
+      <line x1="584" y1="42" x2="584" y2="62" strokeWidth="2" />
+      <line x1="604" y1="42" x2="604" y2="62" strokeWidth="2" />
+      <rect x="475" y="58" width="150" height="4" rx="0.5" />
+
+      {/* Mid Right architectural block */}
+      <path d="M640 62 V46 H685 V62" />
+      <path d="M705 62 V32 H765 V62" />
+      <path d="M715 32 L735 22 L755 32" />
+      <line x1="722" y1="40" x2="748" y2="40" opacity="0.6" />
+      <line x1="722" y1="48" x2="748" y2="48" opacity="0.6" />
+      <line x1="722" y1="56" x2="748" y2="56" opacity="0.6" />
+      <path d="M785 62 V44 H835 V62" />
+
+      {/* Far Right urban skyline */}
+      <path d="M855 62 V36 H905 V62" />
+      <line x1="870" y1="42" x2="890" y2="42" opacity="0.6" />
+      <line x1="870" y1="50" x2="890" y2="50" opacity="0.6" />
+      <path d="M925 62 V48 H970 V62" />
+      <path d="M990 62 V30 H1045 V62" />
+      <path d="M1005 30 L1018 20 L1030 30" />
+      <line x1="1005" y1="40" x2="1030" y2="40" opacity="0.6" />
+      <line x1="1005" y1="50" x2="1030" y2="50" opacity="0.6" />
+      <path d="M1065 62 V44 H1110 V62" />
+      <path d="M1130 62 V52 H1175 V62" />
+    </g>
+  </svg>
+);
+
+// Large, low-opacity scale-of-justice watermark bleeding off the bottom corner
+const FooterCornerScalesWatermark: React.FC = () => (
+  <svg
+    viewBox="0 0 320 320"
+    fill="none"
+    className="w-40 sm:w-56 md:w-72 lg:w-80 h-auto text-[#173330] pointer-events-none select-none opacity-[0.07]"
+    aria-hidden="true"
+  >
+    {/* Central pillar / fulcrum */}
+    <line x1="160" y1="30" x2="160" y2="290" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
+    {/* Finial top ornament */}
+    <circle cx="160" cy="24" r="10" stroke="currentColor" strokeWidth="5" />
+    {/* Stepped classical base */}
+    <rect x="110" y="270" width="100" height="12" rx="2" stroke="currentColor" strokeWidth="5" />
+    <rect x="80" y="282" width="160" height="14" rx="3" stroke="currentColor" strokeWidth="5" />
+
+    {/* Balancing Beam */}
+    <line x1="40" y1="90" x2="280" y2="90" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
+    <circle cx="160" cy="90" r="14" stroke="currentColor" strokeWidth="5" />
+
+    {/* Left Pan Strings & Scale Pan */}
+    <line x1="50" y1="90" x2="15" y2="180" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+    <line x1="50" y1="90" x2="85" y2="180" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+    <path
+      d="M10 180 C10 215 90 215 90 180 Z"
+      stroke="currentColor"
+      strokeWidth="5"
+      strokeLinejoin="round"
+    />
+
+    {/* Right Pan Strings & Scale Pan */}
+    <line x1="270" y1="90" x2="235" y2="180" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+    <line x1="270" y1="90" x2="305" y2="180" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+    <path
+      d="M230 180 C230 215 310 215 310 180 Z"
+      stroke="currentColor"
+      strokeWidth="5"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const [modalContent, setModalContent] = useState<'privacy' | 'terms' | null>(null);
 
   return (
     <footer className="relative bg-[#F1F4EC] border-t border-[#173330]/12 text-[#173330] overflow-hidden">
-      {/* Neoclassical courthouse & urban skyline silhouette frieze */}
-      <div className="w-full text-[#173330] pt-4">
-        <CourthouseSkylineSilhouette className="opacity-40" />
+      {/* 1. Thin Line-Art Skyline running along the top edge of the footer (Direct child of <footer>) */}
+      <div className="absolute top-0 left-0 right-0 w-full z-0 overflow-hidden pointer-events-none">
+        <FooterSkylineIllustration />
       </div>
 
-      {/* Pre-footer Quick Consultation Banner */}
-      <div className="border-b border-[#173330]/10 bg-[#E6E4D2]/45 py-8">
-        <div className="max-w-[1140px] mx-auto px-6 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
-            <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-1">
-              Confidential inquiry
-            </span>
-            <h3 className="font-serif text-xl sm:text-2xl font-semibold text-[#173330]">
-              Need clarity on an active legal question?
-            </h3>
-            <p className="text-sm text-[#2E4C47] mt-1 max-w-[50ch]">
-              Consultations are confidential and conducted directly with practicing partners.
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-4 shrink-0">
-            <a
-              href="tel:+20116114574"
-              className="inline-flex items-center gap-2 border border-[#173330]/20 hover:border-[#173330]/40 px-5 py-2.5 rounded-full text-sm font-semibold text-[#173330] transition-colors"
-            >
-              <PhoneLineIcon size={16} />
-              <span>+2 011 611-4574</span>
-            </a>
-            {onOpenBooking ? (
-              <button
-                onClick={onOpenBooking}
-                className="bg-[#C6902E] hover:bg-[#d49c33] text-[#173330] px-6 py-2.5 rounded-full font-bold text-sm shadow-sm transition-all hover:shadow-md cursor-pointer"
-              >
-                Book a consultation
-              </button>
-            ) : (
-              <button
-                onClick={() => onNavigate({ type: 'contact' })}
-                className="bg-[#C6902E] hover:bg-[#d49c33] text-[#173330] px-6 py-2.5 rounded-full font-bold text-sm shadow-sm transition-all hover:shadow-md cursor-pointer"
-              >
-                Book a consultation
-              </button>
-            )}
-          </div>
-        </div>
+      {/* 2. Large Scale-of-Justice Watermark bleeding off the bottom-right corner (Direct child of <footer>) */}
+      <div className="absolute bottom-0 right-0 z-0 pointer-events-none translate-x-4 translate-y-4 sm:translate-x-6 sm:translate-y-6">
+        <FooterCornerScalesWatermark />
       </div>
 
-      {/* Main Footer Links & Info Grid */}
-      <div className="max-w-[1140px] mx-auto px-6 sm:px-8 pt-14 pb-12">
+      {/* 3. Main Footer Content Container (relative z-10 so content always sits above the watermark textures) */}
+      <div className="relative z-10 max-w-[1140px] mx-auto px-6 sm:px-8 pt-16 sm:pt-20 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-12">
           {/* Column 1: Brand & Firm Philosophy (4 cols) */}
           <div className="lg:col-span-4 lg:pr-6">
@@ -72,12 +145,19 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
               </div>
               <span>Jurista Law</span>
             </button>
-            <p className="text-[#2E4C47] text-sm leading-relaxed mb-6 font-normal">
+
+            <p className="text-[#2E4C47] text-sm leading-relaxed mb-4 font-normal">
               We give clients direct answers, upfront pricing, and written phase budgets. You talk directly with the attorney handling your file, not an administrative middleman.
             </p>
-            <div className="space-y-2 text-xs text-[#2E4C47] border-l-2 border-[#C6902E] pl-3 py-0.5">
-              <div className="font-semibold text-[#173330]">Bar admission and compliance</div>
-              <div>State Bar of New York · Massachusetts · California</div>
+
+            {/* Retained from pre-footer strip per specification */}
+            <p className="text-xs text-[#2E4C47] leading-relaxed mb-5 border-l-2 border-[#9C4A32] pl-3 py-0.5">
+              Consultations are confidential and conducted directly with practicing partners.
+            </p>
+
+            <div className="space-y-1.5 text-xs text-[#2E4C47] border-l-2 border-[#C6902E] pl-3 py-0.5">
+              <div className="font-semibold text-[#173330]">Bar admission and operating standard</div>
+              <div>State Bar of New York · Founded 2011</div>
               <div>Strict confidentiality under Bar Rule 1.6</div>
             </div>
           </div>
@@ -196,40 +276,55 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
             </ul>
           </div>
 
-          {/* Column 4: Offices (3 cols) */}
+          {/* Column 4: Direct Contact Block (3 cols - Option A) */}
           <div className="lg:col-span-3">
             <h4 className="text-xs uppercase font-bold tracking-wider text-[#173330] mb-4 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#173330]" />
-              <span>Office locations</span>
+              <span>Direct contact</span>
             </h4>
             <div className="space-y-4 text-xs text-[#2E4C47]">
-              <div className="bg-[#E6E4D2]/40 p-3 rounded-lg border border-[#173330]/8">
-                <div className="font-bold text-sm text-[#173330] mb-1 flex items-center gap-1.5">
-                  <LocationPinIcon size={14} className="text-[#9C4A32]" />
-                  <span>New York office</span>
+              {/* Primary Contact Card */}
+              <div className="bg-[#E6E4D2]/40 p-4 rounded-xl border border-[#173330]/10 space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="p-1.5 rounded-md bg-[#FAFCF6] border border-[#173330]/10 text-[#9C4A32]">
+                    <PhoneLineIcon size={16} />
+                  </div>
+                  <div>
+                    <div className="text-[11px] text-[#2E4C47]/80">Direct telephone</div>
+                    <a
+                      href="tel:+20116114574"
+                      className="text-sm font-bold text-[#173330] hover:text-[#9C4A32] transition-colors"
+                    >
+                      +2 011 611-4574
+                    </a>
+                  </div>
                 </div>
-                <p>450 Lexington Avenue, Suite 2400</p>
-                <p>New York, NY 10017</p>
-                <p className="mt-1 text-[11px] text-[#C6902E] font-medium">Mon – Fri: 8:30 AM – 6:30 PM EST</p>
+
+                <div className="flex items-center gap-3 pt-2 border-t border-[#173330]/8">
+                  <div className="p-1.5 rounded-md bg-[#FAFCF6] border border-[#173330]/10 text-[#9C4A32]">
+                    <MailLineIcon size={16} />
+                  </div>
+                  <div>
+                    <div className="text-[11px] text-[#2E4C47]/80">Confidential email</div>
+                    <a
+                      href="mailto:w.ashford@jurista.com"
+                      className="text-sm font-semibold text-[#173330] hover:text-[#9C4A32] transition-colors"
+                    >
+                      w.ashford@jurista.com
+                    </a>
+                  </div>
+                </div>
               </div>
 
-              <div className="bg-[#E6E4D2]/40 p-3 rounded-lg border border-[#173330]/8">
-                <div className="font-bold text-sm text-[#173330] mb-1 flex items-center gap-1.5">
-                  <LocationPinIcon size={14} className="text-[#9C4A32]" />
-                  <span>Boston office</span>
+              {/* Hours & Response Standards */}
+              <div className="space-y-1.5 text-xs text-[#2E4C47] pl-1">
+                <div className="flex items-center gap-2">
+                  <ClockLineIcon size={14} className="text-[#9C4A32] shrink-0" />
+                  <span className="font-medium text-[#173330]">Monday – Friday: 8:30 AM – 6:30 PM EST</span>
                 </div>
-                <p>100 High Street, 18th Floor</p>
-                <p>Boston, MA 02110</p>
-              </div>
-
-              <div className="flex items-center gap-3 text-xs pt-1">
-                <a
-                  href="mailto:w.ashford@jurista.com"
-                  className="hover:text-[#9C4A32] transition-colors flex items-center gap-1.5"
-                >
-                  <MailLineIcon size={14} />
-                  <span>w.ashford@jurista.com</span>
-                </a>
+                <div className="text-[11px] text-[#2E4C47]/80 pl-5">
+                  Written preliminary assessment in 2 business days
+                </div>
               </div>
             </div>
           </div>

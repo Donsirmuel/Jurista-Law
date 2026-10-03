@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { PageRoute } from '../types';
-import { Breadcrumb } from '../components/Breadcrumb';
-import { FloatingChips } from '../components/FloatingChips';
+import { BlogHero } from '../components/heroes/BlogHero';
 import { AttorneyPortrait } from '../components/AttorneyPortraits';
 import { FinalCtaBand } from '../components/FinalCtaBand';
 import { BLOG_POSTS, ATTORNEYS, PRACTICE_AREAS } from '../data/firmData';
@@ -31,31 +30,8 @@ export const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate, onOpen
 
   return (
     <div className="w-full">
-      {/* Intro Band on --panel background */}
-      <section className="relative overflow-hidden bg-[#E6E4D2]/60 pt-6 pb-16 lg:pb-20 border-b border-[#173330]/10">
-        <FloatingChips variant="calm" onNavigate={onNavigate} />
-
-        <div className="max-w-[1140px] mx-auto px-6 sm:px-8 relative z-10">
-          <Breadcrumb items={[{ label: 'Blog' }]} onNavigate={onNavigate} />
-
-          <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-2xl mt-4"
-          >
-            <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
-              Articles
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-[#173330] tracking-tight leading-tight mb-4">
-              Articles on the law
-            </h1>
-            <p className="text-base sm:text-lg text-[#2E4C47] leading-relaxed">
-              Practical explanations of contracts, immigration rules, property laws, and court decisions. Written by the attorneys who work on these cases every day.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Distinct Quiet Content-First Blog Hero with Open Book & Quill */}
+      <BlogHero onNavigate={onNavigate} />
 
       {/* Main Blog Content */}
       <section className="py-16 lg:py-20 bg-[#F1F4EC]">
