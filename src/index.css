@@ -45,26 +45,57 @@ h1, h2, h3, h4 {
   font-family: 'Fraunces', serif;
 }
 
-/* Organic Floating Hero Icon Badges Animation Spec */
-@keyframes floatY {
+/* Line-Art Floating Hero Icons Spec */
+.floating-icons {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.li {
+  position: absolute;
+  opacity: 0.92;
+  animation-name: drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 16s;
+}
+
+.li.big {
+  opacity: 0.1;
+  animation: none;
+}
+
+.li path,
+.li circle,
+.li rect,
+.li line,
+.li ellipse,
+.li polygon {
+  fill: none;
+  stroke: #111111;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.li .a {
+  fill: #C6902E;
+}
+
+@keyframes drift {
   0%, 100% {
     transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateY(-16px) rotate(5deg);
+    transform: translateY(-7px) rotate(1.2deg);
   }
 }
 
-.ficon {
-  animation-name: floatY;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 6s; /* default, overridden per chip instance */
-  will-change: transform;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .ficon {
+  .li {
     animation: none !important;
     transform: none !important;
   }

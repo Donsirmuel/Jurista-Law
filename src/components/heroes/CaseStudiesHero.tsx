@@ -26,22 +26,9 @@ export const CaseStudiesHero: React.FC<CaseStudiesHeroProps> = ({ onNavigate }) 
 
         <div className="max-w-2xl mt-5 sm:mt-6">
           {/* Single Case File / Open Folder Icon Motif */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-4 sm:mb-5 pt-1 inline-block select-none"
-          >
-            <div
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#FAFCF6] border-2 border-[#9C4A32]/35 flex items-center justify-center shadow-sm"
-              style={{
-                boxShadow: '0 3px 10px rgba(156, 74, 50, 0.16)',
-              }}
-              title="Legal case file"
-            >
-              <CaseFolderIcon size={30} />
-            </div>
-          </motion.div>
+          <div className="mb-4 sm:mb-5 pt-1 inline-block select-none" title="Legal case file">
+            <CaseFolderIcon size={38} className="text-[#111111]" />
+          </div>
 
           {/* Eyebrow Label */}
           <span className="text-[#9C4A32] font-semibold text-xs sm:text-sm block mb-2">

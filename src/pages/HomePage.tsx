@@ -37,7 +37,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
       case 'criminal-law':
         return <CriminalIcon size={58} className="text-[#173330]" />;
       case 'medical-law':
-        return <ScalesOfJusticeIcon size={58} className="text-[#173330]" />;
+        return <MedicalIcon size={58} className="text-[#173330]" />;
       case 'family-law':
         return <FamilyIcon size={58} className="text-[#173330]" />;
     }
@@ -209,13 +209,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
       </motion.section>
 
       {/* 4. PRACTICE AREAS GRID (Scroll-Animated with Meaningful Icons) */}
-      <section className="scroll-reveal py-20 lg:py-24 bg-[#FAFCF6] border-y border-[#173330]/10">
+      <section className="py-20 lg:py-24 bg-[#FAFCF6] border-y border-[#173330]/10">
         <div className="max-w-[1140px] mx-auto px-6 sm:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 28 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, amount: 0.05 }}
+            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-xl mb-12 sm:mb-14"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
@@ -233,10 +233,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
             {PRACTICE_AREAS.map((practice, idx) => (
               <motion.div
                 key={practice.id}
-                initial={{ opacity: 0, y: 32 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.65, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.6, delay: idx * 0.06, ease: [0.16, 1, 0.3, 1] }}
                 onClick={() => onNavigate({ type: 'practice-detail', slug: practice.id })}
                 className="group bg-[#FAFCF6] p-7 sm:p-8 rounded-xl border border-[#173330]/12 hover:border-[#173330]/30 shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between"
               >
@@ -263,13 +263,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
       </section>
 
       {/* 5. PROCESS SECTION ("How a case moves" with Staggered Scroll-In) */}
-      <section className="scroll-reveal py-20 lg:py-24 bg-[#E6E4D2]/60">
+      <section className="py-20 lg:py-24 bg-[#E6E4D2]/60">
         <div className="max-w-[1140px] mx-auto px-6 sm:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 28 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, amount: 0.05 }}
+            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-xl mb-12 sm:mb-14"
           >
             <span className="text-[#9C4A32] font-bold text-xs uppercase tracking-wider block mb-2">
@@ -292,10 +292,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBooking })
             ].map((step, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.65, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
                 onMouseEnter={() => setActiveStep(idx)}
                 className={`p-6 sm:p-7 rounded-xl border transition-all cursor-pointer ${
                   activeStep === idx

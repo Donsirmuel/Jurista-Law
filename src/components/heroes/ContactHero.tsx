@@ -24,16 +24,8 @@ export const ContactHero: React.FC<ContactHeroProps> = ({ onNavigate }) => {
             className="lg:col-span-7"
           >
             {/* Single Envelope / Direct Communication Icon */}
-            <div className="mb-4 sm:mb-5 pt-1 inline-block select-none">
-              <div
-                className="w-12 h-12 sm:w-13 sm:h-13 rounded-2xl bg-[#FAFCF6] border-2 border-[#173330]/20 flex items-center justify-center shadow-sm"
-                style={{
-                  boxShadow: '0 3px 10px rgba(23, 51, 48, 0.10)',
-                }}
-                title="Direct confidential inquiry"
-              >
-                <SpeechEnvelopeIcon size={28} />
-              </div>
+            <div className="mb-4 sm:mb-5 pt-1 inline-block select-none" title="Direct confidential inquiry">
+              <SpeechEnvelopeIcon size={36} className="text-[#111111]" />
             </div>
 
             {/* Eyebrow Label */}

@@ -44,7 +44,7 @@ export const PracticeAreaDetailPage: React.FC<PracticeAreaDetailPageProps> = ({
       case 'criminal-law':
         return <CriminalIcon size={size} className="text-[#173330]" />;
       case 'medical-law':
-        return <ScalesOfJusticeIcon size={size} className="text-[#173330]" />;
+        return <MedicalIcon size={size} className="text-[#173330]" />;
       case 'family-law':
         return <FamilyIcon size={size} className="text-[#173330]" />;
     }

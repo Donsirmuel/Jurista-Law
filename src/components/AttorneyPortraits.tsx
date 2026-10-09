@@ -5,259 +5,273 @@ interface PortraitProps {
   styleId: Attorney['portraitStyle'];
   size?: number | string;
   className?: string;
-  isDetailed?: boolean;
 }
 
+/**
+ * Editorial Line-Art Attorney Portraits
+ * Spec:
+ * - viewBox="0 0 100 100"
+ * - Stroke: #111111, stroke-width: 2.2, round cap & join
+ * - Flat mustard accent (#C6902E) used exactly once per portrait
+ * - Visibly distinct faces, hair, collars, and accessories
+ * - Zero container pills or drop shadows
+ */
 export const AttorneyPortrait: React.FC<PortraitProps> = ({
   styleId,
-  size = 120,
+  size = 110,
   className = '',
-  isDetailed = false,
 }) => {
-  // Common dimensions
   const width = typeof size === 'number' ? size : undefined;
   const height = typeof size === 'number' ? size : undefined;
 
   switch (styleId) {
     case 'founder':
-      // William Ashford Sr. (Distinguished founder, hair parting with mustard touch, glasses/wisdom lines)
+      // William Ashford Sr. (Senior partner: side-parted hair, glasses, mustard tie)
       return (
         <svg
-          viewBox="0 0 200 220"
-          fill="none"
+          viewBox="0 0 100 100"
           width={width}
           height={height}
+          fill="none"
           className={`shrink-0 ${className}`}
         >
-          {/* Head & shoulders */}
-          <circle cx="100" cy="74" r="44" fill="#E6E4D2" />
-          <circle cx="100" cy="74" r="44" stroke="#173330" strokeWidth="3" />
-          <path d="M38 214 Q100 152 162 214" stroke="#173330" strokeWidth="3" fill="#E6E4D2" />
+          {/* Circular Frame */}
+          <circle cx="50" cy="50" r="46" stroke="#111111" strokeWidth="2.2" />
 
-          {/* Hair swoosh (Mustard Accent) */}
-          <path
-            d="M58 50 Q100 24 142 50"
-            fill="#C6902E"
-            stroke="#173330"
-            strokeWidth="2.4"
-          />
+          {/* Head & Neck */}
+          <circle cx="50" cy="40" r="19" stroke="#111111" strokeWidth="2.2" />
+          <path d="M44 58 V66 M56 58 V66" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
-          {/* Wireframe glasses */}
-          <rect x="74" y="66" width="22" height="18" rx="4" stroke="#173330" strokeWidth="2.2" fill="#FAFCF6" />
-          <rect x="104" y="66" width="22" height="18" rx="4" stroke="#173330" strokeWidth="2.2" fill="#FAFCF6" />
-          <line x1="96" y1="75" x2="104" y2="75" stroke="#173330" strokeWidth="2.2" />
+          {/* Shoulders & Suit */}
+          <path d="M18 92 C24 74 34 66 44 66 H56 C66 66 76 74 82 92" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
+          {/* Receding hairline & side part */}
+          <path d="M33 34 C36 24 45 22 50 22 C56 22 64 24 67 34" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
+          <path d="M35 32 C42 27 50 27 55 30" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
+
+          {/* Eyeglasses */}
+          <rect x="37" y="36" width="10" height="8" rx="2" stroke="#111111" strokeWidth="2.2" />
+          <rect x="53" y="36" width="10" height="8" rx="2" stroke="#111111" strokeWidth="2.2" />
+          <line x1="47" y1="40" x2="53" y2="40" stroke="#111111" strokeWidth="2.2" />
           {/* Eyes */}
-          <circle cx="85" cy="75" r="2.8" fill="#173330" />
-          <circle cx="115" cy="75" r="2.8" fill="#173330" />
+          <circle cx="42" cy="40" r="1.5" fill="#111111" />
+          <circle cx="58" cy="40" r="1.5" fill="#111111" />
 
-          {/* Nose & calm mouth */}
-          <path d="M100 86 V94 L97 96" stroke="#173330" strokeWidth="2" strokeLinecap="round" />
-          <path d="M92 104 Q100 108 108 104" stroke="#173330" strokeWidth="2.2" strokeLinecap="round" />
+          {/* Nose & Calm Mouth */}
+          <path d="M50 45 V48 L48 49" stroke="#111111" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M46 53 Q50 55 54 53" stroke="#111111" strokeWidth="2" strokeLinecap="round" />
 
-          {/* Collar & Tie */}
-          <path d="M88 160 L100 180 L112 160" stroke="#173330" strokeWidth="2.4" fill="#FAFCF6" />
-          <path d="M97 180 L103 180 L106 214 L94 214 Z" stroke="#173330" strokeWidth="2.2" fill="#C6902E" />
+          {/* Shirt Collar & Mustard Tie Accent */}
+          <path d="M44 66 L50 74 L56 66" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
+          <polygon points="48,74 52,74 54,92 46,92" fill="#C6902E" stroke="#111111" strokeWidth="2.2" strokeLinejoin="round" />
         </svg>
       );
 
     case 'associate-priya':
-      // Priya Nandan (Immigration - Elegant top knot / bun, poised eyes, brick earring touch)
+      // Priya Nandan (Top knot bun with mustard hairpin, sleek styled side bangs)
       return (
         <svg
-          viewBox="0 0 200 220"
-          fill="none"
+          viewBox="0 0 100 100"
           width={width}
           height={height}
+          fill="none"
           className={`shrink-0 ${className}`}
         >
-          {/* Head & shoulders */}
-          <circle cx="100" cy="78" r="42" fill="#E6E4D2" />
-          <circle cx="100" cy="78" r="42" stroke="#173330" strokeWidth="3" />
-          <path d="M40 214 Q100 155 160 214" stroke="#173330" strokeWidth="3" fill="#E6E4D2" />
+          {/* Circular Frame */}
+          <circle cx="50" cy="50" r="46" stroke="#111111" strokeWidth="2.2" />
 
-          {/* Elegant Bun with mustard pin */}
-          <circle cx="100" cy="24" r="16" fill="#C6902E" stroke="#173330" strokeWidth="2.4" />
-          <line x1="82" y1="28" x2="118" y2="20" stroke="#173330" strokeWidth="2.4" strokeLinecap="round" />
+          {/* Top Knot Bun with Mustard Accent */}
+          <circle cx="50" cy="18" r="8" fill="#C6902E" stroke="#111111" strokeWidth="2.2" />
+          <line x1="41" y1="20" x2="59" y2="16" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
-          {/* Sleek styled side bangs */}
-          <path d="M60 62 Q100 44 140 62" stroke="#173330" strokeWidth="2.6" fill="#173330" />
+          {/* Head & Neck */}
+          <circle cx="50" cy="42" r="18" stroke="#111111" strokeWidth="2.2" />
+          <path d="M45 59 V68 M55 59 V68" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
-          {/* Eyes & arched brows */}
-          <path d="M76 68 Q86 64 94 68" stroke="#173330" strokeWidth="2" strokeLinecap="round" />
-          <path d="M106 68 Q114 64 124 68" stroke="#173330" strokeWidth="2" strokeLinecap="round" />
-          <circle cx="85" cy="76" r="3" fill="#173330" />
-          <circle cx="115" cy="76" r="3" fill="#173330" />
+          {/* Shoulders */}
+          <path d="M20 92 C26 76 35 68 45 68 H55 C65 68 74 76 80 92" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
-          {/* Gentle smile */}
-          <path d="M92 103 Q100 110 108 103" stroke="#173330" strokeWidth="2.2" strokeLinecap="round" />
+          {/* Sleek Side Bangs & Hairline */}
+          <path d="M33 36 Q50 26 67 36" stroke="#111111" strokeWidth="2.4" strokeLinecap="round" />
+          <path d="M32 38 Q35 48 37 54 M68 38 Q65 48 63 54" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
-          {/* Small drop earrings (Brick accent) */}
-          <circle cx="56" cy="85" r="3.2" fill="#9C4A32" />
-          <circle cx="144" cy="85" r="3.2" fill="#9C4A32" />
+          {/* Eyes & Arched Brows */}
+          <path d="M38 37 Q42 35 46 37" stroke="#111111" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M54 37 Q58 35 62 37" stroke="#111111" strokeWidth="1.8" strokeLinecap="round" />
+          <circle cx="42" cy="41" r="1.6" fill="#111111" />
+          <circle cx="58" cy="41" r="1.6" fill="#111111" />
 
-          {/* Collar */}
-          <path d="M84 165 L100 188 L116 165" stroke="#173330" strokeWidth="2.4" fill="#FAFCF6" />
+          {/* Nose & Graceful Smile */}
+          <path d="M50 45 V49 L48 50" stroke="#111111" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M46 54 Q50 58 54 54" stroke="#111111" strokeWidth="2" strokeLinecap="round" />
+
+          {/* Professional Blazer Lapel */}
+          <path d="M43 68 L50 78 L57 68" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
+          <path d="M38 72 L48 92 M62 72 L52 92" stroke="#111111" strokeWidth="2" strokeLinecap="round" />
         </svg>
       );
 
     case 'associate-daniel':
-      // Daniel Okoye (Criminal Defense - Sharp jawline, short taper hair, determined expression)
+      // Daniel Okoye (Sharp jawline, neat taper haircut, suit with mustard collar pin)
       return (
         <svg
-          viewBox="0 0 200 220"
-          fill="none"
+          viewBox="0 0 100 100"
           width={width}
           height={height}
+          fill="none"
           className={`shrink-0 ${className}`}
         >
-          {/* Head & shoulders */}
-          <circle cx="100" cy="76" r="44" fill="#E6E4D2" />
-          <circle cx="100" cy="76" r="44" stroke="#173330" strokeWidth="3" />
-          <path d="M36 214 Q100 148 164 214" stroke="#173330" strokeWidth="3" fill="#E6E4D2" />
+          {/* Circular Frame */}
+          <circle cx="50" cy="50" r="46" stroke="#111111" strokeWidth="2.2" />
 
-          {/* Neat cropped taper hair */}
-          <path
-            d="M62 55 C65 35 80 28 100 28 C120 28 135 35 138 55 Z"
-            fill="#173330"
-            stroke="#173330"
-            strokeWidth="2.4"
-          />
+          {/* Head & Neck */}
+          <circle cx="50" cy="41" r="19" stroke="#111111" strokeWidth="2.2" />
+          <path d="M43 59 V67 M57 59 V67" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
-          {/* Strong brow line */}
-          <line x1="75" y1="68" x2="93" y2="68" stroke="#173330" strokeWidth="2.6" strokeLinecap="round" />
-          <line x1="107" y1="68" x2="125" y2="68" stroke="#173330" strokeWidth="2.6" strokeLinecap="round" />
+          {/* Strong Shoulders */}
+          <path d="M16 92 C22 74 33 67 43 67 H57 C67 67 78 74 84 92" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
-          {/* Eyes */}
-          <circle cx="84" cy="76" r="3.2" fill="#173330" />
-          <circle cx="116" cy="76" r="3.2" fill="#173330" />
+          {/* Neat Taper Hairline & Crown */}
+          <path d="M32 32 C36 21 44 19 50 19 C56 19 64 21 68 32 Z" stroke="#111111" strokeWidth="2.4" strokeLinejoin="round" />
 
-          {/* Sharp jawline shadow & calm mouth */}
-          <path d="M90 102 H110" stroke="#173330" strokeWidth="2.4" strokeLinecap="round" />
-          <path d="M96 112 H104" stroke="#173330" strokeWidth="1.8" strokeLinecap="round" opacity="0.6" />
+          {/* Determined Strong Brows & Eyes */}
+          <line x1="38" y1="36" x2="46" y2="36" stroke="#111111" strokeWidth="2.4" strokeLinecap="round" />
+          <line x1="54" y1="36" x2="62" y2="36" stroke="#111111" strokeWidth="2.4" strokeLinecap="round" />
+          <circle cx="42" cy="41" r="1.8" fill="#111111" />
+          <circle cx="58" cy="41" r="1.8" fill="#111111" />
 
-          {/* Lapel & necktie */}
-          <path d="M82 158 L100 186 L118 158" stroke="#173330" strokeWidth="2.4" fill="#FAFCF6" />
-          <polygon points="98,186 102,186 105,214 95,214" fill="#173330" />
+          {/* Chiseled Nose & Firm Mouth */}
+          <path d="M50 44 V49 L47 50" stroke="#111111" strokeWidth="2" strokeLinecap="round" />
+          <line x1="45" y1="54" x2="55" y2="54" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
+
+          {/* Collar & Tie with Mustard Lapel Pin Accent */}
+          <path d="M43 67 L50 76 L57 67" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
+          <polygon points="48,76 52,76 53,92 47,92" stroke="#111111" strokeWidth="2.2" strokeLinejoin="round" />
+          {/* Mustard Lapel Pin */}
+          <circle cx="36" cy="74" r="3" fill="#C6902E" stroke="#111111" strokeWidth="2" />
         </svg>
       );
 
     case 'partner-elena':
-      // Elena Rostova (Medical Law - Round spectacles, shoulder-length wavy hair, analytical demeanor)
+      // Elena Rostova (Medical Law - Round spectacles with mustard bridge/accent, wavy layered hair)
       return (
         <svg
-          viewBox="0 0 200 220"
-          fill="none"
+          viewBox="0 0 100 100"
           width={width}
           height={height}
+          fill="none"
           className={`shrink-0 ${className}`}
         >
-          {/* Head & shoulders */}
-          <circle cx="100" cy="76" r="42" fill="#E6E4D2" />
-          <circle cx="100" cy="76" r="42" stroke="#173330" strokeWidth="3" />
-          <path d="M40 214 Q100 152 160 214" stroke="#173330" strokeWidth="3" fill="#E6E4D2" />
+          {/* Circular Frame */}
+          <circle cx="50" cy="50" r="46" stroke="#111111" strokeWidth="2.2" />
 
-          {/* Wave hair cascading */}
-          <path
-            d="M58 70 Q52 105 60 135 M142 70 Q148 105 140 135"
-            stroke="#173330"
-            strokeWidth="3.2"
-            strokeLinecap="round"
-          />
-          <path d="M60 48 Q100 30 140 48" fill="#173330" stroke="#173330" strokeWidth="2.4" />
+          {/* Wavy Shoulder-Length Hair Outline */}
+          <path d="M30 38 C26 50 26 68 32 82 M70 38 C74 50 74 68 68 82" stroke="#111111" strokeWidth="2.4" strokeLinecap="round" />
+          <path d="M31 34 Q50 20 69 34" stroke="#111111" strokeWidth="2.4" strokeLinecap="round" />
 
-          {/* Round tortoise spectacles with mustard tint */}
-          <circle cx="82" cy="76" r="12" stroke="#173330" strokeWidth="2.2" fill="#FAFCF6" />
-          <circle cx="118" cy="76" r="12" stroke="#173330" strokeWidth="2.2" fill="#FAFCF6" />
-          <line x1="94" y1="76" x2="106" y2="76" stroke="#173330" strokeWidth="2.2" />
+          {/* Head & Neck */}
+          <circle cx="50" cy="42" r="18" stroke="#111111" strokeWidth="2.2" />
+          <path d="M45 59 V68 M55 59 V68" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
+          {/* Shoulders */}
+          <path d="M20 92 C26 76 35 68 45 68 H55 C65 68 74 76 80 92" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
+
+          {/* Round Spectacles with Mustard Bridge Accent */}
+          <circle cx="41" cy="42" r="6" stroke="#111111" strokeWidth="2.2" />
+          <circle cx="59" cy="42" r="6" stroke="#111111" strokeWidth="2.2" />
+          {/* Mustard Accent Bridge Bar */}
+          <line x1="47" y1="42" x2="53" y2="42" stroke="#C6902E" strokeWidth="3" strokeLinecap="round" />
           {/* Eyes */}
-          <circle cx="82" cy="76" r="2.8" fill="#173330" />
-          <circle cx="118" cy="76" r="2.8" fill="#173330" />
+          <circle cx="41" cy="42" r="1.6" fill="#111111" />
+          <circle cx="59" cy="42" r="1.6" fill="#111111" />
 
-          {/* Mouth */}
-          <path d="M92 104 Q100 109 108 104" stroke="#173330" strokeWidth="2.2" strokeLinecap="round" />
+          {/* Nose & Thoughtful Mouth */}
+          <path d="M50 46 V50 L48 51" stroke="#111111" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M46 55 Q50 58 54 55" stroke="#111111" strokeWidth="2" strokeLinecap="round" />
 
-          {/* V-neck blouse (Teal/cream) */}
-          <path d="M85 162 L100 190 L115 162" stroke="#173330" strokeWidth="2.4" fill="#FAFCF6" />
+          {/* V-neck blouse */}
+          <path d="M44 68 L50 78 L56 68" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
         </svg>
       );
 
     case 'associate-marcus':
-      // Marcus Vance (Real Estate - Structured frames, side part hair, warm demeanor)
+      // Marcus Vance (Structured modern side-part haircut, suit with mustard tie)
       return (
         <svg
-          viewBox="0 0 200 220"
-          fill="none"
+          viewBox="0 0 100 100"
           width={width}
           height={height}
+          fill="none"
           className={`shrink-0 ${className}`}
         >
-          {/* Head & shoulders */}
-          <circle cx="100" cy="76" r="43" fill="#E6E4D2" />
-          <circle cx="100" cy="76" r="43" stroke="#173330" strokeWidth="3" />
-          <path d="M38 214 Q100 150 162 214" stroke="#173330" strokeWidth="3" fill="#E6E4D2" />
+          {/* Circular Frame */}
+          <circle cx="50" cy="50" r="46" stroke="#111111" strokeWidth="2.2" />
 
-          {/* Side parted hair */}
-          <path
-            d="M60 52 C70 30 110 30 140 46 C120 44 95 44 75 58 Z"
-            fill="#C6902E"
-            stroke="#173330"
-            strokeWidth="2.4"
-          />
+          {/* Head & Neck */}
+          <circle cx="50" cy="41" r="19" stroke="#111111" strokeWidth="2.2" />
+          <path d="M44 59 V67 M56 59 V67" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
-          {/* Eyes & brows */}
-          <path d="M76 68 H92" stroke="#173330" strokeWidth="2.2" strokeLinecap="round" />
-          <path d="M108 68 H124" stroke="#173330" strokeWidth="2.2" strokeLinecap="round" />
-          <circle cx="84" cy="76" r="3" fill="#173330" />
-          <circle cx="116" cy="76" r="3" fill="#173330" />
+          {/* Shoulders */}
+          <path d="M18 92 C24 74 34 67 44 67 H56 C66 67 76 74 82 92" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
-          {/* Smile */}
-          <path d="M90 102 Q100 109 110 102" stroke="#173330" strokeWidth="2.2" strokeLinecap="round" />
+          {/* Structured Side-Part Hair */}
+          <path d="M32 34 C36 21 54 20 68 28 C60 26 48 26 38 34" stroke="#111111" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
 
-          {/* Suit & tie */}
-          <path d="M86 160 L100 184 L114 160" stroke="#173330" strokeWidth="2.4" fill="#FAFCF6" />
-          <polygon points="98,184 102,184 104,214 96,214" fill="#9C4A32" />
+          {/* Eyes & Brows */}
+          <line x1="38" y1="35" x2="45" y2="35" stroke="#111111" strokeWidth="2" strokeLinecap="round" />
+          <line x1="55" y1="35" x2="62" y2="35" stroke="#111111" strokeWidth="2" strokeLinecap="round" />
+          <circle cx="42" cy="40" r="1.6" fill="#111111" />
+          <circle cx="58" cy="40" r="1.6" fill="#111111" />
+
+          {/* Nose & Warm Smile */}
+          <path d="M50 44 V48 L48 49" stroke="#111111" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M45 53 Q50 57 55 53" stroke="#111111" strokeWidth="2" strokeLinecap="round" />
+
+          {/* Collar & Mustard Tie Accent */}
+          <path d="M44 67 L50 75 L56 67" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
+          <polygon points="48,75 52,75 54,92 46,92" fill="#C6902E" stroke="#111111" strokeWidth="2.2" strokeLinejoin="round" />
         </svg>
       );
 
     case 'associate-sophia':
-      // Sophia Sterling (Family Law - Soft layered bob, gentle eyes, brick accent pin)
+      // Sophia Sterling (Family Law - Soft chin-length bob, gentle eyes, mustard hair clip accent)
       return (
         <svg
-          viewBox="0 0 200 220"
-          fill="none"
+          viewBox="0 0 100 100"
           width={width}
           height={height}
+          fill="none"
           className={`shrink-0 ${className}`}
         >
-          {/* Head & shoulders */}
-          <circle cx="100" cy="78" r="42" fill="#E6E4D2" />
-          <circle cx="100" cy="78" r="42" stroke="#173330" strokeWidth="3" />
-          <path d="M40 214 Q100 154 160 214" stroke="#173330" strokeWidth="3" fill="#E6E4D2" />
+          {/* Circular Frame */}
+          <circle cx="50" cy="50" r="46" stroke="#111111" strokeWidth="2.2" />
 
-          {/* Layered bob hair */}
-          <path
-            d="M58 56 C65 32 135 32 142 56 C146 80 144 110 138 125 C130 95 130 65 100 58 C70 65 70 95 62 125 C56 110 54 80 58 56 Z"
-            fill="#173330"
-            stroke="#173330"
-            strokeWidth="2.4"
-          />
+          {/* Layered Chin-Length Bob Hair */}
+          <path d="M29 36 C24 50 25 64 32 72 M71 36 C76 50 75 64 68 72" stroke="#111111" strokeWidth="2.4" strokeLinecap="round" />
+          <path d="M30 36 C36 23 64 23 70 36" stroke="#111111" strokeWidth="2.4" strokeLinecap="round" />
 
-          {/* Small mustard hair clip */}
-          <rect x="68" y="44" width="14" height="4" rx="2" fill="#C6902E" transform="rotate(-15 68 44)" />
+          {/* Mustard Accent Hair Clip */}
+          <rect x="33" y="27" width="9" height="3" rx="1.5" fill="#C6902E" stroke="#111111" strokeWidth="1.6" transform="rotate(-15 33 27)" />
 
-          {/* Eyes & brows */}
-          <path d="M78 70 Q86 66 94 70" stroke="#173330" strokeWidth="2" strokeLinecap="round" />
-          <path d="M106 70 Q114 66 122 70" stroke="#173330" strokeWidth="2" strokeLinecap="round" />
-          <circle cx="86" cy="78" r="2.8" fill="#173330" />
-          <circle cx="114" cy="78" r="2.8" fill="#173330" />
+          {/* Head & Neck */}
+          <circle cx="50" cy="42" r="18" stroke="#111111" strokeWidth="2.2" />
+          <path d="M45 59 V68 M55 59 V68" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
-          {/* Warm smile */}
-          <path d="M91 104 Q100 112 109 104" stroke="#173330" strokeWidth="2.2" strokeLinecap="round" />
+          {/* Shoulders */}
+          <path d="M20 92 C26 76 35 68 45 68 H55 C65 68 74 76 80 92" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
 
-          {/* Collar */}
-          <path d="M84 165 L100 188 L116 165" stroke="#173330" strokeWidth="2.4" fill="#FAFCF6" />
+          {/* Eyes & Soft Brows */}
+          <path d="M38 37 Q42 35 46 37" stroke="#111111" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M54 37 Q58 35 62 37" stroke="#111111" strokeWidth="1.8" strokeLinecap="round" />
+          <circle cx="42" cy="41" r="1.6" fill="#111111" />
+          <circle cx="58" cy="41" r="1.6" fill="#111111" />
+
+          {/* Nose & Warm Gentle Smile */}
+          <path d="M50 45 V49 L48 50" stroke="#111111" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M45 54 Q50 59 55 54" stroke="#111111" strokeWidth="2" strokeLinecap="round" />
+
+          {/* Blouse Neckline */}
+          <path d="M44 68 L50 77 L56 68" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" />
         </svg>
       );
 

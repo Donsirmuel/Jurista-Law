@@ -140,9 +140,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               onClick={() => onNavigate({ type: 'home' })}
               className="flex items-center gap-3 font-serif font-semibold text-2xl tracking-tight text-[#173330] mb-4 text-left cursor-pointer group"
             >
-              <div className="p-1.5 rounded-lg bg-[#E6E4D2] border border-[#173330]/15 group-hover:border-[#C6902E] transition-colors">
-                <BrandLogoIcon size={24} className="text-[#173330]" />
-              </div>
+              <BrandLogoIcon size={32} className="text-[#111111]" />
               <span>Jurista Law</span>
             </button>
 
@@ -286,9 +284,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               {/* Primary Contact Card */}
               <div className="bg-[#E6E4D2]/40 p-4 rounded-xl border border-[#173330]/10 space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="p-1.5 rounded-md bg-[#FAFCF6] border border-[#173330]/10 text-[#9C4A32]">
-                    <PhoneLineIcon size={16} />
-                  </div>
+                  <PhoneLineIcon size={20} className="text-[#111111] shrink-0" />
                   <div>
                     <div className="text-[11px] text-[#2E4C47]/80">Direct telephone</div>
                     <a
@@ -301,9 +297,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </div>
 
                 <div className="flex items-center gap-3 pt-2 border-t border-[#173330]/8">
-                  <div className="p-1.5 rounded-md bg-[#FAFCF6] border border-[#173330]/10 text-[#9C4A32]">
-                    <MailLineIcon size={16} />
-                  </div>
+                  <MailLineIcon size={20} className="text-[#111111] shrink-0" />
                   <div>
                     <div className="text-[11px] text-[#2E4C47]/80">Confidential email</div>
                     <a

@@ -52,55 +52,16 @@ export const AttorneysHero: React.FC<AttorneysHeroProps> = ({ onNavigate }) => {
         <Breadcrumb items={[{ label: 'Attorneys' }]} onNavigate={onNavigate} />
 
         <div className="max-w-2xl mt-5 sm:mt-6">
-          {/* Team Silhouette Circle Cluster */}
+          {/* Clean Line-Art Attorney Trio sitting directly on background (No container chips) */}
           <div className="mb-4 sm:mb-5 pt-1">
-            <motion.div
-              animate={
-                shouldReduceMotion
-                  ? undefined
-                  : {
-                      y: [0, -3.5, 0],
-                      rotate: [0, -0.6, 0],
-                    }
-              }
-              transition={{
-                duration: 7.2,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-              className="inline-flex items-center relative pl-1 select-none"
-              title="Attorney team cluster"
+            <div
+              className="inline-flex items-center gap-3 text-[#111111] select-none"
+              title="Attorney team"
             >
-              {/* Silhouette 1 (Associate / Partner left) */}
-              <div
-                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#FAFCF6] border-2 border-[#173330]/25 flex items-center justify-center shadow-sm z-10 hover:z-30 transition-transform"
-                style={{
-                  boxShadow: '0 2px 8px rgba(23, 51, 48, 0.14)',
-                }}
-              >
-                <PersonSilhouette size={20} />
-              </div>
-
-              {/* Silhouette 2 (Lead Partner center, elevated & larger) */}
-              <div
-                className="w-11 h-11 sm:w-12 sm:h-12 -ml-3 rounded-full bg-[#E6E4D2] border-2 border-[#173330]/40 flex items-center justify-center shadow-md z-20 hover:z-30 transition-transform"
-                style={{
-                  boxShadow: '0 4px 12px rgba(23, 51, 48, 0.22)',
-                }}
-              >
-                <PersonSilhouette size={22} lead />
-              </div>
-
-              {/* Silhouette 3 (Associate right) - Hidden on mobile <520px to prevent crowding */}
-              <div
-                className="hidden min-[520px]:flex w-10 h-10 sm:w-11 sm:h-11 -ml-3 rounded-full bg-[#FAFCF6] border-2 border-[#173330]/25 items-center justify-center shadow-sm z-10 hover:z-30 transition-transform"
-                style={{
-                  boxShadow: '0 2px 8px rgba(23, 51, 48, 0.14)',
-                }}
-              >
-                <PersonSilhouette size={20} />
-              </div>
-            </motion.div>
+              <PersonSilhouette size={34} />
+              <PersonSilhouette size={38} lead />
+              <PersonSilhouette size={34} />
+            </div>
           </div>
 
           {/* Eyebrow Label */}

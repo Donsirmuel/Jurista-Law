@@ -62,7 +62,7 @@ export default function App() {
   // Sync hash on navigation
   const handleNavigate = (route: PageRoute) => {
     setCurrentRoute(route);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
 
     let hash = '#/';
     switch (route.type) {
@@ -106,6 +106,7 @@ export default function App() {
   // Listen for browser back / forward
   useEffect(() => {
     const handlePopState = () => {
+      window.scrollTo(0, 0);
       const hash = window.location.hash.replace(/^#\/?/, '');
       if (!hash || hash === 'home') setCurrentRoute({ type: 'home' });
       else if (hash === 'our-firm') setCurrentRoute({ type: 'our-firm' });

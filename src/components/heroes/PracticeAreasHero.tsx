@@ -27,55 +27,16 @@ export const PracticeAreasHero: React.FC<PracticeAreasHeroProps> = ({ onNavigate
         <Breadcrumb items={[{ label: 'Practice areas' }]} onNavigate={onNavigate} />
 
         <div className="max-w-2xl mt-5 sm:mt-6">
-          {/* Fanned / Overlapping Mini Icon Cluster */}
+          {/* Clean Line-Art Icon Trio sitting directly on background (No container pills/chips) */}
           <div className="mb-4 sm:mb-5 pt-1">
-            <motion.div
-              animate={
-                shouldReduceMotion
-                  ? undefined
-                  : {
-                      y: [0, -3, 0],
-                      rotate: [0, 0.8, 0],
-                    }
-              }
-              transition={{
-                duration: 6.8,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-              className="inline-flex items-center relative pl-1 select-none"
-              title="Practice disciplines cluster"
+            <div
+              className="inline-flex items-center gap-4 text-[#111111] select-none"
+              title="Practice disciplines"
             >
-              {/* Chip 1: Neoclassical Courthouse (left, angled -8deg) */}
-              <div
-                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#FAFCF6] border-2 border-[#C6902E]/40 flex items-center justify-center shadow-sm -rotate-8 z-10 hover:z-30 transition-transform"
-                style={{
-                  boxShadow: '0 2px 8px rgba(198, 144, 46, 0.18)',
-                }}
-              >
-                <BrandLogoIcon size={20} className="text-[#173330]" />
-              </div>
-
-              {/* Chip 2: Scales of Justice (center, slightly elevated / overlapping, +2deg) */}
-              <div
-                className="w-11 h-11 sm:w-12 sm:h-12 -ml-3 rounded-full bg-[#FEF8E8] border-2 border-[#C6902E] flex items-center justify-center shadow-md rotate-2 z-20 hover:z-30 transition-transform"
-                style={{
-                  boxShadow: '0 4px 12px rgba(198, 144, 46, 0.25)',
-                }}
-              >
-                <ScalesOfJusticeIcon size={22} className="text-[#173330]" />
-              </div>
-
-              {/* Chip 3: Property & Real Estate (right, angled +10deg) - Hidden on mobile <520px to prevent crowding */}
-              <div
-                className="hidden min-[520px]:flex w-10 h-10 sm:w-11 sm:h-11 -ml-3 rounded-full bg-[#FAFCF6] border-2 border-[#C6902E]/40 items-center justify-center shadow-sm rotate-8 z-10 hover:z-30 transition-transform"
-                style={{
-                  boxShadow: '0 2px 8px rgba(198, 144, 46, 0.18)',
-                }}
-              >
-                <RealEstateIcon size={20} className="text-[#173330]" />
-              </div>
-            </motion.div>
+              <BrandLogoIcon size={34} />
+              <ScalesOfJusticeIcon size={34} />
+              <RealEstateIcon size={34} />
+            </div>
           </div>
 
           {/* Eyebrow Label */}

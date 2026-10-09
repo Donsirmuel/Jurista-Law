@@ -5,7 +5,7 @@ import { PracticeAreasHero } from '../components/heroes/PracticeAreasHero';
 import {
   CorporateIcon,
   ImmigrationIcon,
-  ScalesOfJusticeIcon,
+  MedicalIcon,
   RealEstateIcon,
   CriminalIcon,
   FamilyIcon,
@@ -34,7 +34,7 @@ export const PracticeAreasIndexPage: React.FC<PracticeAreasIndexPageProps> = ({
       case 'criminal-law':
         return <CriminalIcon size={64} className="text-[#173330]" />;
       case 'medical-law':
-        return <ScalesOfJusticeIcon size={64} className="text-[#173330]" />;
+        return <MedicalIcon size={64} className="text-[#173330]" />;
       case 'family-law':
         return <FamilyIcon size={64} className="text-[#173330]" />;
     }

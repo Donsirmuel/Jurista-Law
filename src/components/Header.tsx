@@ -75,9 +75,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate, onOpen
           onClick={() => onNavigate({ type: 'home' })}
           className="flex items-center gap-2.5 font-serif font-semibold text-xl tracking-tight text-[#173330] hover:opacity-90 transition-opacity cursor-pointer group"
         >
-          <div className="p-1 rounded-lg group-hover:bg-[#E6E4D2]/60 transition-colors">
-            <BrandLogoIcon size={28} className="text-[#173330]" />
-          </div>
+          <BrandLogoIcon size={30} className="text-[#111111]" />
           <span>Jurista</span>
         </button>
 
